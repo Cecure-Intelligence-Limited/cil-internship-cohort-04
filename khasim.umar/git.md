@@ -9,3 +9,5 @@ Headers
 - Thank you cecure intelligence for this opportunity.
 
 --A paragraph
+
+Git has always been the difficult tool for me to learn but at this point, i have been familiar with most of the frequent commands used in git. I am glad i joined CIL. I am hoping as well as confident to be part of those who will make it to module two.
