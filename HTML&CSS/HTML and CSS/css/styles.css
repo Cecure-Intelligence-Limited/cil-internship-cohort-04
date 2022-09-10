@@ -1,0 +1,421 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  background-image: url("black-thread-light.png");
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+
+#home {
+  text-align: center;
+
+}
+
+/* -----------------navigation bar -------------- */
+.header-scrolled.afterscroll {
+  transition: all 0.5s;
+  box-shadow: -21.213px 21.213px 30px 0px rgb(158 158 158 / 30%);
+  width: auto;
+  background-color: #fff;
+
+}
+
+.navbar-light .navbar-toggler {
+  border:0px;
+  ;
+}
+/* .header-scrolled{
+    background-color: #fff;
+} */
+
+.navbar-expand-lg {
+  margin: 0.3rem 5rem;
+  padding: 1rem 0;
+  vertical-align: middle
+}
+
+
+.nav-item {
+  margin-right: 2rem;
+}
+
+.nav-link {
+
+  font-weight: 400;
+  padding: 0.75em 0;
+  letter-spacing: 1px;
+  color: black;
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.navbar-brand {
+  margin-left: 3rem;
+}
+
+.navbar-light .navbar-brand,
+a {
+  color: #69b3a2;
+  font-size: 0.9rem;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  color: #69b3a2;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: #000000;
+  font-size: 0.9rem;
+}
+
+/* @media only screen and (min-width: 992px) {
+        .navbar {
+          padding: 0;
+        }
+        .navbar .navbar-brand {
+          padding: 0 0.7em;
+        }
+        .navbar .navbar-nav .nav-link {
+          padding: 1em 0;
+        }
+        .navbar .navbar-nav .nav-item {
+          margin: 0 1em;
+        }
+      } */
+.navbar .navbar-nav .nav-item {
+  position: relative;
+}
+
+.navbar .navbar-nav .nav-item::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #69b3a2;
+  width: 0%;
+  content: "";
+  height: 4px;
+}
+
+.navbar .navbar-nav .nav-item:hover::after {
+  width: 100%;
+}
+
+.navbar .navbar-nav .nav-item::after {
+  transition: all 0.5s;
+}
+
+.navbar-nav .ml-auto{
+  background-color: #30E3CA;
+}
+
+/* -----------------navigation bar closed-------------- */
+
+/* -----------------introduction ----------------------*/
+.masthead {
+  position: relative;
+  height: 49rem;;
+}
+
+.textlanding {
+  color: black;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  max-width: 600px;
+  padding: 2em 3em 0 3em;
+  text-align: center;
+  top: 300px;
+  margin-top: 7rem;
+}
+
+.textlanding p {
+
+  margin: 0rem 1rem;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* .textlandingname{
+        margin-left: 4rem;
+      } */
+#intro .btn {
+  background: #ffffff;
+  background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -moz-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -ms-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -o-linear-gradient(top, #ffffff, #ffffff);
+  background-image: linear-gradient(to bottom, #ffffff, #ffffff);
+  -webkit-border-radius: 9;
+  -moz-border-radius: 9;
+  border-radius: 9px;
+  -webkit-box-shadow: 1px 1px 3px #666666;
+  -moz-box-shadow: 1px 1px 3px #666666;
+  box-shadow: 1px 1px 3px #666666;
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  color: #217a65;
+  font-size: 18px;
+  padding: 20px 20px 20px 20px;
+  border: solid #30E3CA 1px;
+  text-decoration: none;
+  margin: 2rem 1rem;
+}
+
+#intro .btn:hover {
+  background: #69b3a2;
+  background-image: -webkit-linear-gradient(top, #69b3a2, #217a65);
+  background-image: -moz-linear-gradient(top, #69b3a2, #217a65);
+  background-image: -ms-linear-gradient(top, #69b3a2, #217a65);
+  background-image: -o-linear-gradient(top, #69b3a2, #217a65);
+  background-image: linear-gradient(to bottom, #69b3a2, #217a65);
+  text-decoration: none;
+  color: #fff;
+}
+
+.fa-brands {
+  color: #000000;
+}
+
+.fa-brands:hover {
+  color: #ffc107
+}
+
+.fa-angles-down {
+  color: #69b3a2;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+.bada{
+  padding-left: 3.75rem;
+}
+
+
+
+/* --------description----------- */
+#description {
+  padding: 12rem 0 8rem 0;
+}
+
+.profile-pic {
+  padding: 0 1.5rem;
+}
+
+.img-fluid {
+  height: 246px;
+  width: 255px;
+}
+.text-center {
+  text-align: center;
+}
+.timeline{
+  margin-left: 5rem;
+}
+.descript{
+  position: relative;
+  bottom:1.7rem ;
+
+}
+
+/* ---------skills----------- */
+h6{
+  font-weight: 300;
+}
+
+.home-about-area{
+  position: relative;
+  top: 6rem;
+}
+.list-skills{
+margin-top: 5rem;
+}
+
+
+.container-progress{
+  display: flex;
+}
+
+.progress2 {
+  width:80%;
+  border-radius: 30px;
+  background-color: #808080;
+  box-shadow: 0 0 5px rgb(105, 179, 162);
+}
+
+.progress-bar2 {
+  width:50%;
+  height: 10px;
+  border-radius: 30px;
+  transition: 0.4s linear;
+  
+  transition-property: width, background-color;
+}
+
+.progress-bar2 {
+  background-color: rgb(105, 179, 162);
+  animation: progress 5s;
+}
+
+@keyframes progress {
+  0% {
+    width: 0%;
+    background: rgb(188, 248, 236);
+  }
+
+  100% {
+    width: 50%;
+    background: rgb(105, 179, 162);
+    box-shadow: 0 0 40px rgb(105, 179, 162);
+  }
+}
+
+/* -------------Certificate section-----------------  */
+#certificate-section{
+  padding: 4rem;
+}
+
+.carousel-control-prev, .carousel-control-next{
+  color: #217a65;
+}
+.certificate-container{
+  padding: 5rem
+}
+
+/* --------------------Portfolio------------ */
+/* Container needed to position the overlay. Adjust the width as needed */
+
+#portfolio .container {
+  position: relative;
+  margin-bottom: 5rem;
+  top:8rem
+}
+
+/* Make the image to responsive */
+#portfolio .image-fluid{
+  max-width: 100%;
+  height: 100%;
+}
+
+/* The overlay effect (full height and width) - lays on top of the container and over the image */
+#portfolio .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #217a65;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  transition: .3s ease;
+  opacity: 90%;
+}
+
+/* When you mouse over the container, the overlay text will "zoom" in display */
+#portfolio .project:hover .overlay {
+  transform: scale(1);
+}
+
+/* Some text inside the overlay, which is positioned in the middle vertically and horizontally */
+#portfolio .text {
+  color: white;
+  font-size: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+#portfolio .btn{
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 2px;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 5px 8px 5px 8px;
+  border: solid #ffffff 1px;
+  text-decoration: none;
+  background: #217a65;
+  margin: 1rem;
+}
+
+
+  /* ------------Reccommendation section---------------- */
+
+  #testimonial{
+    background-color: rgb(188, 248, 236);
+    padding: 3rem 0;
+    min-height: 25rem;
+    
+    
+    
+  }
+
+  /* -----------footeer-------------------- */
+  .footer-area{
+    padding: 3rem 0;
+    background-color:#494747;
+    color: #ffffff;
+  }
+
+  .footer-area p{
+    font-weight: 300;
+  }
+  
+
+  @media (max-width: 993px) {
+    /* mobile CSS: hide .desktop div */
+    #navbarTogglerDemo02 {
+      background-color: #fff;
+      
+    }
+    .btn.js-scroll-trigger{
+      display: none
+    }
+    .hide-if-small-screen{
+      display: none
+    }
+    .textlandingname p{
+      padding-left: 0
+    }
+    .textlanding{
+      padding: 2rem 0rem 0rem 0rem;
+    }
+    h4.text-center{
+      margin: 3rem;
+    }
+    .single-skill{
+      padding: 0 3rem;
+    }
+    .container{
+      padding: 2rem;
+    }
+    #certificate-section{
+      padding: 0;
+    }
+    h1.text-center{
+      font-size: 1.5rem;
+    }
+    .certificate-container{
+      padding: 2rem
+    }
+    #portfolio .container {
+      width: 70%;}
+    #portfolio .col-md-3{
+      margin: 1rem;
+    }
+    .portfolio-text{
+      position: relative;
+      top: 2rem;
+    }
+  }
