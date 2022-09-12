@@ -31,12 +31,12 @@ Resized_Image_name = New Image name
 
 Image_Resizer("/Users/User/Desktop","Ball",40,40,"Resized_Ball")
 
-File_path = /Users/User/Desktop
+File_path = "/Users/User/Desktop"
 
-Image_name = Ball
+Image_name = "Ball"
 
 Base_width = 40
 
 Base_height = 40
 
-Resized_Image_name = Resized_Ball
+Resized_Image_name = "Resized_Ball"
