@@ -1,39 +1,31 @@
-# Question 1. Describe any layered process you are familiar with similar to the OSI model
+### Question 1. Describe any layered process you are familiar with similar to the OSI model
 
-### The application layer
-The Application Layer is topmost layer in the Open System Interconnection (OSI) model.
-This layer also requests various types of information from its bottom layer, which is the presentation layer. The Application Layer interface interacts directly with the application and provides common application services.
-To ensure smooth communication, application layer protocols are implemented the same on source host and destination host.
+# TCP/IP
+TCP refers to Transmission Control Protocol. TCP/IP follow a horizontal approach and TCP/IP uses both session and presentation layer in the application layer itself
 
-##### Functions of Application Layer :
+## Network Access Layer:
+This layer corresponds to the combination of Data Link Layer and Physical Layer of the OSI model. It looks out for hardware addressing and the protocols present in this layer allows for the physical transmission of data.
 
-1. This layer allows users to interact with other software applications.
-2. Data is presented visually in this layer, allowing users to truly understand data rather than remembering or visualizing it in binary format (0's or 1’s).
-3. This layer serves as a portal through which users and application processes can access network services.
-4. This layer provides services such as e-mail, file transfer, distributing results to users, directory services, network resources, and so on.
-5. The protocols which are used in this application layer depend upon what information users wish to send or receive.
+## Internet layer:
+This layer parallels the functions of OSI’s Network layer. It defines the protocols which are responsible for logical transmission of data over the entire network. The main protocols residing at this layer are:
 
-##### Some examples of protocols  provided by the application layer
+#### 1. IP:
+stands for Internet Protocol and it is responsible for delivering packets from the source host to the destination host by looking at the IP addresses in the packet headers. IP has 2 versions: IPv4 and IPv6. IPv4 is the one that most of the websites are using currently. But IPv6 is growing as the number of IPv4 addresses are limited in number when compared to the number of users
 
-1. Telnet -  This protocol is used for managing files over the Internet. 
-2. HTTP(S)- . It is the foundation of the World Wide Web (WWW).This protocol was designed particularly for the communications between the web browsers and web servers
-3. DNS- This service translates the domain name (selected by user) into the corresponding IP address. 
-4. NFS - This stands for Network File System. This protocol allows remote hosts to mount files over a network and interact with those file systems as though they are mounted locally.
+#### 2. ICMP:
+stands for Internet Control Message Protocol. It is encapsulated within IP datagrams and is responsible for providing hosts with information about network problems
 
-### The Transport Layer -
+#### 3. ARP:
+stands for Address Resolution Protocol. Its job is to find the hardware address of a host from a known IP address. ARP has several types: Reverse ARP, Proxy ARP, Gratuitous ARP and Inverse ARP.
 
-Provide a logical connection between two hosts. It controls reliability of communication through segmentation, flow control and error control. 
-Segmentation is the process of breaking up a large data into smaller data unit called a segment, each segment contain port and sequence number for segment rearrangement and assembly when it get to the destination host. 
-Flow control it control amount of data being transported by increasing or decreasing the rate of data transfer between devices with different Mbps rate. 
- Error control used automatic repeat request to retransmit the loss or corrupted data with a group of checksum to verified Transport layer protocols are TCP and UDP .
-Transmission control protocol (TCP) its a connection- oriented transmission, it wait for an acknowledgement from the remote host (feedback). It is reliable but very slow compared to UDP.
- User datagram protocol its a connectionless transmission. its not reliable because it does not require a feedback but very fast.
+## Host-to-Host layer:
+This layer is analogous to the transport layer of the OSI model. It is responsible for end-to-end communication and error-free delivery of data. It shields the upper-layer applications from the complexities of data. The two main protocols present in this layer are :
 
+#### 1. Transmission Control protocol(TCP):
+It is known to provide reliable and error-free communication between end systems. It performs sequencing and segmentation of data. It also has acknowledgment feature and controls the flow of the data through flow control mechanism. It is a very effective protocol but has a lot of overhead due to such features. Increased overhead leads to increased cost.
 
-### The Physical Layer 
-The physical layer is bottom-most layer of the Open System Interconnection (OSI) Model, which represents the system physically and electrically. It is made up of various network components such as power plugs, connectors, receivers, and cable types, among others. The Physical Layer transports data bits from one device (such as a computer) to another (s).
+#### 2. User Datagram Protocol(UDP):
+It is the go-to protocol if your application does not require reliable transport as it is very cost-effective. Unlike TCP, which is connection-oriented protocol, UDP is connectionless.
 
-##### Functions of Physical Layer :
-1. This layer is classified as a Hardware Layer (since the hardware layer is responsible for all the physical connection establishment and processing too).
-2. Hubs, Ethernet, modems device is used in this layer.
-3. It also includes a switching mechanism that allows data packets to be routed from one port (the sender port) to the leading destination port.
+## Application Layer:
+This layer performs the functions of top three layers of the OSI model: Application, Presentation and Session Layer. It is responsible for node-to-node communication and controls user-interface specifications. Some of the protocols present in this layer are: HTTP, HTTPS, FTP, TFTP, Telnet, SSH, SMTP, SNMP, NTP, DNS, DHCP, NFS, X Window, LPD
