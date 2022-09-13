@@ -1,4 +1,4 @@
-# 1) Describe what you understand by Scrum, and elaborate on some of it's benefits in software development
+# Q. Describe what you understand by Scrum, and elaborate on some of it's benefits in software development
 Scrum is a software product development framework that helps teams work together. it encourages teams to learn through experiences, self-organize while working 
 on a problem, and reflect on their wins and losses to continuously improve. 
 
@@ -10,7 +10,7 @@ understand the goals and provide solutions in a fast and incremental way.
 In Scrum, time is split into short fixed-length iterations or sprints (usually 2-4 weeks) with potentially shippable code delivered after each iteration. The team meets 
 daily to discuss progress and also at the end of the iteration to review the previous sprint. 
 
-# How Scrum Works
+## How Scrum Works
 * Scrum software development starts with a wish list of features (a product backlog). The team meets to discuss:
 The backlog,
 What still needs to be completed,
@@ -41,7 +41,7 @@ items that are now ‘Done’ to stakeholders and teammates for feedback. In mos
 or even for certain ceremonies. The idea is to create a place where the team can focus on what went well and what needs to be improved for the next time, and less 
 about what went wrong.
 
-# Benefits of Scrum
+## Benefits of Scrum
 * The organization of complex tasks into manageable user stories makes it ideal for difficult projects.
 * The clear demarcation of roles and planned events ensure that there is transparency and collective ownership throughout the development cycle.
 * Quick releases keep the team motivated and the users happy as they can see progress in a short amount of time.
