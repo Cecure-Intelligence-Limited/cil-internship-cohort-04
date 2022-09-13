@@ -1,6 +1,6 @@
-# 1 NS IP Adresses for Google, Facebook and Tesla
+# Q. NS IP Adresses for Google, Facebook and Tesla
 
-# Google: 
+## Google: 
 1) ns2.google.com: IPV4 - 216.239.34.10 ,
                    IPV6 - 2001:4860:4802:34::a
                    
@@ -13,7 +13,7 @@
 4) ns4.google.com: IPV4 - 216.239.38.10 ,
                    IPV6 - 2a03:2880:f0fc:c:face:b00c:0:35
         
-# Facebook: 
+## Facebook: 
 1) a.ns.facebook.com: IPV4 - 129.134.30.12 ,
                       IPV6 - 2a03:2880:f0fc:c:face:b00c:0:35
                       
@@ -26,7 +26,7 @@
 4) b.ns.facebook.com: IPV4 - 129.134.31.12 ,
                       IPV6 - 2a03:2880:f0fd:c:face:b00c:0:35
           
-# Tesla:
+## Tesla:
 1) a1-12.akam.net: IPV4 - 193.108.91.12 ,
                    IPV6 - 2600:1401:2::c
               
@@ -47,7 +47,9 @@
                     IPV6 - 2001:502:f3ff::245
 
 
-# 2 Breakdown RFC IPV4 Address into 4 subnetwork
+# Q. Breakdown RFC IPV4 Address into 4 subnetwork
 1) 10.10.10.0: 10.10.10.0, 10.10.10.64, 10.10.10.128, 10.10.10.192
+
 2) 192.168.0.0: 192.168.0.0, 192.168.0.64, 192.168.0.128, 192.168.0.192
+
 3) 172.168.1.0: 172.168.1.0, 172.168.1.64, 172.168.1.128, 172.168.1.192
