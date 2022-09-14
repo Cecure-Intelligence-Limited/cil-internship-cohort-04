@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js</title>
+  </head>
+  <body>
+    <div id="lists"></div>
+    <script>
+      const list = document.getElementById("lists");
+      const eachList = document.createDocumentFragment();
+      fetch(`https://jsonplaceholder.typicode.com/users`)
+        .then(function (response) {
+          return response.json();
+        })
+        .then((data) => {
+          data.forEach((item) => {
+            let list = document.createElement("li");
+            let name = document.createElement("h2");
+            let username = document.createElement("p");
+            name.innerText = `Name: ${item.name}`;
+            username.innerText = `Username: ${item.username}`;
+            list.appendChild(name);
+            list.appendChild(username);
+            eachList.appendChild(list);
+          });
+          console.log(data);
+          list.appendChild(eachList);
+        })
+        .catch((err) => {
+          console.log(`Error fetching: ${err}`);
+        });
+    </script>
+  </body>
+</html>
