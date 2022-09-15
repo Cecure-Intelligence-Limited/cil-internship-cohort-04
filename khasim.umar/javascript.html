@@ -1,37 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>js</title>
-  </head>
-  <body>
-    <div id="lists"></div>
-    <script>
-      const list = document.getElementById("lists");
-      const eachList = document.createDocumentFragment();
-      fetch(`https://jsonplaceholder.typicode.com/users`)
-        .then(function (response) {
-          return response.json();
+document.querySelector(".json").addEventListener('click', getProfile);
+const url = "http://jsonplaceholder.typicode.com/users"
+
+function getProfile() {
+    fetch(url)
+        .then(function (res) { return (res.json()) })
+        .then(function (data) {
+            console.log(data);
+            let output = '<h2>Users Profile</h2>';
+            data.forEach(function (user) {
+                output += `
+                            <ul>
+                            <li> ID: ${user.id} </li>
+                            <li> Name: ${user.name} </li>
+                            <li> Email: ${user.email} </li>
+                            <li> City: ${user.address.city} </li>
+                            <li> Phone: ${user.phone} </li>
+                            <li> Website: ${user.website} </li>
+                            <li> Company Name: ${user.company.name} </li>
+                             </ul>`
+            }
+
+            );
+            document.querySelector(".text").innerHTML = output
+
         })
-        .then((data) => {
-          data.forEach((item) => {
-            let list = document.createElement("li");
-            let name = document.createElement("h2");
-            let username = document.createElement("p");
-            name.innerText = `Name: ${item.name}`;
-            username.innerText = `Username: ${item.username}`;
-            list.appendChild(name);
-            list.appendChild(username);
-            eachList.appendChild(list);
-          });
-          console.log(data);
-          list.appendChild(eachList);
-        })
-        .catch((err) => {
-          console.log(`Error fetching: ${err}`);
-        });
-    </script>
-  </body>
-</html>
+}
