@@ -9,7 +9,7 @@ Am an aspiring Frontend Engineer
 - Network layer
 - Data Link Layer
 
-Link to my personal website
-[Nneji Chidera Personal website task](https://nneji-chidera.netlify.app)
+Link to my personal website task  
+[Nneji Chidera Personal website task](https://nneji-chidera.netlify.app) <br>
 or follow the link delow
 <https://nneji-chidera.netlify.app>
