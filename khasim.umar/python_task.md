@@ -14,8 +14,7 @@ top = height / 3
 right = 160
 bottom = 2 * height / 3
  
-# Cropped image of above dimension
-# (It will not change original image)
+# Cropped image of above dimension (orginial image is intact)
 image = im.crop((left, top, right, bottom))
 newsize = (300, 300)
 image = im1.resize(newsize)
