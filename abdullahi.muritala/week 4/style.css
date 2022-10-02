@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: hsl(236, 33%, 92%);
+  --card-background: hsl(0, 0%, 98%);
+  --text-color: hsl(0, 0%, 26%);
+  --inactive-color: hsl(236, 9%, 61%);
+  --active-color: hsl(220, 98%, 61%);
+  --hover-color: hsl(235, 19%, 35%);
+  --check-color: hsl(233, 11%, 84%);
+  --card-shadow-color: hsla(240, 5%, 85%, 0.603);
+  --bg-img-mobile: url(assets/images/bg-mobile-light.jpg);
+  --bg-img-desktop: url(assets/images/bg-desktop-light.jpg);
+}
+
+html[data-theme='light'] {
+  --background-color: hsl(236, 33%, 92%);
+  --card-background: hsl(0, 0%, 98%);
+  --text-color: hsl(0, 0%, 26%);
+  --inactive-color: hsl(236, 9%, 61%);
+  --active-color: hsl(220, 98%, 61%);
+  --hover-color: hsl(235, 19%, 35%);
+  --check-color: hsl(233, 11%, 84%);
+  --card-shadow-color: hsla(240, 5%, 85%, 0.603);
+  --bg-img-mobile: url(assets/images/bg-mobile-light.jpg);
+  --bg-img-desktop: url(assets/images/bg-desktop-light.jpg);
+}
+
+html[data-theme='dark'] {
+  --background-color: hsl(235, 21%, 11%);
+  --card-background: hsl(235, 24%, 19%);
+  --text-color: hsl(0, 0%, 73%);
+  --inactive-color: hsl(234, 11%, 52%);
+  --active-color: hsl(234, 39%, 85%);
+  --hover-color: hsl(236, 33%, 92%);
+  --check-color: hsl(233, 14%, 35%);
+  --card-shadow-color: hsla(0, 0%, 7%, 0.877);
+  --bg-img-mobile: url(assets/images/bg-mobile-dark.jpg);
+  --bg-img-desktop: url(assets/images/bg-desktop-dark.jpg);
+}
