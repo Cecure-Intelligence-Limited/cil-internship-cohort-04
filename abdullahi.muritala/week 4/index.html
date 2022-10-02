@@ -28,19 +28,74 @@
           </button>
         </div>
         <form action="#">
+          <span class="round"></span>
           <label for="newTodo" hidden>Add new</label>
           <input type="text" name="newTodo" id="newTodo" placeholder="Create a new todo..." />
         </form>
         <div class="todo-list">
-          <ul>
-            <li>Complete online JavaScript course</li>
-            <li>Jog around the park 3x</li>
-            <li>10 minutes meditation</li>
-            <li>Read for 1 hour</li>
-            <li>Pick up groceries</li>
-            <li>Complete Todo App on Frontend Mentor</li>
+          <ul class="todos">
+            <div class="todo-item">
+              <label class="check-label">
+                <input type="checkbox" />
+                <span class="round"></span>
+              </label>
+              <li class="todo">Complete online JavaScript course</li>
+              <button class="btn delete">
+                <img src="./assets/icons/icon-cross.svg" alt="delete" />
+              </button>
+            </div>
+            <div class="todo-item">
+              <label class="check-label">
+                <input type="checkbox" />
+                <span class="round"></span>
+              </label>
+              <li class="todo">Jog around the park 3x</li>
+              <button class="btn delete">
+                <img src="./assets/icons/icon-cross.svg" alt="delete" />
+              </button>
+            </div>
+            <div class="todo-item">
+              <label class="check-label">
+                <input type="checkbox" />
+                <span class="round"></span>
+              </label>
+              <li class="todo">10 minutes meditation</li>
+              <button class="btn delete">
+                <img src="./assets/icons/icon-cross.svg" alt="delete" />
+              </button>
+            </div>
+            <div class="todo-item">
+              <label class="check-label">
+                <input type="checkbox" />
+                <span class="round"></span>
+              </label>
+              <li class="todo">Read for 1 hour</li>
+              <button class="btn delete">
+                <img src="./assets/icons/icon-cross.svg" alt="delete" />
+              </button>
+            </div>
+            <div class="todo-item">
+              <label class="check-label">
+                <input type="checkbox" />
+                <span class="round"></span>
+              </label>
+              <li class="todo">Pick up groceries</li>
+              <button class="btn delete">
+                <img src="./assets/icons/icon-cross.svg" alt="delete" />
+              </button>
+            </div>
+            <div class="todo-item">
+              <label class="check-label">
+                <input type="checkbox" />
+                <span class="round"></span>
+              </label>
+              <li class="todo">Complete Todo App on Frontend Mentor</li>
+              <button class="btn delete">
+                <img src="./assets/icons/icon-cross.svg" alt="delete" />
+              </button>
+            </div>
           </ul>
-          <div>
+          <div class="controls">
             <span>5 items left</span>
             <div>
               <button>All</button>
