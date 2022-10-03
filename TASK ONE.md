@@ -26,7 +26,9 @@ Although, it is a global product, Our Pass has built one focusing on the African
 
 # Market Growth: 
 Revenue in the eCommerce market is projected to reach US$8.52bn in 2022.Revenue is expected to show an annual growth rate (CAGR 2022-2025) of 13.86%, resulting in a projected market volume of US$12.58bn by 2025.In the eCommerce market, the number of users is expected to amount to 122.5m users by 2025.User penetration will be 41.9% in 2022 and is expected to hit 52.5% by 2025.The average revenue per user (ARPU) is expected to amount to US$93.77.
-Competitors: Flutterwave, Paystack.
+
+# Competitors: 
+Flutterwave, Paystack.
 
 # How the product earns: 
 The company charges 0.8% per transaction, capped at N1,000 (~$2) for merchants and a commission of 5% on every product sold. There is also a plan to introduce subscriptions on the product. 
