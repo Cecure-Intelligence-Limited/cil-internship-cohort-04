@@ -151,6 +151,38 @@ const toggleDone = (event) => {
 
 todos.addEventListener('click', toggleDone);
 
-// TODO: Add Event listener for clear completed
-// TODO: Add Event Listener for the filters
-// TODO: Show a message of no todos if tasks array is empty
+const clearCompletedBtn = document.querySelector('#clearCompletedBtn');
+
+const clearCompletedTasks = () => {
+  const remainingTasks = tasks.filter((task) => !task.checklist);
+  tasks = [...remainingTasks];
+  saveToLocalStorage();
+  clearContent(todos);
+  tasks.map(renderTodos);
+};
+
+clearCompletedBtn.addEventListener('click', clearCompletedTasks);
+
+const completedTasksBtn = document.querySelector('#completedTasksBtn');
+
+const filterCompletedTasks = () => {
+  const completedTasks = tasks.filter((task) => task.checklist);
+  clearContent(todos);
+  completedTasks.map(render);
+};
+
+completedTasksBtn.addEventListener('click', filterCompletedTasks);
+
+const activeTasksBtn = document.querySelector('#activeTasksBtn');
+
+const filterActiveTasks = () => {
+  const activeTasks = tasks.filter((task) => !task.checklist);
+  clearContent(todos);
+  activeTasks.map(render);
+};
+
+activeTasksBtn.addEventListener('click', filterActiveTasks);
+
+const allTasksBtn = document.querySelector('#allTasksBtn');
+
+allTasksBtn.addEventListener('click', renderTodos);
