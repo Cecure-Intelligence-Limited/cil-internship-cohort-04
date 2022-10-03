@@ -23,6 +23,7 @@ toggle.addEventListener('click', handleThemeToggle);
 
 // Array to hold all tasks
 const tasks = [];
+const todos = document.querySelector('#todos');
 
 // Declare the task class
 
@@ -37,8 +38,6 @@ class Task {
   }
 }
 
-console.log(tasks);
-
 const newTaskForm = document.querySelector('#newTaskForm');
 
 const addNewTask = (event) => {
@@ -47,7 +46,63 @@ const addNewTask = (event) => {
   const checklist = undefined;
   const newTask = new Task(title, checklist);
   newTask.addToTasks();
+  renderTodos();
   document.querySelector('#newTaskForm').reset();
-  console.log(tasks);
 };
 newTaskForm.addEventListener('submit', addNewTask);
+
+// Helper function to clear the ul
+const clearContent = (content) => {
+  while (content.firstChild) {
+    content.removeChild(content.firstChild);
+  }
+};
+
+const renderTodos = () => {
+  clearContent(todos);
+  tasks.map(render);
+};
+
+// Map over the tasks array to render the todo items in todo unordered list
+
+const render = (obj) => {
+  // Create the Todo Item Div and its contents
+  const todoItem = document.createElement('div');
+  todoItem.classList.add('todo-item');
+  if (obj.checklist === 'done') todoItem.classList.add('completed');
+
+  let checkLabel = document.createElement('label');
+  checkLabel.classList.add('check-label');
+
+  let checkbox = document.createElement('input');
+  if (obj.checklist === 'done') checkbox.checked = true;
+  checkbox.type = 'checkbox';
+  checkbox.id = 'toggleDoneBox';
+
+  let roundSpan = document.createElement('span');
+  roundSpan.classList.add('round');
+
+  let title = document.createElement('li');
+  title.classList.add('todo');
+  title.textContent = obj.title;
+
+  let delBtn = document.createElement('button');
+  let crossIcon = document.createElement('img');
+  crossIcon.src = './assets/icons/icon-cross.svg';
+  crossIcon.alt = 'delete';
+
+  // Append all the contents to todoItem
+  checkLabel.append(checkbox, roundSpan);
+  delBtn.appendChild(crossIcon);
+
+  todoItem.append(checkLabel, title, delBtn);
+
+  todos.appendChild(todoItem);
+};
+
+// TODO: Event listener for delete button
+// TODO: Event listener for Checkbox
+// TODO: Add count of items left in array
+// TODO: Add Event listener for clear completed
+// TODO: Add Event Listener for the filters
+// TODO: Show a message of no todos if tasks array is empty
