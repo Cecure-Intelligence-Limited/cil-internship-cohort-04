@@ -185,6 +185,12 @@ form span {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+.todo-item:hover > button {
+  opacity: 1;
 }
 
 button {
@@ -223,6 +229,10 @@ button {
   }
   main {
     margin: 0 30px;
+  }
+
+  .todo-item > button {
+    opacity: 1;
   }
 
   .controls > * {

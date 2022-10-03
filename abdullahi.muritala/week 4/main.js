@@ -1,7 +1,14 @@
-// Handle the theme switching logic
-
+let tasks = [];
 let toggle = document.querySelector('#theme-toggle');
+const newTaskForm = document.querySelector('#newTaskForm');
+const taskCount = document.querySelector('.controls span');
+const todos = document.querySelector('#todos');
+const allTasksBtn = document.querySelector('#allTasksBtn');
+const activeTasksBtn = document.querySelector('#activeTasksBtn');
+const completedTasksBtn = document.querySelector('#completedTasksBtn');
+const clearCompletedBtn = document.querySelector('#clearCompletedBtn');
 
+// Handle the theme switching logic
 let storedTheme =
   localStorage.getItem('theme') ||
   (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
@@ -19,14 +26,7 @@ const handleThemeToggle = () => {
   localStorage.setItem('theme', targetTheme);
 };
 
-toggle.addEventListener('click', handleThemeToggle);
-
-// Array to hold all tasks
-let tasks = [];
-const todos = document.querySelector('#todos');
-
 // Declare the task class
-
 class Task {
   constructor(title, checklist) {
     this.title = title;
@@ -38,9 +38,6 @@ class Task {
   }
 }
 
-const newTaskForm = document.querySelector('#newTaskForm');
-const taskCount = document.querySelector('.controls span');
-
 const addNewTask = (event) => {
   event.preventDefault();
   const title = document.querySelector('#newTodo').value;
@@ -49,9 +46,8 @@ const addNewTask = (event) => {
   newTask.addToTasks();
   saveToLocalStorage();
   renderTodos();
-  document.querySelector('#newTaskForm').reset();
+  newTaskForm.reset();
 };
-newTaskForm.addEventListener('submit', addNewTask);
 
 // Helper function to clear the ul
 const clearContent = (content) => {
@@ -66,7 +62,6 @@ const renderTodos = () => {
 };
 
 // Map over the tasks array to render the todo items in todo unordered list
-
 const render = (obj) => {
   // Create the Todo Item Div and its contents
   const todoItem = document.createElement('div');
@@ -114,9 +109,6 @@ const restoreLocalStorage = () => {
   tasks.map(render);
 };
 
-// Call this on starting the app
-restoreLocalStorage();
-
 const deleteTask = (event) => {
   if (!event.target.matches('IMG')) return;
   let targetTitle = event.target.parentNode.parentNode.children[1].outerText;
@@ -129,8 +121,6 @@ const deleteTask = (event) => {
   clearContent(todos);
   tasks.map(renderTodos);
 };
-
-todos.addEventListener('click', deleteTask);
 
 const toggleDone = (event) => {
   if (!event.target.matches('INPUT')) return;
@@ -149,10 +139,6 @@ const toggleDone = (event) => {
   tasks.map(renderTodos);
 };
 
-todos.addEventListener('click', toggleDone);
-
-const clearCompletedBtn = document.querySelector('#clearCompletedBtn');
-
 const clearCompletedTasks = () => {
   const remainingTasks = tasks.filter((task) => !task.checklist);
   tasks = [...remainingTasks];
@@ -161,19 +147,11 @@ const clearCompletedTasks = () => {
   tasks.map(renderTodos);
 };
 
-clearCompletedBtn.addEventListener('click', clearCompletedTasks);
-
-const completedTasksBtn = document.querySelector('#completedTasksBtn');
-
 const filterCompletedTasks = () => {
   const completedTasks = tasks.filter((task) => task.checklist);
   clearContent(todos);
   completedTasks.map(render);
 };
-
-completedTasksBtn.addEventListener('click', filterCompletedTasks);
-
-const activeTasksBtn = document.querySelector('#activeTasksBtn');
 
 const filterActiveTasks = () => {
   const activeTasks = tasks.filter((task) => !task.checklist);
@@ -181,8 +159,14 @@ const filterActiveTasks = () => {
   activeTasks.map(render);
 };
 
+toggle.addEventListener('click', handleThemeToggle);
 activeTasksBtn.addEventListener('click', filterActiveTasks);
-
-const allTasksBtn = document.querySelector('#allTasksBtn');
-
 allTasksBtn.addEventListener('click', renderTodos);
+completedTasksBtn.addEventListener('click', filterCompletedTasks);
+clearCompletedBtn.addEventListener('click', clearCompletedTasks);
+todos.addEventListener('click', toggleDone);
+todos.addEventListener('click', deleteTask);
+newTaskForm.addEventListener('submit', addNewTask);
+
+// Call this on starting the app
+restoreLocalStorage();
