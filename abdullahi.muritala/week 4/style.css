@@ -158,6 +158,23 @@ form span {
   opacity: 0;
 }
 
+.todo-item input:checked + .round {
+  background-image: url(./assets/icons/icon-check.svg), linear-gradient(#57ddff, #c058f3);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.todo-item.todo-item.completed {
+  opacity: 0.5;
+}
+
+.todo-item.completed > li {
+  text-decoration: line-through;
+}
+
 .todo-item .todo {
   flex: 1;
   padding-left: 1rem;
