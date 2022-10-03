@@ -20,3 +20,21 @@ const handleThemeToggle = () => {
 };
 
 toggle.addEventListener('click', handleThemeToggle);
+
+// Array to hold all tasks
+const tasks = [];
+
+// Declare the task class
+
+class Task {
+  constructor(title, checklist) {
+    this.title = title;
+    this.checklist = checklist;
+  }
+
+  addToTasks() {
+    tasks.push(this);
+  }
+}
+
+console.log(tasks);
