@@ -38,3 +38,16 @@ class Task {
 }
 
 console.log(tasks);
+
+const newTaskForm = document.querySelector('#newTaskForm');
+
+const addNewTask = (event) => {
+  event.preventDefault();
+  const title = document.querySelector('#newTodo').value;
+  const checklist = undefined;
+  const newTask = new Task(title, checklist);
+  newTask.addToTasks();
+  document.querySelector('#newTaskForm').reset();
+  console.log(tasks);
+};
+newTaskForm.addEventListener('submit', addNewTask);
