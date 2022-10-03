@@ -39,6 +39,7 @@ class Task {
 }
 
 const newTaskForm = document.querySelector('#newTaskForm');
+const taskCount = document.querySelector('.controls span');
 
 const addNewTask = (event) => {
   event.preventDefault();
@@ -98,6 +99,9 @@ const render = (obj) => {
   todoItem.append(checkLabel, title, delBtn);
 
   todos.appendChild(todoItem);
+
+  // Always update the UI with latest tasks array count
+  taskCount.textContent = `${tasks.length} items left`;
 };
 
 const saveToLocalStorage = () => {
@@ -147,7 +151,6 @@ const toggleDone = (event) => {
 
 todos.addEventListener('click', toggleDone);
 
-// TODO: Add count of items left in array
 // TODO: Add Event listener for clear completed
 // TODO: Add Event Listener for the filters
 // TODO: Show a message of no todos if tasks array is empty
