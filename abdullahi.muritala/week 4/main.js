@@ -22,7 +22,7 @@ const handleThemeToggle = () => {
 toggle.addEventListener('click', handleThemeToggle);
 
 // Array to hold all tasks
-const tasks = [];
+let tasks = [];
 const todos = document.querySelector('#todos');
 
 // Declare the task class
@@ -46,6 +46,7 @@ const addNewTask = (event) => {
   const checklist = undefined;
   const newTask = new Task(title, checklist);
   newTask.addToTasks();
+  saveToLocalStorage();
   renderTodos();
   document.querySelector('#newTaskForm').reset();
 };
@@ -99,6 +100,19 @@ const render = (obj) => {
 
   todos.appendChild(todoItem);
 };
+
+const saveToLocalStorage = () => {
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+};
+
+const restoreLocalStorage = () => {
+  tasks = JSON.parse(localStorage.getItem('tasks'));
+  if (tasks === null) tasks = [];
+  tasks.map(render);
+};
+
+// Call this on starting the app
+restoreLocalStorage();
 
 // TODO: Event listener for delete button
 // TODO: Event listener for Checkbox
