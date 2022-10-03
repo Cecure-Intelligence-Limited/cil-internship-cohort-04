@@ -1,7 +1,7 @@
 # cil-internship-cohort-04
 # CIL 018
 
-# Question 1 DESCRIBE A PREFERRED PRODUCT (EXISTING OR NOVEL) AND HOW YOU WOULD DETERMINE MARKET OPPORTUNITIES
+# Question 1: DESCRIBE A PREFERRED PRODUCT (EXISTING OR NOVEL) AND HOW YOU WOULD DETERMINE MARKET OPPORTUNITIES
 
 The product I will be describing and talking about it's market opportunities will be OurPass.
 
