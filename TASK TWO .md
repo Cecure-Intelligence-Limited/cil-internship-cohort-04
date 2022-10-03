@@ -3,18 +3,11 @@
 
 # Question: CHOOSE A FRAMEWORK YOU WOULD USE FOR THE PRODUCT SELECTED IN THE LAST TOPIC.
 
-# The MoSCoW method
+# The MoSCoW Method
 
 The MoSCoW prioritization framework was developed by Dai Clegg while working at Oracle in 1994 and first used in the Dynamic Systems Development Method (DSDM)—an agile project delivery framework.
 
 The MoSCoW method helps you prioritize product features into four unambiguous buckets typically in conjunction with fixed timeframes.
-
-This quirky acronym stands for:
-
-Must have (Mo)
-Should have (S)
-Could have (Co)
-Won’t have (W)
 
 Features are prioritized to deliver the most immediate business value early. Product teams are focused on implementing the “Must Have” initiatives before the rest of them. “Should Have” and “Could Have” features are important, but they’re the first to be dropped if resources or deadline pressures occur.
 
