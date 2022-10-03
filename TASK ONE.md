@@ -3,8 +3,9 @@
 
 # Question 1 DESCRIBE A PREFERRED PRODUCT (EXISTING OR NOVEL) AND HOW YOU WOULD DETERMINE MARKET OPPORTUNITIES
 
-The product I will be describing and talking about it's market opportunities will be OurPass. 
-About OurPass:
+The product I will be describing and talking about it's market opportunities will be OurPass.
+
+# About OurPass:
 OurPass is a relatively new product in the e-commerce industry. OurPass is a digital commerce platform which creates a seamless online payment system for customers. They create a new shopping experience for customers where customers can shop faster and checkout in one click, boost business sales and reduce cart abandonment. They also provide free delivery on all orders for customers.
 I'll be able to determine the market opportunities of OurPass by knowing the following:
 
