@@ -78,7 +78,6 @@ const render = (obj) => {
   let checkbox = document.createElement('input');
   if (obj.checklist === 'done') checkbox.checked = true;
   checkbox.type = 'checkbox';
-  checkbox.id = 'toggleDoneBox';
 
   let roundSpan = document.createElement('span');
   roundSpan.classList.add('round');
@@ -129,7 +128,25 @@ const deleteTask = (event) => {
 
 todos.addEventListener('click', deleteTask);
 
-// TODO: Event listener for Checkbox
+const toggleDone = (event) => {
+  if (!event.target.matches('INPUT')) return;
+  let targetTitle = event.target.parentNode.parentNode.children[1].outerText;
+  for (let i = 0; i < tasks.length; i++) {
+    if (targetTitle === tasks[i].title) {
+      if (tasks[i].checklist === 'done') {
+        tasks[i].checklist = undefined;
+      } else {
+        tasks[i].checklist = 'done';
+      }
+    }
+  }
+  saveToLocalStorage();
+  clearContent(todos);
+  tasks.map(renderTodos);
+};
+
+todos.addEventListener('click', toggleDone);
+
 // TODO: Add count of items left in array
 // TODO: Add Event listener for clear completed
 // TODO: Add Event Listener for the filters
