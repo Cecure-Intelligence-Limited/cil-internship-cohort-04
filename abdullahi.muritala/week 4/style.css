@@ -118,6 +118,10 @@ form span {
   border-radius: 50%;
 }
 
+.todo-list {
+  box-shadow: 7px 7px 7px 3px var(--card-shadow-color);
+}
+
 .todo-list ul {
   list-style-type: none;
   padding-inline-start: 0px;
@@ -178,6 +182,7 @@ button {
 .todo-list .controls {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 0.5rem 0.5rem;
   font-size: 14px;
@@ -193,4 +198,31 @@ button {
 .todo-list .controls button {
   font-size: inherit;
   color: inherit;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-image: var(--bg-img-mobile);
+  }
+  main {
+    margin: 0 30px;
+  }
+
+  .controls > * {
+    flex-basis: 35%;
+  }
+
+  .controls div {
+    order: 3;
+    margin-top: 20px;
+  }
+}
+
+.d-none {
+  display: none;
+}
+
+html[data-theme='light'] .d-block-light,
+html[data-theme='dark'] .d-block-dark {
+  display: block !important;
 }
