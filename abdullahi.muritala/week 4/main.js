@@ -114,7 +114,21 @@ const restoreLocalStorage = () => {
 // Call this on starting the app
 restoreLocalStorage();
 
-// TODO: Event listener for delete button
+const deleteTask = (event) => {
+  if (!event.target.matches('IMG')) return;
+  let targetTitle = event.target.parentNode.parentNode.children[1].outerText;
+  for (let i = 0; i < tasks.length; i++) {
+    if (targetTitle === tasks[i].title) {
+      tasks.splice(i, 1);
+    }
+  }
+  saveToLocalStorage();
+  clearContent(todos);
+  tasks.map(renderTodos);
+};
+
+todos.addEventListener('click', deleteTask);
+
 // TODO: Event listener for Checkbox
 // TODO: Add count of items left in array
 // TODO: Add Event listener for clear completed
