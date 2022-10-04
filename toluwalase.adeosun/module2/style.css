@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --font-family: 'Josefin Sans', sans-serif;
+
+}
+
+.wrapper {
+    height: 100vh;
+    /* background-color: #181824; */
+    width: 100%;
+    position: relative;
+}
+
+.bg-img {
+    background-image: url("./images/bg-desktop-dark.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    width: 100%;
+    height: 20%
+}
+
+.inner_wrapper {
+    width: 80%;
+    height: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+}
+
+.todo_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-family);
+    color: hsl(0, 0%, 98%);
+    margin-bottom: 3rem;
+}
+
+.todo_header h1 {
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+.modeSwitch {
+    width: 80px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.modeSwitch button {
+    background: none;
+    border: none;
+}
+
+#back {
+    background-color: none;
+    margin-bottom: 10px;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    /* Light grey */
+    border-top: 16px solid #d6d9dbcd;
+    /* Blue */
+    border-radius: 50%;
+    position: absolute;
+    left: 47%;
+    top: 47%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.usersContainer {
+    width: 100%;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 3rem;
+    justify-items: center;
+    overflow-y: scroll;
+
+}
+
+.user {
+    width: 220px;
+    height: 200px;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    font-family: var(--font-family);
+    background: #d4ade6;
+    box-shadow: inset 20px 20px 60px #b493c4,
+        inset -20px -20px 60px #f4c7ff;
+}
+
+.user h3,
+.user a,
+.user button {
+    padding: 1rem 0;
+    font-family: var(--font-family);
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.user button {
+    background-color: black;
+    padding: 1rem;
+    font-family: var(--font-family);
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.tab {
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+.tab h1 {
+    background-color: inherit;
+    text-align: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+.tabcontent {
+    background-color: #ccc;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+
+.todo {
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    box-shadow: 0px 0px 20px rgb(0 0 0 / 10%);
+    margin-bottom: 16px;
+    border-left: 4px solid #604aed;
+    border-right: 4px solid #604aed;
+    border-top: 1px solid #604aed;
+    border-bottom: 1px solid #604aed;
+
+    border-radius: 2px;
+}
+
+.todo h3 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.todo p[type="false"] {
+    content: url(./images/red-x-icon.png);
+    width: 20px;
+    height: 20px;
+}
+
+.todo p[type="true"] {
+    content: url(./images/done-icon.png);
+    width: 20px;
+    height: 20px;
+}
