@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   mode: 'development',
   module: {
@@ -14,5 +16,10 @@ module.exports = {
   devtool: false,
   resolve: {
     extensions: ['.ts', '.js'],
+  },
+  devServer: {
+    static: {
+      directory: path.join(__dirname, '/dist'),
+    },
   },
 };
