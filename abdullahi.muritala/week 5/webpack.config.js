@@ -1,10 +1,24 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
-const plugins = [new MiniCssExtractPlugin()];
+const plugins = [
+  new MiniCssExtractPlugin(),
+  new HtmlWebpackPlugin({
+    template: './src/index.html',
+  }),
+];
 
 module.exports = {
   mode: 'development',
+  entry: './src/index.ts',
+  output: {
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: 'images/[hash][ext][query]',
+    clean: true,
+  },
   module: {
     rules: [
       {
@@ -42,4 +56,9 @@ module.exports = {
     },
   },
   plugins: plugins,
+  target: 'browserslist',
+  optimization: {
+    minimizer: [new CssMinimizerPlugin()],
+    minimize: true,
+  },
 };
