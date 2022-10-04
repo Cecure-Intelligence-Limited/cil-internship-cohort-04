@@ -1,3 +1,255 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: hsl(236, 33%, 92%);
+  --card-background: hsl(0, 0%, 98%);
+  --text-color: hsl(0, 0%, 26%);
+  --inactive-color: hsl(236, 9%, 61%);
+  --active-color: hsl(220, 98%, 61%);
+  --hover-color: hsl(235, 19%, 35%);
+  --check-color: hsl(233, 11%, 84%);
+  --card-shadow-color: hsla(240, 5%, 85%, 0.603);
+  --bg-img-mobile: url('../assets/images/bg-mobile-light.jpg');
+  --bg-img-desktop: url('../assets/images/bg-desktop-light.jpg');
+}
+
+html[data-theme='light'] {
+  --background-color: hsl(236, 33%, 92%);
+  --card-background: hsl(0, 0%, 98%);
+  --text-color: hsl(0, 0%, 26%);
+  --inactive-color: hsl(236, 9%, 61%);
+  --active-color: hsl(220, 98%, 61%);
+  --hover-color: hsl(235, 19%, 35%);
+  --check-color: hsl(233, 11%, 84%);
+  --card-shadow-color: hsla(240, 5%, 85%, 0.603);
+  --bg-img-mobile: url('../assets/images/bg-mobile-light.jpg');
+  --bg-img-desktop: url('../assets/images/bg-desktop-light.jpg');
+}
+
+html[data-theme='dark'] {
+  --background-color: hsl(235, 21%, 11%);
+  --card-background: hsl(235, 24%, 19%);
+  --text-color: hsl(0, 0%, 73%);
+  --inactive-color: hsl(234, 11%, 52%);
+  --active-color: hsl(234, 39%, 85%);
+  --hover-color: hsl(236, 33%, 92%);
+  --check-color: hsl(233, 14%, 35%);
+  --card-shadow-color: hsla(0, 0%, 7%, 0.877);
+  --bg-img-mobile: url('../assets/images/bg-mobile-dark.jpg');
+  --bg-img-desktop: url('../assets/images/bg-desktop-dark.jpg');
+}
+
 body {
-  background-color: aqua;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+  width: 100%;
+  min-height: 100vh;
+  background-image: var(--bg-img-desktop);
+  background-color: var(--background-color);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: contain;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+section.content {
+  flex: 0 1 500px;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.content .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+}
+
+section.content > * {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+  font-size: 16px;
+}
+
+section.content > *:not(.header) {
+  background: var(--card-background);
+}
+
+h1 {
+  color: white;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+}
+
+form input {
+  width: 100%;
+  padding: 1rem 1rem;
+  border: 0px;
+  color: inherit;
+  background-color: var(--card-background);
+}
+
+/* Although I believe removing outline on focus is bad for assessibility, I hace decided to add it to be consistent witht the design
+*/
+
+form input:focus {
+  outline: none;
+}
+
+form span {
+  width: 25px;
+  height: 25px;
+  border: 2px solid var(--check-color);
+  border-radius: 50%;
+}
+
+.todo-list {
+  box-shadow: 7px 7px 7px 3px var(--card-shadow-color);
+}
+
+.todo-list ul {
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+
+.todo-list .todo-item {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 0.5rem;
+  margin: 0.5rem 0;
+  height: 3rem;
+  border-bottom: 1px solid var(--check-color);
+  text-align: left;
+}
+
+.todo-item label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  background-color: transparent;
+  border: 1px solid var(--check-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.todo-item input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.todo-item input:checked + .round {
+  background-image: url('../assets/icons/icon-check.svg'), linear-gradient(#57ddff, #c058f3);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.todo-item.todo-item.completed {
+  opacity: 0.5;
+}
+
+.todo-item.completed > li {
+  text-decoration: line-through;
+}
+
+.todo-item .todo {
+  flex: 1;
+  padding-left: 1rem;
+  color: inherit;
+}
+
+.todo-item > button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+.todo-item:hover > button {
+  opacity: 1;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+.todo-list .controls {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 0.5rem 0.5rem;
+  font-size: 14px;
+  color: var(--inactive-color);
+}
+
+.todo-list .controls div {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.todo-list .controls button {
+  font-size: inherit;
+  color: inherit;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-image: var(--bg-img-mobile);
+  }
+  main {
+    margin: 0 30px;
+  }
+
+  .todo-item > button {
+    opacity: 1;
+  }
+
+  .controls > * {
+    flex-basis: 35%;
+  }
+
+  .controls div {
+    order: 3;
+    margin-top: 20px;
+  }
+}
+
+.d-none {
+  display: none;
+}
+
+html[data-theme='light'] .d-block-light,
+html[data-theme='dark'] .d-block-dark {
+  display: block !important;
 }
