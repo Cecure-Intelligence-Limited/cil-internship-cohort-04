@@ -22,9 +22,9 @@ Resources:
   LambdaFunction:
     Type: 'AWS::Lambda::Function'
     Properties:
-      Description: Creating Amazon lambda function from CloudFormation
+      Description: Amazon lambda function with AWS CloudFormation
       FunctionName: lambdafunction01
-      Role: !GetAtt AWSLambdaRole1.Arn
+      Role: !GetAtt LambdaTestRole.Arn
       Runtime: python3.9
       Handler: index.lambda_handler
       Code:

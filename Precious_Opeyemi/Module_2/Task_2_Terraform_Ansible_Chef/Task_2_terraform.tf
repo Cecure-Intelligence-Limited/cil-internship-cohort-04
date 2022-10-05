@@ -47,7 +47,7 @@ resource "aws_lambda_function" "lambda_function" {
   runtime = "python3.9"
   role = aws_iam_role.iam_for_lambda.arn
   handler = "lambda.lambda_handler"
-  description = "Creating Amazon lambda function with terraform"
+  description = "Amazon lambda function with HashiCorp Terraform"
 }
 
 resource "aws_sfn_state_machine" "sfn_state_machine" {
