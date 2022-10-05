@@ -124,7 +124,7 @@ form span {
 
 .todo-list ul {
   list-style-type: none;
-  padding-inline-start: 0px;
+  margin-left: -40px;
 }
 
 .todo-list .todo-item {

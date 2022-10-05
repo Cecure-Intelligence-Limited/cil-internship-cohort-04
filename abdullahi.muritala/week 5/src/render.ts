@@ -1,6 +1,8 @@
 import { todos, tasks } from './index';
 import TaskInterface from './task';
 
+const crossPath = require('./assets/icons/icon-cross.svg');
+
 const taskCount = document.querySelector('.controls span') as HTMLSpanElement;
 
 // Map over the tasks array to render the todo items in todo unordered list
@@ -26,7 +28,7 @@ const render = (obj: TaskInterface) => {
 
   let delBtn = document.createElement('button');
   let crossIcon = document.createElement('img');
-  crossIcon.src = './assets/icons/icon-cross.svg';
+  crossIcon.src = crossPath;
   crossIcon.alt = 'delete';
 
   // Append all the contents to todoItem
