@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+            <a href="index.html"><img class="logo" src="images/logo.svg" alt="Website's Logo"></a>
+            <img id="mobile-cta" class="mobile-menu" src="images/menu.svg" alt="Open Menu">
+            <nav>
+                <img id="mobile-exit" class="mobile-menu-exit" src="images/exit.svg" alt="Exit Menu">
+                <ul class="primary-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="current"><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <ul class="secondary-nav">
+                    <li class="nav-button"><a href="contact.html">Become a MAX Rider</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <div class="bg-image">
+                <img src="images/about1.jpg" alt="Team at work">
+            </div>
+            <div class="bg-text">
+                <h1>About Us</h1>
+                <h5>Home >> About Us</h5>
+            </div>
+        </div>
+        <div class="bubble">
+            <img src="images/bubble.svg" class="bubble" alt="Let's chat">
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <div class="left-column">
+                <img src="images/about3.jpg" alt="Worldwide Reach">
+            </div>
+            <div class="right-column">
+                <h3>Africa Based.</h3>
+                <h1>Worldwide Focused.</h1>
+                <p>ARC is a global leader in the Human Resources Industry. By serving as a trusted human partner in today's technology-driven world of talent, we support people and organisations in realising their true potentials.</p>
+                <p>We are a technology-driven Professional Employer organisation solving the problem of hiring and paying your company's global talent. We understand that identifying and retaining high-quality talent is one of the biggest and most important challenge facing organisation and this is something we take pride in solving. We have a full range of staffing, technical recruiting and retention services that achieve your goals.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <div class="heading">
+                <h5>SERVICES</h5>
+                <h2>Our Services</h2>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <img src="images/graph.png" alt="HR Professional Services">
+                    <h4>HR Professional Services</h4>
+                </div>
+                <div class="column">
+                    <img src="images/toolbox.png" alt="Staffing and Recruiting">
+                    <h4>Staffing and Recruiting</h4>
+                </div>
+                <div class="column">
+                    <img src="images/globe.png" alt="Payroll and Benefits">
+                    <h4>Payroll and Benefits</h4>
+                </div>
+            </div>
+            <div class="view">
+                <h5>VIEW MORE</h5>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="container">
+            <div class="heading">
+                <h1>The world of vehicles at the feet of a MAX champion</h1>
+                <div class="footer-cta">
+                    <a href="contact.html" class="footer-cta">Become a MAX Champion</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <h4>Company</h4>
+                    <p>About Metro Africa Xpress</p>
+                    <p>Impacts</p>
+                    <p>Press &amp; Media</p>
+                    <p>Careers</p>
+                </div>
+                <div class="column">
+                    <h4>Services</h4>
+                    <p>Drivers Platform</p>
+                    <p>Transport Marketplace</p>
+                    <p>Enterprise</p>
+                    <p>Electric Vehicles</p>
+                </div>
+                <div class="column">
+                    <h4>Get In Touch</h4>
+                    <i class="fa fa-youtube-play"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-linkedin-square"></i>
+                    <p>success@max.ng</p>
+                    <p>info@max.ng</p>
+                    <p>25b Bisola Durosinmi Etti dr, Lekki Phase 1</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+
+        const mobileBtn = document.getElementById('mobile-cta')
+              nav = document.querySelector('nav')
+              mobileBtnExit = document.getElementById('mobile-exit');
+
+        mobileBtn.addEventListener('click', () => {
+            nav.classList.add('menu-btn');
+        })
+
+        mobileBtnExit.addEventListener('click', () => {
+            nav.classList.remove('menu-btn');
+        })
+
+    </script>
+    
+</body>
+</html>
