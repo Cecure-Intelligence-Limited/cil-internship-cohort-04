@@ -64,8 +64,44 @@ const restoreLocalStorage = () => {
   tasks.map(render);
 };
 
+const deleteTask = (event: MouseEvent) => {
+  const target = event.target as HTMLImageElement;
+  if (!target.matches('IMG')) return;
+  const targetTask = target?.parentNode?.parentNode?.children[1] as HTMLLinkElement;
+  let targetTitle = targetTask.outerText;
+  for (let i = 0; i < tasks.length; i++) {
+    if (targetTitle === tasks[i].title) {
+      tasks.splice(i, 1);
+    }
+  }
+  saveToLocalStorage();
+  clearContent(todos);
+  tasks.map(renderTodos);
+};
+
+const toggleDone = (event: MouseEvent) => {
+  const target = event.target as HTMLInputElement;
+  if (!target.matches('INPUT')) return;
+  const targetTask = target?.parentNode?.parentNode?.children[1] as HTMLLinkElement;
+  let targetTitle = targetTask.outerText;
+  for (let i = 0; i < tasks.length; i++) {
+    if (targetTitle === tasks[i].title) {
+      if (tasks[i].checklist === 'done') {
+        tasks[i].checklist = undefined;
+      } else {
+        tasks[i].checklist = 'done';
+      }
+    }
+  }
+  saveToLocalStorage();
+  clearContent(todos);
+  tasks.map(renderTodos);
+};
+
 toggle.addEventListener('click', handleThemeToggle);
 newTaskForm.addEventListener('submit', addNewTask);
+todos.addEventListener('click', deleteTask);
+todos.addEventListener('click', toggleDone);
 
 // Call this on starting the app
 restoreLocalStorage();
