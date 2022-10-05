@@ -104,6 +104,10 @@ form input {
   background-color: var(--card-background);
 }
 
+form input[type='number'] {
+  width: 35%;
+}
+
 /* Although I believe removing outline on focus is bad for assessibility, I hace decided to add it to be consistent witht the design
 */
 
