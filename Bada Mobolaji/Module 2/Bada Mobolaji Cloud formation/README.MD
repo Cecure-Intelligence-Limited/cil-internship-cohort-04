@@ -1,3 +1,5 @@
+<img src="https://github.com/Mobolaji-Github/cil-internship-cohort-04/blob/069/Bada%20Mobolaji/Module%202/Bada%20Mobolaji%20Cloud%20formation/images/cloud-formation.png?raw=true">
+
 The Format Version helps to identify the capabilities of the template.  The most up to date version as I write is 2010-09-09.
 
 The second line is the Description, which is used to help you and others understand what the template does.
