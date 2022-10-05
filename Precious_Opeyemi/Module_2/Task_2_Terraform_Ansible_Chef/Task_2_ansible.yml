@@ -36,4 +36,4 @@
       handler: lambda.lambda_handler
       role: MyAWSLambdaRole3
       region: us-east-1
-      description: Creating Amazon lambda function with ansible
+      description: Creating Amazon lambda function with Redhat Ansible
