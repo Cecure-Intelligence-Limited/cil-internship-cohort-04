@@ -4,7 +4,7 @@ Resources:
   LambdaTestRole:
     Type: AWS::IAM::Role
     Properties:
-      RoleName: lambdatestrole
+      RoleName: AWSLambdaRole1
       AssumeRolePolicyDocument:
         Version: "2012-10-17"
         Statement:
@@ -23,15 +23,17 @@ Resources:
     Type: 'AWS::Lambda::Function'
     Properties:
       Description: Creating Amazon lambda function from CloudFormation
-      FunctionName: lambdafunctiontemplate01
-      Role: !GetAtt LambdaTestRole.Arn
+      FunctionName: lambdafunction01
+      Role: !GetAtt AWSLambdaRole1.Arn
       Runtime: python3.9
       Handler: index.lambda_handler
       Code:
         ZipFile: |
           def lambda_handler(event, context):
-            message = 'Hello world!'
-            return message
+            message = 'Hello {} {}!'.format(event['first_name'], event['last_name'])  
+            return { 
+                'message' : message
+            }
 
   S3Bucket:
     Type: AWS::S3::Bucket
