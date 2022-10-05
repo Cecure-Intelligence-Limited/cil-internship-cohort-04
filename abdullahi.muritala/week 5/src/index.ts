@@ -3,6 +3,7 @@ import './styles/index.css';
 import TaskInterface from './task';
 import Task from './task';
 import render from './render';
+import fetchTodos from './fetchTodos';
 
 export let tasks: TaskInterface[] = [];
 let toggle = document.querySelector('#theme-toggle') as HTMLButtonElement;
@@ -12,6 +13,7 @@ const allTasksBtn = document.querySelector('#allTasksBtn') as HTMLButtonElement;
 const activeTasksBtn = document.querySelector('#activeTasksBtn') as HTMLButtonElement;
 const completedTasksBtn = document.querySelector('#completedTasksBtn') as HTMLButtonElement;
 const clearCompletedBtn = document.querySelector('#clearCompletedBtn') as HTMLButtonElement;
+const fetchTodosForm = document.querySelector('#fetchTodosForm') as HTMLFormElement;
 
 // Handle the theme switching logic
 let storedTheme: string =
@@ -122,6 +124,21 @@ const filterActiveTasks = (): void => {
   activeTasks.map(render);
 };
 
+const displayApiTodos = async (event: SubmitEvent) => {
+  event.preventDefault();
+  tasks = [];
+  const userIdElement = document.querySelector('#todoUserId') as HTMLInputElement;
+  const userId = Number(userIdElement.value);
+  const apiTodos = await fetchTodos(userId);
+  apiTodos.forEach((todo) => {
+    const title = todo.title;
+    const checklist = todo.completed ? 'done' : undefined;
+    const newTask = new Task(title, checklist);
+    newTask.addToTasks();
+    renderTodos();
+  });
+};
+
 toggle.addEventListener('click', handleThemeToggle);
 newTaskForm.addEventListener('submit', addNewTask);
 todos.addEventListener('click', deleteTask);
@@ -130,6 +147,7 @@ clearCompletedBtn.addEventListener('click', clearCompletedTasks);
 completedTasksBtn.addEventListener('click', filterCompletedTasks);
 activeTasksBtn.addEventListener('click', filterActiveTasks);
 allTasksBtn.addEventListener('click', renderTodos);
+fetchTodosForm.addEventListener('submit', displayApiTodos);
 
 // Call this on starting the app
 restoreLocalStorage();
