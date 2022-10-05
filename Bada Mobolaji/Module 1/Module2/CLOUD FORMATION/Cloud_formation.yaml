@@ -1,0 +1,56 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: CloudFormation template for s3 bucket and lambda function
+Resources:
+  S3Bucket:
+    DeletionPolicy: Retain
+    Type: 'AWS::S3::Bucket'
+    Description: Creating Amazon S3 bucket from CloudFormation
+    Properties:
+      AccessControl: Private
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      VersioningConfiguration:
+        Status: Enabled
+
+  NamesLambdaRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: NamesLambdaRole
+      AssumeRolePolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+                
+
+  NamesLambdaFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: NamesLambdaFunction
+      Role: !GetAtt NamesLambdaRole.Arn
+      Runtime: python3.7
+      Handler: index.my_handler
+      Code:
+         ZipFile: |
+          def my_handler(event, context):
+            message = {'firstName': 'Mobolaji',
+            'lastName': 'Bada',
+            'hobbies': ['Playing Games', 'Watching Movies', 'Surfing the web', 'Cooking'],
+            'Programming_Languages': [{'Name': 'Python', 'Proficiency': 'Good '},
+              {'Name': 'SQL', 'Proficiency': 'Good'},
+              {'Name': 'Javascript', 'Proficiency': 'Good '}],
+            'Dry Jokes': 'Why should you take a data scientist with you into the jungle? Answer: They can take care of Python problems'}
+
+            return message
+Outputs:
+  S3Bucket:
+    Description: Bucket Created using this template.
+    Value: !Ref S3Bucket
