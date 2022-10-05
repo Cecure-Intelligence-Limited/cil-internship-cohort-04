@@ -8,6 +8,10 @@ export let tasks: TaskInterface[] = [];
 let toggle = document.querySelector('#theme-toggle') as HTMLButtonElement;
 const newTaskForm = document.querySelector('#newTaskForm') as HTMLFormElement;
 export const todos = document.querySelector('#todos') as HTMLUListElement;
+const allTasksBtn = document.querySelector('#allTasksBtn') as HTMLButtonElement;
+const activeTasksBtn = document.querySelector('#activeTasksBtn') as HTMLButtonElement;
+const completedTasksBtn = document.querySelector('#completedTasksBtn') as HTMLButtonElement;
+const clearCompletedBtn = document.querySelector('#clearCompletedBtn') as HTMLButtonElement;
 
 // Handle the theme switching logic
 let storedTheme: string =
@@ -51,11 +55,11 @@ const renderTodos = (): void => {
   tasks.map(render);
 };
 
-const saveToLocalStorage = () => {
+const saveToLocalStorage = (): void => {
   localStorage.setItem('tasks', JSON.stringify(tasks));
 };
 
-const restoreLocalStorage = () => {
+const restoreLocalStorage = (): void => {
   const value = localStorage.getItem('tasks');
   if (typeof value === 'string') {
     tasks = JSON.parse(value);
@@ -64,7 +68,7 @@ const restoreLocalStorage = () => {
   tasks.map(render);
 };
 
-const deleteTask = (event: MouseEvent) => {
+const deleteTask = (event: MouseEvent): void => {
   const target = event.target as HTMLImageElement;
   if (!target.matches('IMG')) return;
   const targetTask = target?.parentNode?.parentNode?.children[1] as HTMLLinkElement;
@@ -79,7 +83,7 @@ const deleteTask = (event: MouseEvent) => {
   tasks.map(renderTodos);
 };
 
-const toggleDone = (event: MouseEvent) => {
+const toggleDone = (event: MouseEvent): void => {
   const target = event.target as HTMLInputElement;
   if (!target.matches('INPUT')) return;
   const targetTask = target?.parentNode?.parentNode?.children[1] as HTMLLinkElement;
@@ -98,10 +102,34 @@ const toggleDone = (event: MouseEvent) => {
   tasks.map(renderTodos);
 };
 
+const clearCompletedTasks = (): void => {
+  const remainingTasks = tasks.filter((task) => !task.checklist);
+  tasks = [...remainingTasks];
+  saveToLocalStorage();
+  clearContent(todos);
+  tasks.map(renderTodos);
+};
+
+const filterCompletedTasks = (): void => {
+  const completedTasks = tasks.filter((task) => task.checklist);
+  clearContent(todos);
+  completedTasks.map(render);
+};
+
+const filterActiveTasks = (): void => {
+  const activeTasks = tasks.filter((task) => !task.checklist);
+  clearContent(todos);
+  activeTasks.map(render);
+};
+
 toggle.addEventListener('click', handleThemeToggle);
 newTaskForm.addEventListener('submit', addNewTask);
 todos.addEventListener('click', deleteTask);
 todos.addEventListener('click', toggleDone);
+clearCompletedBtn.addEventListener('click', clearCompletedTasks);
+completedTasksBtn.addEventListener('click', filterCompletedTasks);
+activeTasksBtn.addEventListener('click', filterActiveTasks);
+allTasksBtn.addEventListener('click', renderTodos);
 
 // Call this on starting the app
 restoreLocalStorage();
