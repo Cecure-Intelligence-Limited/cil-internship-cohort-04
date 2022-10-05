@@ -11,7 +11,7 @@ const plugins = [
 ];
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: './src/index.ts',
   output: {
     filename: '[name].bundle.js',
