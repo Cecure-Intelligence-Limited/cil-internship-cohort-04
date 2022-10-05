@@ -2,12 +2,16 @@
 
 This is to demonstrate the usage of several AWS Lambda functions to create a workflow on AWS Step Function. Terraform configuration files are also provided to simplify the process of setting up the required AWS resources.
 
+<img src="https://github.com/Mobolaji-Github/cil-internship-cohort-04/blob/069/Bada%20Mobolaji/Module%202/Bada%20Mobolaji-aws-step-functions/images/cecure-state-machine.png?raw=true">
+
 # AWS Step Function
 - This is a choice based step function.
 - Either of the lambda Function can be triggered based on the input feed into the function.
 # AWS Lambda Function
 - process-purchase-lambda - This is triggered when input = {"TransactionType": "PURCHASE"} , it displays the type,time of transaction and customized message.
 - process-refund-lambda - This is triggered when input = {"TransactionType": "REFUND"} , it displays the type,time of transaction and customized message.
+
+<img src="https://github.com/Mobolaji-Github/cil-internship-cohort-04/blob/069/Bada%20Mobolaji/Module%202/Bada%20Mobolaji-aws-step-functions/images/sfn-input.png?raw=true">
 
 # Terraform - Prerequisite
 - To use terraform, go to [here](https://learn.hashicorp.com/terraform/getting-started/install.html) to install and learn Terraform by Hashicorp.
@@ -19,6 +23,10 @@ This is to demonstrate the usage of several AWS Lambda functions to create a wor
 # please note
 - I used "aws configure --profile myaws" inside my terminal to set the profile name, myaws is feed into main.ft as the profile. 
 - An error would occur if the profile is not set yet.
+
+<img src="https://github.com/Mobolaji-Github/cil-internship-cohort-04/blob/069/Bada%20Mobolaji/Module%202/Bada%20Mobolaji-aws-step-functions/images/purchase.png?raw=true">
+
+<img src="https://github.com/Mobolaji-Github/cil-internship-cohort-04/blob/069/Bada%20Mobolaji/Module%202/Bada%20Mobolaji-aws-step-functions/images/refund.png?raw=true">
 
 # Terraform - Guide
  - After `git clone`, change directory to `cd ./terraform/`.
