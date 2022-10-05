@@ -1,52 +1,47 @@
-# declare template format and version
 AWSTemplateFormatVersion: "2010-09-09"
 Description: A simple template that provisioning for lambda function and S3 Bucket
-Resources:    # resource header
-  NazzLambdaRole:   #  define the resource role
-    Type: AWS::IAM::Role  # role type
-    Properties:   #    role properties
-      RoleName: NazzLambdaRole  #     resource role name
+Resources:    
+  NewLambdaRole:   
+    Type: AWS::IAM::Role  
+    Properties:   
+      RoleName: NewLambdaRole  
       AssumeRolePolicyDocument:
         Version: "2012-10-17"
         Statement:
-          - Effect: Allow  #    allow role
+          - Effect: Allow  
             Principal:
               Service: lambda.amazonaws.com
             Action: sts:AssumeRole
 
-  NazzLambdaFunction:   #  define the resource function
-    Type: AWS::Lambda::Function #    function type
-    Properties:  #    function properties
-      FunctionName: NazzLambdaFunction  #      function name
-      Role: !GetAtt NazzLambdaRole.Arn  # get attribute intrinsic function
-      Runtime: python3.9  #     the function is written in python
-      Handler: index.my_handler  # invoke function using handler
+  NazzNewLambdaFunction:   
+    Type: AWS::Lambda::Function 
+    Properties:  
+      FunctionName: NazzNewLambdaFunction  
+      Role: !GetAtt NewLambdaRole.Arn  
+      Runtime: python3.8  
+      Handler: index.my_handler  
       Code:
         ZipFile: |
           def my_handler(event, context):
             message = 'Nazz Lambda World!'
             return message
 
-  NazzLogBucket:
-    Type: "AWS::S3::Bucket"
+  NazzS3Bucket:
+    DeletionPolicy: Retain
+    Type: 'AWS::S3::Bucket'
+    Description: Creating Amazon S3 bucket from CloudFormation
     Properties:
-      AccessControl: LogDeliveryWrite
-
-  NazzS3Bucket:  # define the resource s3 bucket
-    Type: AWS::S3::Bucket
-    Properties:
-      BucketName: nazzs3bucket
-      AccessControl: PublicRead
+      AccessControl: Private
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
       BucketEncryption:
         ServerSideEncryptionConfiguration:
           - ServerSideEncryptionByDefault:
               SSEAlgorithm: AES256
-        LoggingConfiguration:
-          DestinationBucketName: !Ref NazzLogBucket
-  Outputs:
-    Nazzs3Bucket:
-      Description: Name of the main bucket
-      Value: !Ref Nazzs3Bucket
-    LogBucketName:
-      Description: Name of the access log bucket
-      Value: !Ref NazzLogBucket
+      VersioningConfiguration:
+        Status: Enabled
+
+ 
