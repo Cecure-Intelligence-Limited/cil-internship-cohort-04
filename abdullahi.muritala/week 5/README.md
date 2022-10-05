@@ -4,9 +4,9 @@ A task in fulfilment of Frontend web development internship at Cecure Intelligen
 
 ## Resources
 
-A live version of [Todo List App](https://004-todo.netlify.app/).
+A live version of [Todo List App](https://004-typescript-todo.netlify.app/).
 
-A video demonstration of the web pages both in desktop and mobile viewports available [on google drive](https://drive.google.com/file/d/11N9zcpjjV2Y6StP5s0nEtA2I1aPXOqd7/view?usp=sharing).
+A video demonstration of the web pages both in desktop and mobile viewports available [on google drive](https://drive.google.com/file/d/1sOiCMEboDyg5gll-1y2VL4S7dWnQm9hU/view?usp=sharing).
 
 The designs followed were culled from [Frontend Mentor](https://www.frontendmentor.io) challenges.
 
@@ -46,7 +46,11 @@ It correctly bundles the app in production mode and optimizes the build for the 
 - CSS3
 - TypeScript
 - Webpack
+- [JSON Placeholder](https://jsonplaceholder.typicode.com/)
+- Netlify CLI for CI/CD and Hosting
 
 ### What I learned
 
-I came to appreciate how much JavaScript frontend libraries and frameworks have simplified rendering and rerendering.
+- I refreshed my knowledge of webpack configuration.
+- I came to appreciate how much tooling comes with create-react-app out of the box.
+- I learnt to use the Netlify CLI for continuous integration.
