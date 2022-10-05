@@ -1,0 +1,35 @@
+---
+ - name:  provisioning Lambda function using Ansible
+   hosts: localhost
+   connection: local
+   gather_facts: False
+   tags: provisioning
+   
+   tasks:
+    - name: looped creation
+      lambda:
+        name: '{{ item.name }}'
+        state: present
+        region: us-east-1
+        zip_file: '{{ item.zip_file }}'
+        runtime: 'python3.7'
+        role: 'arn:aws:iam::671113505501:role/lambda_ansible_role'
+        handler: index.my_handler
+        vpc_subnet_ids:
+        - subnet-0a467e55f45acff53
+        - subnet-015ef4387fde5d318
+        vpc_security_group_ids:
+        - sg-0280664e45db08f94
+        - sg-077238b855ef6033a
+        environment_variables: '{{ item.env_vars }}'
+      with_items:
+        - name: HelloWorld
+          zip_file: hello-code.zip
+          env_vars:
+            key1: "first"
+            key2: "second"
+        - name: ByeBye
+          zip_file: hello-code.zip
+          env_vars:
+            key1: "1"
+            key2: "2"

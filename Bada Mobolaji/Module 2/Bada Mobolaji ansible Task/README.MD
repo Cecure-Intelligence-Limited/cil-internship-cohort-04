@@ -1,0 +1,6 @@
+- created an EC2 ubuntu instance to serve as my ansible host
+- installed Ansible and Boro into the instance
+- created a playbooks folder
+- created a .yml file named it create-lambdafn.yml
+- edited the .yml file using vi
+- execute and troubleshot the code.
