@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dest/style.css" />
+    <title>Typescript TodoList</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Ts TodoList</h1>
+      <button class="todo-delete-all">Delete All</button>
+      <form class="todo-form">
+        <input
+          type="text"
+          class="todo-input"
+          required
+          placeholder="New Todo"
+          maxlength="30"
+          autofocus
+        />
+        <button class="todo-submit">Submit</button>
+      </form>
+      <ul class="todo-list">
+        <li>New Todo <input type="checkbox" /></li>
+      </ul>
+    </div>
+    <script src="./dest/index.js"></script>
+  </body>
+</html>
