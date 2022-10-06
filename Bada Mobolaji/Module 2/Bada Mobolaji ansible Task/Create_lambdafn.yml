@@ -4,9 +4,14 @@
    connection: local
    gather_facts: False
    tags: provisioning
-   
+
    tasks:
-    - name: looped creation
+    - name: archive lambda
+      archive:
+        path: /home/ubuntu/playbooks/hello-code.py
+        format: zip
+
+    - name: lambda creation
       lambda:
         name: '{{ item.name }}'
         state: present
@@ -14,7 +19,7 @@
         zip_file: '{{ item.zip_file }}'
         runtime: 'python3.7'
         role: 'arn:aws:iam::671113505501:role/lambda_ansible_role'
-        handler: index.my_handler
+        handler: hello-code.my_handler
         vpc_subnet_ids:
         - subnet-0a467e55f45acff53
         - subnet-015ef4387fde5d318
@@ -23,13 +28,29 @@
         - sg-077238b855ef6033a
         environment_variables: '{{ item.env_vars }}'
       with_items:
-        - name: HelloWorld
-          zip_file: hello-code.zip
+        - name: ansible_lambda
+          zip_file: hello-code.py.zip
           env_vars:
             key1: "first"
             key2: "second"
         - name: ByeBye
-          zip_file: hello-code.zip
+          zip_file: hello-code.py.zip
           env_vars:
             key1: "1"
             key2: "2"
+
+    - name: Run Ansile lambda
+      execute_lambda:
+        name: ansible_lambda
+        region: us-east-1
+        payload:
+          arg1: foo
+          arg2: bar
+        wait: true
+      register: ansible_lambda
+
+    - name: ansible lambda function
+      lambda:
+        region: us-east-1
+        state: absent
+        name: ansible_lambda
