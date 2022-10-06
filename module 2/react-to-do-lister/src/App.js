@@ -18,14 +18,22 @@ const [tasks, setTasks] = useState([
 
   }, []   )
 ])
-// fetch task
+// fetch tasks
 const fetchTasks = async () =>{
   const res = await fetch ('https://jsonplaceholder.typicode.com/todos')
   const data =await res.json()
  // console.log(data)
   return data
 }
- // add task
+
+//fetch task
+const fetchTask = async (id) =>{
+  const res = await fetch (`https://jsonplaceholder.typicode.com/todos/${id}`)
+  const data =await res.json()
+ // console.log(data)
+  return data
+}
+ // add task to app
 const addTask = async (task) =>{
  
   const id= tasks.length +1
@@ -48,13 +56,33 @@ const addTask = async (task) =>{
   setTasks([...tasks, data])
 
 }
-const deleteTask =(id) =>{
-
+const deleteTask = async (id) =>{
+  await fetch (`https://jsonplaceholder.typicode.com/todos/$
+  {id}`,
+  {
+    method: 'DELETE',
+    
+  })
   console.log('deleting ...', id)
   setTasks(tasks.filter((task) =>task.id !==id))
 }
-const toggleCompleted = (id)=>{
+const toggleCompleted = async(id)=>{
   console.log(id);
+  const taskToToggle = await fetchTask(id)
+  const updTask ={...taskToToggle, completed:!taskToToggle.completed}
+
+  const res = await fetch(
+    `https://jsonplaceholder.typicode.com/todos/${id}`,
+    {
+      method: 'PUT',
+      headers: {
+        'Content-type': 'application/json',
+      },
+      body: JSON.stringify(updTask),
+    })
+    const data=await res.json()
+
+   
   setTasks(tasks.map((task) => task.id === id ?
   {...task, completed:!task.completed} : task))
 }
