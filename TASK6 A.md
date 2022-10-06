@@ -10,7 +10,7 @@ It provides the capability to quickly adapt to changes in product definition and
 Testing and version control are essential elements of any software development process. Effective testing helps to eliminate product bugs through early detection and to resolve issues through versioning.The Scrum team identifies the tools for test coverage and sets the acceptable metrics. Beyond unit testing coverage, the Scrum team performs product feature testing to validate story success criteria.
 
 * On-time delivery
-To deliver software on time in Scrum, execute the elements of Scrum, which build upon each other. Stable, well-defined sprints ensure quality and predicable increments. Communication and feedback within the sprint allow participants to identify issues and to collaborate internally and externally. This enables you to resolve blocked work and or realign the backlog for the subsequent sprint.
+To deliver software on time in Scrum, execute the elements of Scrum, which build upon each other. Stable, well-defined sprints ensure quality and predicable increments. Communication and feedback within the sprint allow participants to identify issues and to collaborate internally and externally. This enables you to resolve blocked work and/or realign the backlog for the subsequent sprint.
 
 
 ## 2
