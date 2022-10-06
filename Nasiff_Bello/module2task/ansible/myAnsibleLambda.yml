@@ -1,0 +1,49 @@
+---
+ - name:  provisioning lambda function using Ansible
+   hosts: localhost
+   connection: local
+   gather_facts: False
+   tags: provisioning
+   become: yes
+
+   vars:
+    tempdir: tempdeploydir
+    deployenv: deployvenv
+    aws_profile: default
+
+    lambda_timeout: 300
+    lambda_memory: 2048
+    lambda_iam_role: arn:aws:iam::711328479423:role/NazzLambdaRole
+   
+   tasks:
+    - name: archive lambda
+      archive:
+        path: ./ansibleLambda.py
+        format: zip
+
+    - name: my ansible lambda function
+      lambda:
+        state: present
+        name: ansible_lambda
+        zip_file: ansibleLambda.py.zip
+        runtime: python3.8
+        handler:  ansibleLambda.ansible_lambda
+        region: us-east-1
+        role: arn:aws:iam::711328479423:role/NazzLambdaRole
+      
+  
+    - name: Run Ansile lambda
+      execute_lambda:
+        name: ansible_lambda
+        payload:
+          arg1: foo
+          arg2: bar
+        wait: true
+      register: ansible_lambda
+
+    - name: ansible lambda function
+      lambda:
+        state: absent
+        name: ansible_lambda
+
+   
