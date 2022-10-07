@@ -1,7 +1,7 @@
 provider "aws" {
   region  = "us-east-1"
-  access_key = "AKIAVDYTXDOZDCEK7PFV"
-  secret_key = "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"
+  access_key = "My name is Ifeoluwa and i removed my access keys because it poses a security risks"
+  secret_key = "My name is Ifeoluwa and i removed my secret keys because it poses a security risks"
 }
 
 terraform {
