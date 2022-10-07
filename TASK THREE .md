@@ -46,3 +46,5 @@ The Retained Time: this is to know how long users keep using the product. We’l
 # To measure Revenue:
 
 The Revenue per User: this is a way to measure that. There are many others — it’s a very business-dependent metric.
+
+The tool i will use is Amplitude
