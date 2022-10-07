@@ -104,7 +104,7 @@ The CloudFormation Stack can be created through the AWS console or AWS CLI on lo
 $ aws cloudformation deploy --template-file lambda-s3-cloudformation.json --stack-name LambdaS3CloudFormation --capabilities CAPABILITY_NAMED_IAM
 ```  
 
-Where `lambda-s3-cloudformation.json` is the file containing our template, `LambdaS3CloudFormation` is the desired name for the stack. And if you have used a named IAM role in our stack, we must include the `--capabilities` flag giving it a value of `CAPABILITY_NAMED_IAM`.
+Where `lambda-s3-cloudformation.json` is the file containing our template, `LambdaS3CloudFormation` is the desired name for the stack. Also, if a named IAM role is used in our stack, the `--capabilities` flag must be included with a value of `CAPABILITY_NAMED_IAM`.
 
 
 ##### - Using AWS Console
