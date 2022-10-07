@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: 2010-09-09
-#Resources
+#The Resources
 Resources:
   S3Bucket:
     Type: AWS::S3::Bucket

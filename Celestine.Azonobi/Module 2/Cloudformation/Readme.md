@@ -2,7 +2,7 @@
 # Cloudformation with Lambda and S3 Bucket.
  
 # Lambda
-Here are a few more details about the Lambda function properties:
+Here are a few more details about the Lambda function properties that we have:
 
 I named the **The Resource** as “HelloLambdaFunction”.
 
@@ -12,6 +12,7 @@ I created the HelloLambdaRole role so I could supply it here. Since CloudFormati
 
 **Runtime** is the programming language I used for my function. Note that python 3.6 has be deprecated on the console as at when I created this.
 **The Handler** specifies what function, within the Lambda code, should be invoked.
+
 
 
 # S3 :: Bucket 
