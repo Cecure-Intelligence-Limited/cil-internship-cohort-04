@@ -1,7 +1,0 @@
-[Article on UX design](https://www.figma.com/file/TFhGdmptkDA27nUVY0lQg7/Article-on-UX%2FUI-Fundamentals?node-id=0%3A1)
-[tutorial-1](https://www.figma.com/file/DpnZ2oAmSRz3nNBcHMGEmF/Attempted-Tasks-From-Tutorials--tutorial-1)
-[tutorial-2](https://www.figma.com/file/d0AeLNxhSQm3iQlOdFzJy1/Attempted-task-tutorial-tutorial-2)
-[tutorial-3](https://www.figma.com/file/a6uGHghWb6JquieOghkngz/Attempted-task-(tutorial-3))
-[tutorial-4](https://www.figma.com/file/fczWGy2le0j8tMpyVFQzKd/Attempted-task-(tutorial-4)?node-id=2%3A2)
-[tutorial-5](https://www.figma.com/file/0CJlyTY47AGq89VIOPeZ77/Attempted-task-(tutorial-5)?node-id=0%3A1)
-[tutorial-6](https://www.figma.com/file/DB0quR902tBHqZqcMYwafV/Attempted-task-(tutorial-6))
