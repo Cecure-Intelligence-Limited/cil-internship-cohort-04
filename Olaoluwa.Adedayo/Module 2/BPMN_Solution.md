@@ -1,0 +1,1 @@
+The following link contains the solution document to Oats Making BPMN Model. [Solution Document](https://docs.google.com/document/d/1w8xWHOLumXmgyOLLE6OVQSySOcB1XDyAiIf2JBCpCJ4/edit?usp=sharing)
