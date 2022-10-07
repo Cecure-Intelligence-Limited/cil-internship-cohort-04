@@ -1,21 +1,23 @@
-- hosts: localhost
+- name: deploy my_lambda_function
+  hosts: 127.0.0.1
+  connection: local
   vars:
-    iam_role_name: LambdaFunction-AnsibleIAMRole
-    lambda_fn_name: PythonHelloFunction
+    aws_region: us-east-2
+    s3_bucket: testLambdaBucket20
+    code_path: my_lambda_function/
+    zip_name: my_lambda_function.zip
   tasks:
-    - name: Create {{ iam_role_name }}
-      register: lambda_iam_return_value
-      community.aws.iam_role:
-        name: "{{ iam_role_name }}"
-        assume_role_policy_document: "{{ lookup('file','lambda_policy.json') }}"
-        state: present   
-    - name: Create {{ lambda_fn_name }}
-      community.aws.lambda:
-        name: "{{ lambda_fn_name }}"
-        state: present
-        zip_file: 'main.zip'
-        runtime: 'python3.7'
-        role: "{{ lambda_iam_return_value.arn }}"
-        handler: 'HelloPythonFunction'
-        tags:
-          Name: "{{ lambda_fn_name }}"
+    - include: includes/init_workspace.yml
+    - include: includes/build_zip.yml
+    - include: includes/copy_to_s3.yml
+
+    - name: cloudformation stack
+      cloudformation:
+        region: '{{ aws_region }}'
+        stack_name: my-lambda-function
+        template: files/my_lambda_function_stack.yml
+        template_format: yaml
+        template_parameters:
+          S3Bucket: '{{ s3_bucket }}'
+          S3Key: '{{ zip_name }}'
+          S3ObjectVersion: '{{ s3_version_id }}'
