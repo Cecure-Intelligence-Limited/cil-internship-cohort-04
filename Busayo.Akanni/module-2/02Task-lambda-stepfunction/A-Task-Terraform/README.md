@@ -1,4 +1,4 @@
-GO here: /Users/busayo.akanni/Desktop/Cecure-Module-2/02Task-step-lambda-function/Main.tf
+GO here: Main.tf
 
 Change line 6 to an existing bucket in your AWS account. e.g
 
@@ -7,7 +7,7 @@ Change line 6 to an existing bucket in your AWS account. e.g
 7    key    = "udapeople-udacityproject3.tfstate"
 8    region = "us-east-2"
 
-Go here: /Users/busayo.akanni/Desktop/Cecure-Module-2/02Task-step-lambda-function/LambdaFunction/AWSLambda.tf
+Go here: LambdaFunction/AWSLambda.tf
 
 Under resource s3, change the bucket name to a unique name as s3 bucket names must be unique across all accounts and regions. Ensure that the correct region where the bucket is, is selected.
 

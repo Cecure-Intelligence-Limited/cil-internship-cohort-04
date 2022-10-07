@@ -8,6 +8,7 @@ To run this, you will need:
 * Python and a recent `pip`
 * Ansible 2.0+ (`pip install ansible`)
 * Boto, configured to work on your target AWS account (`pip install boto`)
+* `pip install botocore`
 * The AWS CLI (`pip install awscli`)
 
 Usage
@@ -19,6 +20,6 @@ Usage
    will be created too.
 
 2. Run `ansible-playbook playbook.yml`. It will create a Cloudformation stack
-   in your AWS account called `my-lambda-function` that runs the example Lambda
+   in your AWS account called `PythonHelloFunction` that runs the example Lambda
    function every day at 08:00 UTC, logging "Hello World".
 
