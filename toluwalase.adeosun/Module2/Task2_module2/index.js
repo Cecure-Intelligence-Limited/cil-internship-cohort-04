@@ -58,19 +58,10 @@ async function renderUsers() {
 renderUsers();
 
 const getTodoDetails = async (event, id) => {
-  window.location.href = `/toluwalase.adeosun/module2/todoDetails.html?id=${id}`;
+  window.location.href = `/toluwalase.adeosun/Module2/Task2_module2/todoDetails.html?id=${id}`;
   console.log(id);
 };
 
-// let switch= false
-
-// if (switch = false) {
-//   document.querySelector('.wrapper').style.backgroundColor = 'black';
-// } else {
-//   document.querySelector('.wrapper').style.backgroundColor = 'blue';
-// }
-
-// document.querySelector('.lightSwitchMode').addEventListener("click", ;
 function dark_mode() {
   document.querySelector('.wrapper').style.backgroundColor = 'black';
 }
