@@ -1,0 +1,33 @@
+Description: Provisioning a Lambda Function and an S3 Bucket
+Resources:
+  TaskLambdaRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: TaskLambdaRole
+      AssumeRolePolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+
+  TaskLambdaFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      Architectures:
+        - x86_64
+      FunctionName: TaskLambdaFunction
+      Role: !GetAtt TaskLambdaRole.Arn
+      Runtime: python3.7
+      Handler: index.handler
+      Code:
+        ZipFile: |
+          def handler(event, context):
+            message = 'This Task is to create a template for Lambda and S3 Bucket!'
+            return message
+
+  TaskS3Bucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Retain
+    Properties:
+      BucketName: TaskBucket
