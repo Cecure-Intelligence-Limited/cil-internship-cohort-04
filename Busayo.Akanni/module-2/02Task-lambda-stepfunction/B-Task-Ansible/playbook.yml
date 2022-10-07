@@ -1,23 +1,19 @@
-- name: deploy my_lambda_function
-  hosts: 127.0.0.1
-  connection: local
-  vars:
-    aws_region: us-east-2
-    s3_bucket: testLambdaBucket20
-    code_path: my_lambda_function/
-    zip_name: my_lambda_function.zip
-  tasks:
-    - include: includes/init_workspace.yml
-    - include: includes/build_zip.yml
-    - include: includes/copy_to_s3.yml
+  - hosts: localhost
+    tasks:
+      - name: Create a role with description and tags
+        register: lambda_role
+        community.aws.iam_role:
+          name: lambda-role
+          assume_role_policy_document: "{{ lookup('file','policy.json') }}"
+          description: This is My New Role
+          state: present
+      - name: PythonFunction
+        community.aws.lambda:
+          name: ansible-deploy-lambda
+          state: present
+          zip_file: my_lambda_function/my_lambda_function.zip
+          runtime: 'python3.9'
+          role: "{{ lambda_role.arn }}"
+          handler: 'hello_python.my_handler'
 
-    - name: cloudformation stack
-      cloudformation:
-        region: '{{ aws_region }}'
-        stack_name: my-lambda-function
-        template: files/my_lambda_function_stack.yml
-        template_format: yaml
-        template_parameters:
-          S3Bucket: '{{ s3_bucket }}'
-          S3Key: '{{ zip_name }}'
-          S3ObjectVersion: '{{ s3_version_id }}'
+
