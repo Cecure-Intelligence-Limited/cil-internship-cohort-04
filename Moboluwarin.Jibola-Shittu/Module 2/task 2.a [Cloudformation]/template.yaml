@@ -1,0 +1,27 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: A simple CloudFormation template
+Resources:
+    Bucket:
+        Type: AWS::S3::Bucket
+        Properties:
+            BucketName: mazis-bucket
+    LambdaFunction:
+        Type: AWS::Lambda::Function
+        Properties:
+            FunctionName: mazis-pinger 
+            Description: returns 'hello world' response
+            Role: arn:aws:iam::889924098781:role/lambda_role
+            Handler: index.handler
+            Runtime: nodejs16.x
+            Code: 
+                ZipFile:  |
+                    exports.handler = async (event) => {
+                        // TODO implement
+                        const response = {
+                            statusCode: 200,
+                            body: JSON.stringify('Hello from Lambda!'),
+                        };
+                        return response;
+                    }
+            TracingConfig:
+                Mode: Active
