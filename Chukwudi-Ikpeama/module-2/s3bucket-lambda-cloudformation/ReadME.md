@@ -5,14 +5,13 @@ The AWS CloudFormation template comes either as a YAML file or a JSON file. In t
 ## 1. Start a new project with following directory tree
 
 ```
-
 📦s3bucket-lambda-cloudformation
  ┣ 📜ReadME.md
  ┣ 📜lambda-s3-cloudformation.json
  ┗ 📜lambda-s3-cloudformation.yaml
 ```
 
-#### 📜 lambda-s3-cloudformation.json
+📜 ***lambda-s3-cloudformation.json***
 
 ```json
 {
@@ -59,7 +58,7 @@ The AWS CloudFormation template comes either as a YAML file or a JSON file. In t
 }
 ```
 
-##### 📜 lambda-s3-cloudformation.yaml
+📜 ***lambda-s3-cloudformation.yaml***
 
 ```yaml
 AWSTemplateFormatVersion: '2010-09-09'
@@ -99,24 +98,24 @@ Resources:
 
 The CloudFormation Stack can be created through the AWS console or AWS CLI on local machine:
 
-#### - through AWS CLI
+##### - Using AWS CLI
 
 ```shell
 $ aws cloudformation deploy --template-file lambda-s3-cloudformation.json --stack-name LambdaS3CloudFormation --capabilities CAPABILITY_NAMED_IAM
 ```
 
-#### - through AWS Console
+##### - Using AWS Console
 
 - Find and Open **CloudFormation** Service in AWS Cloud Console
-- Select **Create Stack**
-- At **Prerequisite - Prepare template** section, select **Template is ready**
-- At **Specify template** section, select **Upload a template file**
-- Click **Choose File** to browse and select template file
-- Click **Next** and follow subsequent prompt...
+- Select ==Create Stack==
+- At ==Prerequisite - Prepare template== section, select ==Template is ready==
+- At ==Specify template== section, select ==Upload a template file==
+- Click ==Choose File== to browse and pick template file
+- Click ==Next== and follow subsequent prompts...
 
 ## 3. Deleting the Stack
 
-To clean up the stack, the following command can be executed on CLI
+When you are done with a stack. you may wish to discard it so as to free up some reources from your AWS account. So, to clean up the stack, the following command can be executed on CLI.
 
 ```shell
 $ aws cloudformation delete-stack --stack-name LambdaS3CloudFormation

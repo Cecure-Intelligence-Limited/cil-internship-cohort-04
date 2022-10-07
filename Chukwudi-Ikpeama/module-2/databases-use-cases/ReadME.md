@@ -37,9 +37,9 @@ Document-oriented database system employs CRUD operation for data manipulation. 
 
 ### Use Cases
 
-Document-oriented databases are good for representing large volumes of **irregular** data, particularly data that is stored with metadata that describes each document. Some type of document database is usually what people think of when they are discussing NoSQL databases. Examples of document database are MongoDB, Amazon DocumentDB, etc.
+Document-oriented databases are good for representing large volumes of **irregular** data, particularly data that is stored with metadata that describes each document. Due to their flexible schema, document-oriented databases are perfect for collecting and storing any type of data. It can be used for creating and incorporating new forms of data, including user-generated content, such as images, comments, and videos. Because of this, we can effectively manage unstructured data collected and aggregated from a variety of sources.
 
-Due to their flexible schema, document-oriented databases are perfect for collecting and storing any type of data. It can be used for creating and incorporating new forms of data, including user-generated content, such as images, comments, and videos. Because of this we can effectively manage data collected and aggregated from a variety of sources.
+Examples of document database are MongoDB, Amazon DocumentDB, etc.
 
 ## 3. Key-value Databases
 

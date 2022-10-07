@@ -2,8 +2,6 @@
 
 This Project Project uses Terraform Template to Provision Lambda Functions attached to a step function.
 
-This Project Project uses Terraform Template to Provision Lambda Functions attached to a step function.
-
 ## Project Directory Structure
 
 ```
@@ -13,15 +11,44 @@ This Project Project uses Terraform Template to Provision Lambda Functions attac
  ┗ 📜main.tf 
  ``` 
 
-#### 📜 lambda-function-payload.zip  
+📜 ***lambda-function-payload.zip***
 
 This is a zip file containing our two .py file, each containing a python function to be executed  by our Lambda Function
 
-- process-success.py
+^|_^ *process-success.py*
 
-- process-failure.py
+```python
+from datetime import datetime as dt
 
-#### 📜 main.tf
+def processSuccess(value, context):
+    print("Processing...")
+    result = {}
+
+    result['Status'] = value['Status']
+    result['When'] = dt.now().strftime("%d-%m-%Y %H:%M:%S")
+    result['Message'] = "This transaction was successful!"
+
+    return result
+
+```
+
+^|_^ *process-failure.py*
+
+```python
+from datetime import datetime as dt
+
+def processFailure(value, context):
+    print("Processing...")
+    result = {}
+
+    result['Status'] = value['Status']
+    result['When'] = dt.now().strftime("%d-%m-%Y %H:%M:%S")
+    result['Message'] = "This transaction failed!"
+
+    return result
+```
+
+📜 ***main.tf***
 
 This is the Terraform Template File
 

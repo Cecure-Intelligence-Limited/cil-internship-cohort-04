@@ -46,7 +46,7 @@ Some PaaS cloud services includes:
 
 **SaaS** is a business and software delivery model that enables organizations to offer their solution in a low-friction, service-centric approach. SaaS provides the entire software application over the internet. You can use it to perform different tasks. In SaaS, the cloud provider hosts the hardware, the software tools, and the application itself in its data center.  
 
-Some SaaS cloud services includes:
+Some SaaS services includes:
 
 - Google G-Suites
 - Microsoft Office 365
@@ -58,7 +58,7 @@ Some SaaS cloud services includes:
 
 ![IaaS vs PaaS vs SaaS]([./../cloud-service-model-compare.png "Key Differences Between IaaS, PaaS and SaaS")
 
-### Reference
+### References
 
 - [*IaaS (Infrastructure as a Service):
 The Ultimate Guide*](https://cloud.netapp.com/iaas)  

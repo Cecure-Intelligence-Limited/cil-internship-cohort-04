@@ -3,7 +3,7 @@
 ### 1. Packages Installation
 - Install ansible and and other associated packages
 
-```
+```shell
 $ python3 -m pip install --user ansible
 $ pip install boto
 $ pip install boto3
@@ -23,11 +23,13 @@ $ pip install botocore
 
 ### 3. Create Project Files
 
-📜 ***check-number.zip***   
+📜 ***check-number.zip***  
+
 This is a zip file that contains a python .py file where executable function of our lambda function is written.
 
 
-📜 ***iam-lambda-policy.json***   
+📜 ***iam-lambda-policy.json***
+
 This JSON format file defines the IAM Role permission for our lambda function
 
 ```json
@@ -45,7 +47,8 @@ This JSON format file defines the IAM Role permission for our lambda function
 }
 ```
 
-📜 ***playbook.yaml***   
+📜 ***playbook.yaml***
+
 This file contains the declaratuive statement for AWS Resource deployment
 
 ```yaml
@@ -76,8 +79,9 @@ This file contains the declaratuive statement for AWS Resource deployment
 
 ```
 
-📜 ***script.py***   
-This file has no purpose in this location as it is already zipped in *check-number.zip* file. But we kept a copy in the project directory to be able to view its content in a repository.
+📜 ***script.py***
+
+This file has no purpose in this location as it is already zipped in *check-number.zip* file. But a copy was kept inside the project directory root to be able to view its content in a repository.
 
 ```python
 def checkNumber(event, context):
@@ -88,7 +92,7 @@ def checkNumber(event, context):
 
 ### 4. Deploy the Resources
 
-```
+```shell
 $ cd <Project-Directory>
 $ ansible-playbook  playbook.yaml
 ```
