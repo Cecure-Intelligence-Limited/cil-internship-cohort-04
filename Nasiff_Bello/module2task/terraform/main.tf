@@ -31,12 +31,8 @@ resource "aws_iam_policy" "iam_policy_for_casual_lambda" {
  "Version": "2012-10-17",
  "Statement": [
    {
-     "Action": [
-       "logs:CreateLogGroup",
-       "logs:CreateLogStream",
-       "logs:PutLogEvents"
-     ],
-     "Resource": "arn:aws:logs:*:*:*",
+     "Action": "sts:AssumeRole",
+     "Resource": "*",
      "Effect": "Allow"
    }
  ]
@@ -78,12 +74,8 @@ resource "aws_iam_policy" "iam_policy_for_member_lambda" {
  "Version": "2012-10-17",
  "Statement": [
    {
-     "Action": [
-       "logs:CreateLogGroup",
-       "logs:CreateLogStream",
-       "logs:PutLogEvents"
-     ],
-     "Resource": "arn:aws:logs:*:*:*",
+     "Action": "sts:AssumeRole",
+     "Resource": "*",
      "Effect": "Allow"
    }
  ]
@@ -102,7 +94,6 @@ type        = "zip"
 source_file = "${path.module}/casualLambdaFunction.py" 
 output_path = "casualLambda.zip"
 }
-
 data "archive_file" "zip_the_memberpy_code" {
 type        = "zip"
 source_file = "${path.module}/memberLambdaFunction.py" 
@@ -112,7 +103,7 @@ output_path = "memberLambda.zip"
 # creating the casual and member lambda function
 resource "aws_lambda_function" "terraform_casual_lambda_func" {
 filename                       = "casualLambda.zip"
-function_name                  = "myLambdaCasualRole"
+function_name                  = "myLambdaCasualFunction"
 role                           = aws_iam_role.casual_lambda_role.arn
 handler                        = "casualLambdaFunction.lambda_handler"
 runtime                        = "python3.8"
@@ -121,7 +112,7 @@ depends_on                     = [aws_iam_role_policy_attachment.attach_casual_i
  
 resource "aws_lambda_function" "terraform_member_lambda_func" {
 filename                       = "memberLambda.zip"
-function_name                  = "myLambdaMemberRole"
+function_name                  = "myLambdaMemberFunction"
 role                           = aws_iam_role.member_lambda_role.arn
 handler                        = "memberLambdaFunction.lambda_handler"
 runtime                        = "python3.8"
