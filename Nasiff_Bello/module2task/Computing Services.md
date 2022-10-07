@@ -34,7 +34,7 @@
 | Middleware | Provide | Provide | Don't Provide|
 | OS | Provide | Provide | Provide|
 | Virtualization | Provide | Provide | Provide |
-| Servers| Provide | Provide | | Provide |
+| Servers| Provide | Provide |  Provide |
 | Storage | Provide | Provide | Provide |
 | Networking | Provide | Provide | Provide |
 
