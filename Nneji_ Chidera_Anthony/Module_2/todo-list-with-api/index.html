@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/21d83e6aa2.js" crossorigin="anonymous"></script>
+    <script defer src="index.js"></script>
+    <title>Todo App</title>
+</head>
+
+<body>
+    <div class="app">
+        <div class="app-info">
+            <i class="fa-solid fa-bell"></i>
+            <h1>Todo List</h1>
+        </div>
+        <div class="container">
+            <div class="actions">
+                <button class="gettodo">Get Todos</button>
+                <button class="addnew">Add New Todo</button>
+            </div>
+            <form class="input-field">
+                <div>
+                    <input type="text" placeholder="userid" id="userid">
+                    <input type="textarea" placeholder="task" id="title">
+                </div>
+
+                <button class=add-todo type="submit">Add New</button>
+            </form>
+            <div id="list" class="todo-list">
+                <!-- <div class="task">
+                    <div class="content">
+                        <input type="text" value="1" class="text" readonly>
+                        <input type="text" value="1" class="text" readonly>
+                        <input type="text" value="fugiat veniam minus" class="text" readonly>
+                        <input type="text" value="false" class="text" readonly>
+                    </div>
+                    <div class="actions">
+                        <button class="edit">Edit</button>
+                        <button class="delete">delete</button>
+                    </div>
+                </div> -->
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <!-- edit modal -->
+    <div id="mod">
+
+        <!-- <div class="modal-bg">
+            <div class="modal">
+                <i class="fa-solid fa-xmark" id="close-btn"></i>
+                <h2>Edit Todo</h2>
+                <input type="text" class="m-i" placeholder="todo">
+                <input type="text" class="m-i" placeholder="status">
+                <button type="submit" class="m-submit">Save</button>
+            </div>
+        </div> -->
+    </div>
+</body>
+
+</html>
