@@ -1,7 +1,8 @@
 # Lambda Function Deployment with Ansible
 
 ### 1. Packages Installation
-- Install ansible and and other associated packages
+
+- Install ansible and other associated packages
 
 ```shell
 $ python3 -m pip install --user ansible
@@ -9,6 +10,7 @@ $ pip install boto
 $ pip install boto3
 $ pip install botocore
 ```
+
 ### 2. Create Project Directory ***ansible-lambda***
 
 - Directory Structure:

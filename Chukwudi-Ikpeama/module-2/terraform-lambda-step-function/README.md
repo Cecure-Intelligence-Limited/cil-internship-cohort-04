@@ -15,7 +15,7 @@ This Project Project uses Terraform Template to Provision Lambda Functions attac
 
 This is a zip file containing our two .py file, each containing a python function to be executed  by our Lambda Function
 
-^|_^ *process-success.py*
+|_ *process-success.py*
 
 ```python
 from datetime import datetime as dt
@@ -32,7 +32,7 @@ def processSuccess(value, context):
 
 ```
 
-^|_^ *process-failure.py*
+|_ *process-failure.py*
 
 ```python
 from datetime import datetime as dt

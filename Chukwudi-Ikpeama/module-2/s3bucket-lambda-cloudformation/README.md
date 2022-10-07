@@ -102,21 +102,26 @@ The CloudFormation Stack can be created through the AWS console or AWS CLI on lo
 
 ```shell
 $ aws cloudformation deploy --template-file lambda-s3-cloudformation.json --stack-name LambdaS3CloudFormation --capabilities CAPABILITY_NAMED_IAM
-```
+```  
+
+Where `lambda-s3-cloudformation.json` is the file containing our template, `LambdaS3CloudFormation` is the desired name for the stack. And if you have used a named IAM role in our stack, we must include the `--capabilities` flag giving it a value of `CAPABILITY_NAMED_IAM`.
+
 
 ##### - Using AWS Console
 
 - Find and Open **CloudFormation** Service in AWS Cloud Console
-- Select ==Create Stack==
-- At ==Prerequisite - Prepare template== section, select ==Template is ready==
-- At ==Specify template== section, select ==Upload a template file==
-- Click ==Choose File== to browse and pick template file
-- Click ==Next== and follow subsequent prompts...
+- Select **Create Stack**
+- At **Prerequisite - Prepare template** section, select **Template is ready**
+- At **Specify template** section, select **Upload a template file**
+- Click **Choose File** to browse and pick template file
+- Click **Next** and follow subsequent prompts...
 
 ## 3. Deleting the Stack
 
-When you are done with a stack. you may wish to discard it so as to free up some reources from your AWS account. So, to clean up the stack, the following command can be executed on CLI.
+When you are done with a stack. you may wish to discard it so as to free up some reources from your AWS account. To clean up the stack, the following command can be executed on CLI.
 
 ```shell
 $ aws cloudformation delete-stack --stack-name LambdaS3CloudFormation
-```
+```  
+
+Where `LambdaS3CloudFormation` is the name given to the stack during creation.
