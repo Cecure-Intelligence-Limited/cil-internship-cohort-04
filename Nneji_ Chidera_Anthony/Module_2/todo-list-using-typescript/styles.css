@@ -1,0 +1,145 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #ecf0f3;
+  min-height: 100vh;
+}
+.app {
+  padding: 2rem 1rem;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.app-info {
+  display: flex;
+  align-items: center;
+  border-bottom: solid 0.1rem #d3dae7;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  color: #4c5773;
+}
+.app-info i {
+  font-size: 2rem;
+  margin-right: 10px;
+  background-color: #e2e6e9;
+  padding: 0.5rem;
+  border-radius: 30%;
+}
+.container {
+  width: 100%;
+  height: 80%;
+  background-color: #d3dae7;
+  border-radius: 20px;
+  padding: 1rem 1.5rem;
+}
+.input-field {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.4rem;
+  align-items: center;
+}
+.input-field input {
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  flex-basis: 76%;
+  height: 40px;
+  padding: 1rem;
+}
+
+.input-field button {
+  background-color: rgb(52, 97, 52);
+  height: 40px;
+  border-radius: 1rem;
+  color: #fff;
+  width: 110px;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.input-field button:hover {
+  opacity: 0.8;
+}
+
+.todo-list {
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #ecf0f3;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+.content {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  /* background-color: blue; */
+  flex-basis: 85%;
+  /* background-color: red; */
+}
+.check {
+  width: 20px;
+  height: 20px;
+}
+.content input {
+  margin-left: 5px;
+
+  /* background-color: #e6532e; */
+}
+.text {
+  font-size: 15px;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  background: none;
+  appearance: none;
+}
+.text:not(:read-only) {
+  color: #e6532e;
+}
+.actions {
+  display: flex;
+  margin: 0 -0.5rem;
+}
+
+.actions button {
+  cursor: pointer;
+  margin: 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  color: #fff;
+  width: 80px;
+  padding: 0.2rem 0.1rem;
+}
+.actions button:hover {
+  opacity: 0.8;
+}
+
+.edit {
+  background: #333a4d;
+}
+.delete {
+  background: crimson;
+}
