@@ -120,10 +120,10 @@ resource "aws_iam_role_policy" "sfn_policy" {
 ```
 
 ## Lambda function 
-![Lambda function](/images/lambda.jpg)
+![Lambda function](./images/lambda.jpg)
 
 ### Step function
-![Step function](/images/step.jpg)
+![Step function](./images/step.jpg)
 
-![Step function execution](/images/step1.jpg)
+![Step function execution](./images/step1.jpg)
 
