@@ -1,7 +1,6 @@
 ## Deploy a lambda function with ansible
 
 ```
-
 ---
 - name: Deploying lambda function with ansible
   hosts: localhost
@@ -36,4 +35,4 @@
 ```
 
 # Lambda function
-![Lambda function](/images/ansible.jpg)
+![Lambda function](./images/ansible.jpg)
