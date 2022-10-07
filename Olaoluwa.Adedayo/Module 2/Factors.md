@@ -1,0 +1,1 @@
+The following link contains the solution document to factors that impact emerging markets. [Solution Document](https://docs.google.com/document/d/1wGxcxumP1E1jlCjVZERtfeIpMMWBRG4L7NldSs0ZecE/edit?usp=sharing)
