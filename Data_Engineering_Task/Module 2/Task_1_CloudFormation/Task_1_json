@@ -1,0 +1,101 @@
+{
+    "Metadata": {
+        "AWS::CloudFormation::Designer": {
+            "bd4f10ef-7cd6-46c4-83f0-39b478e8b3d1": {
+                "size": {
+                    "width": 60,
+                    "height": 60
+                },
+                "position": {
+                    "x": 120,
+                    "y": 30
+                },
+                "z": 1,
+                "embeds": []
+            },
+            "1dff99b9-3ba5-4e7c-9994-aa9215010e4f": {
+                "size": {
+                    "width": 60,
+                    "height": 60
+                },
+                "position": {
+                    "x": 330,
+                    "y": 30
+                },
+                "z": 1,
+                "embeds": []
+            },
+            "f1a3a442-d4a2-4d0b-8a18-6ac14e8617b0": {
+                "size": {
+                    "width": 60,
+                    "height": 60
+                },
+                "position": {
+                    "x": 210,
+                    "y": 90
+                },
+                "z": 1,
+                "embeds": [],
+                "dependson": [
+                    "1dff99b9-3ba5-4e7c-9994-aa9215010e4f"
+                ]
+            }
+        }
+    },
+    "Resources": {
+        "MyLambdaRole": {
+            "Type": "AWS::IAM::Role",
+            "Properties": {
+                "AssumeRolePolicyDocument": {
+                    "Statement": [
+                        {
+                            "Effect": "Allow",
+                            "Principal": {
+                                "Service": [
+                                    "lambda.amazonaws.com"
+                                ]
+                            },
+                            "Action": [
+                                "sts:AssumeRole"
+                            ]
+                        }
+                    ]
+                },
+                "Path": "/"
+            },
+            "Metadata": {
+                "AWS::CloudFormation::Designer": {
+                    "id": "bd4f10ef-7cd6-46c4-83f0-39b478e8b3d1"
+                }
+            }
+        },
+        "MyLambdaFunction": {
+            "Type": "AWS::Lambda::Function",
+            "Properties": {
+                "Runtime": "python3.9",
+                "Role": {
+                    "Fn::GetAtt": [
+                        "MyLambdaRole",
+                        "Arn"
+                    ]
+                },
+                "Handler": "index.shout",
+                "Code": {
+                    "ZipFile": "def shoutout(name):\n  shout= f\"Hello world and Hello {input('enter name:' name)}\"\n      return shout\n"
+                },
+                "Description": "Simple Print function."
+            },
+            "Metadata": {
+                "AWS::CloudFormation::Designer": {
+                    "id": "1dff99b9-3ba5-4e7c-9994-aa9215010e4f"
+                }
+            },
+            "DependsOn": [
+                "MyLambdaRole"
+            ]
+        },
+        "MyLambdabucket": {
+            "Type": "AWS::S3::Bucket"
+        }
+    }
+}
