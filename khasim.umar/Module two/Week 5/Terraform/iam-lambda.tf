@@ -1,7 +1,7 @@
 provider "aws" {
     region = "us-east-1"
-    access_key = "AKIAT4E6HAXLBPXAZ3L6"
-    secret_key = "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"
+    access_key = ""
+    secret_key = ""
    }
 resource "aws_iam_role_policy" "lambda_policy" {
   name = "lambda_policy"
