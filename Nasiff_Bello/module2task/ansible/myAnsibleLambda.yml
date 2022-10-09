@@ -40,11 +40,12 @@
           arg2: bar
         wait: true
       register: ansible_lambda
-
-    - name: ansible lambda function
-      lambda:
-        state: absent
-        name: ansible_lambda
+      
+# to delete the function
+#     - name: ansible lambda function
+#       lambda:
+#         state: absent
+#         name: ansible_lambda
     
     - debug:
         msg: "{{ ansible_lambda }}"
