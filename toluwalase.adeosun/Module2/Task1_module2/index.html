@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Lexend+Deca:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="./index.css" />
+    <title>Frontend Mentor | Todo app</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="bg-img"></div>
+      <div class="inner_wrapper">
+        <div class="todo_header">
+          <h1>TODO</h1>
+          <p class="date"></p>
+          <img src="../Task2_module2/images/icon-sun.svg" alt="light mode" />
+        </div>
+        <form onsubmit="submitHandler(event)" class="todo_form flex">
+          <span class="circle"></span>
+          <input
+            type="text"
+            placeholder="Create your todo"
+            class="todo_input text-typo"
+            value=""
+          />
+        </form>
+        <div class="todo_container flex">
+          <div class="todo_items"></div>
+          <div class="todo_pages">
+            <button class="active" onclick="allTodo(event)">All</button>
+            <button onclick="activeTodos(event)">Active</button>
+            <button onclick="compeletedTodos(event)">Completed</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="./index.js"></script>
+  </body>
+</html>

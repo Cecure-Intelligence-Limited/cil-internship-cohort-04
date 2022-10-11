@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --font-family: 'Josefin Sans', sans-serif;
+
+}
+
+.wrapper {
+    height: 100vh;
+    background-color: #181824;
+    width: 100%;
+
+    position: relative;
+}
+
+.bg-img {
+    background-image: url("../module2/images/bg-desktop-dark.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    width: 100%;
+    height: 40%
+}
+
+
+.inner_wrapper {
+    width: 600px;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.todo_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-family);
+    color: hsl(0, 0%, 98%);
+}
+
+.todo_header h1 {
+    letter-spacing: 10px;
+    font-weight: bolder;
+    font-size: 2.5rem;
+}
+
+
+.todo_form {
+    margin-top: 40px;
+    background-color: #25273c;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+}
+
+
+.todo_input {
+    padding: 20px 0;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: #fff !important;
+}
+
+.todo_input:focus {
+    outline: none
+}
+
+
+.circle {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: 1px solid hsl(233, 14%, 35%);
+    display: block;
+}
+
+
+.text-typo {
+    margin-left: 20px;
+    font-family: var(--font-family);
+    color: hsl(233, 14%, 35%);
+    font-size: 20px;
+}
+
+
+
+.todo_container {
+    border-radius: 6px;
+    background-color: #25273c;
+    margin-top: 40px;
+    display: none;
+}
+
+
+.todo_items {
+    display: flex;
+    flex-direction: column;
+    max-height: 350px;
+    overflow: auto;
+}
+
+.todo_item {
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.todo_item span {
+    margin-left: 20px;
+}
+
+.todo_item {
+    border-bottom: 1px solid hsl(233, 14%, 35%);
+
+}
+
+.todo_btns {
+    flex-grow: 1;
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.todo_btns button {
+    font-size: 18px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.todo_btns button:not(:last-child) {
+    margin-right: 20px;
+    color: green;
+}
+
+.todo_btns button:last-child {
+    color: red;
+}
+
+/* .todo_label {
+} */
+
+
+.todo_checkbox:checked~.todo_label {
+    background-image: linear-gradient(to bottom right, #76b6fb 50%, #a27beb 40%);
+}
+
+
+.todo_pages {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 20px;
+    color: #fff
+}
+
+.todo_pages button {
+    border: none;
+    background-color: transparent;
+    font-size: 18px
+}
+
+.active {
+    color: green
+}
+
+.text-time {
+    font-size: 14px !important;
+    display: block !important;
+    margin-top: 10px !important
+}
