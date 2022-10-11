@@ -1,0 +1,83 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Simple cloud formation for bucket creation and configuration
+# Note: for the lambda function to be deployed automatically from the s3 bucket whenever a new object is uploaded,then the bucket #will have to be created in a different template and the lambda fnc will be uploaded as a zip file.(manually or via ansible )
+
+
+
+Resources:
+  # Bucket to store Lambda function ZIP files
+  LambdaS3Bucket:
+    Type: "AWS::S3::Bucket"
+    # DeletionPolicy: Retain      # Retain the bucket even if the CF stack is deleted
+    Properties:
+      BucketName : lambda-s3-bucket-test
+      AccessControl : PublicRead
+
+  # Allow CloudFormation templates to read from the bucket
+  DocBucketAccessPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket:
+        Ref: "LambdaS3Bucket"
+      PolicyDocument:
+        Statement:
+          - Action:
+            - "s3:GetObject"
+            - s3:PutObject
+            - s3:PutObjectAcl
+            Effect: "Allow"
+            Resource:
+              Fn::Join:
+              - ""
+              - - "arn:aws:s3:::"
+                - Ref: "LambdaS3Bucket"
+                - "/*"
+            Principal:
+              Service:
+              - cloudformation.amazonaws.com
+              - lambda.amazonaws.com
+
+
+
+  TestLambdaFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: 'Test-Lambda'
+      Handler: index.my_handler
+      Role:
+        Fn::GetAtt:
+        - TestLambdaRole
+        - Arn
+      Code:
+        ZipFile: |
+          def my_handler(event, context):
+            message = 'Hello Lambda World!'
+            return message
+      Runtime: python3.7
+
+  TestLambdaRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: HelloWorldLambdaRole
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+        - Effect: Allow
+          Principal:
+            Service:
+            - lambda.amazonaws.com
+          Action:
+          - sts:AssumeRole
+      Path: "/"
+      Policies:
+      - PolicyName: AWSLambdaBasicExecutionRole
+        PolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+          - Effect: Allow
+            Action:
+            - logs:CreateLogGroup
+            - logs:CreateLogStream
+            - logs:PutLogEvents
+            Resource: "*"
+
