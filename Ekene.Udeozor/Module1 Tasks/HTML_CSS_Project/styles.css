@@ -1,0 +1,395 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+@media (max-width: 75em) {
+    html {
+      font-size: 56.25%;
+    }
+    }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 40%;
+      }
+    }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 25%;
+      }
+    }
+
+body {
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #777;
+  line-height: 1.7;
+  box-sizing: border-box;
+}
+/* Styling the navigation and header section */
+.home_heading{
+  height: 100vh;
+  position: relative;
+}
+
+.navigation_box{
+  padding: 2rem 25rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: #edeff2;
+}
+.nav_logo_box{
+
+}
+.nav_list{
+  display: inline-block;
+  margin-right: 2rem;
+}
+.nav_link{
+  text-decoration: none;
+  color: #777;
+  transition: ease-in;
+}
+.nav_link:hover{
+  border-bottom: 2px solid #a3380d;
+}
+.nav_logo{
+  color: #a3380d;
+  font-weight: 900;
+}
+.heading_text{
+  font-size: 5rem;
+  color: #edeff2;
+  letter-spacing: .4rem;
+  font-weight: 900;
+  animation-name: myMove;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+}
+.heading_text_box{
+  text-align: center;
+  padding: 35rem 0;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+}
+.heading_text_box_home{
+  background-image: url("images/sunset_rider.jpg");
+}
+.heading_text_box_about{
+  background-image: url("images/jumping.jpg");
+}
+span{
+  color: #edeff2;
+  font-size: 3.5rem;
+}
+.nav_flexbox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Styling the Nav bar register button */
+.register{
+  text-decoration: none;
+  color: #fff;
+  background-color: #000;
+  padding: 1rem;
+  border-radius: 20px;
+}
+.register:hover{
+  color: #a3380d;
+}
+/* Styling the Chat icon */
+.chat_icon{
+  position: fixed;
+  right: 3.5rem;
+  bottom: 2.5rem;
+  z-index: 100;
+  color: #a10808;
+  font-size: 5rem;
+  animation-name: ChatBounce;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+}
+/* Who-we-are section */
+.who_we_are{
+  padding: 15rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+}
+.who_we_are_image{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5);
+}
+.who_we_are_imageBox{
+  width: 35%;
+}
+.who_we_are_link{
+  color: #a3380d;
+  display: inline-block;
+  transition: .3s ease-in;
+}
+.who_we_are_link:hover{
+  transform: scale(1.05)
+}
+.paragraph1{
+  color: #000;
+  font-weight: 400;
+}
+.paragraph{
+  margin-bottom: 3rem;
+}
+/* Styling the our-growth section */
+.statistics{
+  padding: 5rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+}
+.stats_box{
+  text-align: center;
+}
+.our_growth{
+  text-align: center;
+  background-color: #f2f0e1;
+  padding: 10rem 0;
+}
+.our_growth_title{
+  color: #000;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+.stats{
+  font-size: 3rem;
+  color: #000;
+}
+/* Driver's services section */
+.drivers_services{
+  display: flex;
+  gap: 7rem;
+  justify-content: center;
+  padding: 10rem 7rem;
+}
+.drivers_services_img{
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, .3);
+}
+.drivers_services_img_box{
+  width: 33%;
+}
+.drivers_services_heading-box{
+  color: #000;
+  font-weight: 900;
+  font-size: 2.2rem;
+  margin-bottom: 1.2rem;
+}
+.drivers_services-list{
+  margin-bottom: 1.2rem;
+}
+.drivers_services_paragraph2{
+  margin-bottom: 1.7rem;
+}
+.services_icon{
+  color: #000;
+  margin-right: .5rem;
+}
+.drivers_services_link{
+  text-decoration: none;
+  color: #000;
+}
+.drivers_services_link:hover{
+  border-bottom: 2px solid #a3380d;
+}
+/* Electric bike section */
+.electric_bike{
+  background-color: #fcf9dc;
+  align-items: center;
+}
+.electric_bike_paragraph1{
+  margin-bottom: 2rem;
+}
+/* Styling the footer */
+.footer{
+  text-align: center;
+  padding-top: 10rem;
+  padding-bottom: 2rem;
+  color: #edeff2;
+  background-image: linear-gradient(to bottom, #cf540c, #361705);
+}
+.footer_shortcuts{
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.4rem;
+}
+.footer_button{
+  display: inline-block;
+  margin: 4rem 0;
+  color: #fcf9dc;
+  background-color: #000;
+  padding: .8rem;
+  border-radius: 20px;
+  transition: .3s ease-in;
+}
+.footer_button:hover{
+  transform: scale(1.1);
+}
+.footer_icon_list{
+  display: inline-block;
+  margin-right: .5rem;
+}
+.footer_link{
+  text-decoration: none;
+  color: #edeff2;
+}
+.footer_list{
+  list-style: none;
+  margin-bottom: 1rem;
+}
+.shortcut_heading{
+  margin-bottom: 1rem;
+}
+
+.about_heading_list{
+  display: inline-block;
+  list-style: none;
+}
+.about_heading_link{
+  text-decoration: none;
+  font-size: 4rem;
+  color: #edeff2;
+  transition: .3s ease-in;
+}
+.about_heading_link:hover{
+  color: #a3380d;
+}
+
+/* Why Choose Us Section */
+.services{
+  text-align: center;
+  padding: 15rem 0;
+}
+.service{
+  background-image: linear-gradient(to bottom, #cf540c, #361705);
+  padding: 2rem;
+  color: #edeff2;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  outline-offset: 6px;
+}
+.service:hover{
+  outline: 2px solid #cf540c;
+}
+.our_services{
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 8rem;
+}
+/* Styling the Contact Us Page */
+.heading_text_box_contact{
+  background-image: url("images/call.jpg");
+}
+.contact{
+  padding: 10rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+.contact_box{
+  outline: 2px solid #cf540c;
+  text-align: center;
+  padding: 3rem;
+  height: 15rem;
+  width: 20rem;
+  color: #361705;
+  border-radius: 3rem;
+}
+.contact_box:hover{
+  background-color: #fcf9dc;
+}
+.contact_form{
+  text-align: center;
+  background-color: #fcf9dc;
+  padding: 10rem 0;
+}
+/* Styling the form on contact-us page */
+.input_box{
+  height: 4rem;
+  width: 23.6%;
+  margin: 2rem;
+  border: none;
+  padding: 1.5rem;
+}
+.input_box:focus{
+  outline: none;
+  border-bottom: 3px solid #a3380d;
+}
+.input_text{
+  border: none;
+  width: 50%;
+  margin-top: 2rem;
+  padding: 1.5rem;
+}
+.input_text:focus{
+  outline: 3px solid #a3380d;
+}
+.form_heading{
+  color: #a3380d;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 4rem;
+}
+.form_submit{
+  border: none;
+  padding: 1.5rem;
+  color: #edeff2;
+  background-color: #a3380d;
+  border-radius: 2rem;
+  margin-top: 5rem;
+  cursor: pointer;
+  transition: .3s ease-in;
+}
+.form_submit:hover{
+  transform: scale(1.05);
+}
+/* Keyframe animations */
+@keyframes myMove{
+  0% {
+    opacity: 0;
+    transform: translateX(30rem);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes ChatBounce{
+  0%{
+    transform: translateY(0);
+  }
+  70%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(-.5rem);
+    color: #fcf9dc;
+  }
+}
