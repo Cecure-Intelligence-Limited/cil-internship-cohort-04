@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="todolist.css" />
+    <script src="TStodolist.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>My Todo Lists</header>
+    <main>
+      <div class="todo-list">
+        <div class="todo-list-heading">
+          <h2 id="todo-list-title"></h2>
+          <div class="todo-list-info">
+            <span id="items-count">0</span>
+            <p>tasks remaining</p>
+          </div>
+        </div>
+        <form action="" id="new-todo-form">
+          <input
+            id="form-input-new-todo"
+            type="text"
+            placeholder="add new todo"
+          />
+          <input type="submit" id="add-todo" value="+" />
+        </form>
+        <ul class="todo-list-items">
+
+          <!-- <li class="todo-list-item">
+           <input type="checkbox" class="checkbox" />
+           <label for=""
+             >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+             Voluptates, recusandae.</label
+           >
+         </li>
+         <li class="todo-list-item">
+           <input type="checkbox" class="checkbox" />
+           <label for="">task2</label>
+         </li>
+         <li class="todo-list-item">
+           <input type="checkbox" class="checkbox" />
+           <label for="">task2</label>
+         </li>
+         <li class="todo-list-item">
+           <input type="checkbox" class="checkbox" />
+           <label for="">task2</label>
+         </li>
+         <li class="clear">
+           <button class="clear-complete">Clear completed tasks</button>
+           <button id="delete-list" class="delete-list">Delete list</button>
+         </li> -->
+        </ul>
+        <div class="clear">
+          <button class="clear-complete">Clear completed tasks</button>
+          <button id="delete-list" class="delete-list">Delete list</button>
+        </div>
+    </main>
+  </body>
+</html>

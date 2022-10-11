@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+li {
+	list-style: none;
+}
+
+body {
+	background: #cf285d;
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 405px;
+	margin: 120px auto;
+	background: #fff;
+	border-radius: 7px;
+	padding: 28px 12px;
+}
+
+#new-task-form {
+}
+#new-task-form {
+	height: 52px;
+	padding: 0 25px;
+	position: relative;
+}
+#new-task-form button {
+	position: absolute;
+	top: 50%;
+	right: 17px;
+	transform: translate(-17px, -50%);
+	outline: none;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	font-size: 13px;
+	border-radius: 4px;
+	padding: 7px 13px;
+	background: #3c87ff;
+}
+#new-task-form input {
+	height: 100%;
+	width: 100%;
+	outline: none;
+	font-size: 18px;
+	border-radius: 5px;
+	border: 1px solid #999;
+	padding: 0 53px 0 20px;
+}
+
+#list {
+	margin: 20px 25px;
+}
+#list li {
+	font-size: 17px;
+	margin-bottom: 18px;
+	padding-bottom: 16px;
+	border-bottom: 1px solid #ccc;
+}
+#list li:last-child {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	border-bottom: 0;
+}
+li label {
+	display: flex;
+	position: relative;
+}
+li label input {
+	margin: 6px 12px 0 0;
+}
+li.checked label {
+	text-decoration: line-through;
+	color: #bfbfbf;
+}
+
+li label button {
+	position: absolute;
+	top: 50%;
+	right: 0px;
+	transform: translate(0, -50%);
+	outline: none;
+	border: 1.1px solid #c25656;
+	color: #c25656;
+	cursor: pointer;
+	font-size: 13px;
+	border-radius: 30px;
+	padding: 7px 13px;
+	background: inherit;
+}
+
+li.checked label button {
+	text-decoration: line-through;
+	color: #bfbfbf;
+	border: 1.1px solid #bfbfbf;
+}

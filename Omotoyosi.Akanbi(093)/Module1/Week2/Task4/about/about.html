@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(244,248,252);
+        }
+       .container-about-main{
+            background-image:  url('./image/people-business-meeting-high-angle.webp');
+            height: 550px;
+            text-align: center;
+            color: aliceblue;
+            
+        }
+
+        .container-about-body{
+            display: flex;
+            padding:40px 250px;
+            gap: 50px;
+            color: rgb(37,50,70);
+        }
+        .container-about-body img{
+            
+            width: 500px;
+            height:600px;
+            box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+        }
+        .container-about-body h1{
+            padding:10px 0px;
+            font-size: 50px;
+            
+        }
+        .about-services{
+            text-align: center;
+        }
+        .about-slide{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px 0px;
+        }
+        .about-service{
+            background-color: white;
+            padding: 70px 40px;
+            width: 300px;
+            height: 300px;
+        }
+        .about-service img{
+            width: 60px;
+            border-radius: 50%;
+
+            
+        }
+        .about-services{
+            color: rgb(37,50,70); 
+            padding: 70px 0px;
+        }
+
+       .about-services span {
+            color: rgb(68,140,240);
+        }
+        .about-services h1{
+            color: rgb(37,50,70);
+            font-size: 50px;
+        }
+        .about-services b{
+        font-size: 15px;
+        }
+
+        .about-service p{
+            padding: 30px;
+        }
+        .about-services button{
+         color: white;
+         background-color: rgb(68,140,240);
+         padding: 15px 40px;
+         border: none;   
+        }
+        nav{
+            background-color: aliceblue;
+            display: flex;
+            padding: 10px 120px;
+            justify-content: space-between;
+            align-items: center;
+            color: gray;
+
+        }
+        nav img{
+            width: 40px;
+            height: 40px;
+        }
+        nav ul{
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav button {
+            padding: 15px  20px;
+            border: none;
+            background-color: black;
+            color: white;
+            border-radius: 25px;
+        }
+        footer{    
+        background-color: rgb(47,37,68);
+        color: white;
+
+        }
+        .fot-top{
+            text-align: center;
+            padding: 50px 0px;
+            color: white;
+            font-size: 25px;
+        }
+        footer button{
+            padding: 15px  20px;
+            border: none;
+            background-color: white;
+            border-radius: 25px;
+            margin: 20px 0px;
+        }
+        footer ul {
+            list-style: none;
+            line-height: 2;
+        }
+        .bottom{
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="container-about-main">
+            <h1>About</h1>
+            <p>home >> <span>About</span></p>
+        </div>
+        <div class="container-about-body"> 
+            <img src="./image/important-customer-service.webp" alt="">
+            <div class="container-about-body-aside">
+                <p><b>Africa Based</b></p>
+            <h1>Worldwide Focused</h1>
+            <p>1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham</p>
+            <br>
+            <br>
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+            </div>
+            
+            
+        </div>
+        <div class="about-services">
+            <div>
+                <h5>SERVICES</h5>
+                <h1>Our services <span>.</span> </h1>
+            </div>
+            <div class="about-slide">
+                <div class="about-service">
+                    <img src="./image/pngtree-graph-vector-icon-png-image_470654.jpg" alt="">
+                    <p>HR Profesional Service</p>
+                </div>
+                <div class="about-service">
+                    <img src="./image/pngtree-graph-vector-icon-png-image_470654.jpg" alt="">
+                    <p>HR Profesional Service</p>
+                </div>
+                <div class="about-service">
+                    <img src="./image/pngtree-graph-vector-icon-png-image_470654.jpg" alt="">
+                    <p>HR Profesional Service</p>
+                </div>
+                
+            </div>
+            <button>View More</button>
+        </div>
+            <nav>
+                <div>
+                <img src="./image/apple-logo-png-dallas-shootings-don-add-are-speech-zones-used-4.png" alt="">
+                <span>max</span>
+                </div>
+                
+                <ul>
+                    <li>About us</li>
+                    <li>Products</li>
+                    <li>Impact</li>
+                    <li>Careers</li>
+                    <li>Contact us</li>
+                </ul>
+                <button>Become a Max Rider</button>
+            </nav>
+    </main>
+    <footer>
+        <div class="fot-top">
+            <h1>The world of vehicles at the feet of a     
+            <br> MAX champion</h1>
+            <button>Become a Max champion</button>
+        </div>
+        <div class="bottom">
+            <ul>
+                <li><b>Company</b></li>
+                <li>About Metro Africa Xpress</li>
+                <li>impact</li>
+                <li>press & Media </li>
+                <li>Careers</li>
+            </ul>
+            <ul>
+                <li><b>Company</b></li>
+                <li>About Metro Africa Xpress</li>
+                <li>impact</li>
+                <li>press & Media </li>
+                <li>Careers</li>
+            </ul>
+            <ul>
+                <li><b>Company</b></li>
+                <li>About Metro Africa Xpress</li>
+                <li>impact</li>
+                <li>press & Media </li>
+                <li>Careers</li>
+            </ul>
+        </div>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,1 @@
+The following link contains solution document to activity 1 & 3 of the Case study. [Solution Document](https://docs.google.com/document/d/1bKBx2J5mT_H6PrZblKHT-RA18ia58sHUGkWXlChfLcM/edit?usp=sharing)

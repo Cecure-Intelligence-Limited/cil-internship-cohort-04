@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+		<title>Document</title>
+	</head>
+
+	<body>
+		<div class="text-wrapper">
+			<p>
+				<span>GET method: </span> The list renders 10
+				elements from the api url provided using
+				splice() because of space.
+			</p>
+			<p>
+				<span>Post method: </span>The form adds Items
+				to the List provided
+			</p>
+			<p>
+				<span>PUT method: </span
+				><span class="update-text"
+					>See update info</span
+				>
+				shows the new information passed for the item
+				with id: 200
+			</p>
+		</div>
+
+		<div class="wrapper">
+			<div class="nav-wrapper">
+				<form class="form">
+					<input
+						type="text"
+						class="input"
+						placeholder="Add new Item"
+						value=""
+					/>
+
+					<input
+						type="submit"
+						value="Add!"
+						class="post"
+					/>
+				</form>
+
+				<button class="update-todos">
+					See Update Info
+				</button>
+			</div>
+
+			<div class="update">
+				<p class="previous"></p>
+				<p class="new-update"></p>
+			</div>
+
+			<ul class="display"></ul>
+		</div>
+
+		<script type="module" src="./app.js"></script>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:             
+
+  HelloLambdaFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: CilLambdaFunction
+      Role: arn:aws:iam::614319693978:role/lambdaRole
+      Runtime: python3.7
+      Handler: index.my_handler
+      Code:
+        ZipFile: |
+          def my_handler(event, context):
+            message = 'Hello Lambda World!'
+            return message
+
+# I'm naming this Resource 'HelloLambdaFunction'.
+# It's a Lambda Function.
+# I'm also naming the Function 'HelloLambdaFunction'.
+# Anyone/thing with the HelloLambdaRole gets to run it.
+# The Lambda function was written inPython. 
+# When triggered, run the 'my_handler' Python function.
+# What comes next is the source code of this function, provided 'inline'. 
+# This is the 'my_handler' function, which I told 
+# the 'Handler' to run when Lambda is triggered
+
+
+  S3Bucket:
+    Description: Creating Amazon S3 bucket in CloudFormation
+    Type: AWS::S3::Object
+    Properties:
+      Target:
+        Bucket: !Ref TargetBucket
+        Key: README.md
+      Body: |
+
+# The Target property has the following sub-properties:
+# Bucket (REQUIRED): The name of the bucket that will store the new object
+# Key (REQUIRED): The location within the bucket
+# The Body property simply takes a string which will be used to populate the new object.

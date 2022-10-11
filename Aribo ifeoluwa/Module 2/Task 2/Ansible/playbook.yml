@@ -1,0 +1,42 @@
+- hosts: localhost
+  strategy: free
+  connection: local
+  gather_facts: False
+
+  vars:
+    tempdir: tempdeploydir
+    tempzipfile: lambda.zip
+    deployenv: deployvenv
+
+    lambda_timeout: 300
+    lambda_memory: 2048
+    lambda_iam_role: arn:aws:iam::351691807666:role/function2
+
+  tasks:
+  - name: Create zip archive
+    archive:
+      path: "{{tempdir}}/"
+      dest: "{{tempzipfile}}"
+      format: zip
+
+
+  - name: Lambda Direct Deploy
+    lambda:
+      name: function2
+      zip_file: "{{tempzipfile}}"
+      region: us-east-1
+      runtime: python3.7
+      role: "{{lambda_iam_role}}"
+      handler: function2.handler
+      timeout: "{{lambda_timeout}}"
+      memory_size: "{{lambda_memory}}"
+
+  - name: Run Ansible lambda
+    execute_lambda:
+      name: function2
+      region: us-east-1
+      payload:
+        arg1: foo
+        arg2: bar
+      wait: true
+    register: function2

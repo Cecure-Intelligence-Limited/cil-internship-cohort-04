@@ -1,0 +1,24 @@
+- name: AWS Lambda function
+  hosts: localhost
+
+  tasks:
+    - archive:
+        path: ./handler.py
+        format: zip
+        dest: ./handler.zip
+    - set_fact: LAMBDA_ARN=" arn:aws:iam::614319693978:role/lambdaRole"
+    - set_fact: INSTANCE_ID=""
+    - set_fact: INSTANCE_NAME=""
+    - set_fact: INSTANCE_DESCRIPTION=""
+    - name: Create lambda function
+      lambda:
+        name: "Simple_python_lambda_function"
+        state: present
+        zip_file: ./handler.zip
+        runtime: 'python2.7'
+        role: "{{LAMBDA_ARN}}"
+        handler: 'handler.run_handler'
+      environment_variables:
+          instance_id: "{{INSTANCE_ID}}"
+          instance_name: "{{INSTANCE_NAME}}"
+          instance_description:  "{{INSTANCE_DESCRIPTION}}"

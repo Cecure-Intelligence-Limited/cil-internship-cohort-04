@@ -1,0 +1,1 @@
+The following link contains the solution document to the presentation on how to become an experienced business analyst in three years using Gap Analysis. [Solution Document](https://docs.google.com/presentation/d/1ei2tZ3NlAOjKzwcSgx9X6_rb6P1Fo9WQQzYHJV-PrWM/edit?usp=sharing)

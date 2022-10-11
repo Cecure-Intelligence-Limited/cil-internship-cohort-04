@@ -1,0 +1,37 @@
+{
+  "Resources" : {
+    "HelloLambdaRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "RoleName": "HelloLambdaRole",
+        "AssumeRolePolicyDocument": {
+          "Version": '2010-09-09'
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              },
+              "Action": "sts:AssumeRole"
+            }
+          ]
+        }
+      }
+    },
+
+    "HelloLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "FunctionName": "HelloLambdaFunction",
+        "Role": {
+          "Fn::GetAtt": ["HelloLambdaRole","Arn"]
+        },
+        "Runtime": "python3.9",
+        "Handler": "index.my_handler",
+        "Code": {
+          "ZipFile": "def my_handler(event, context):\n  message = \"Hello Lambda World!\"\n  return message\n"
+        }
+      }
+    }
+  }
+}

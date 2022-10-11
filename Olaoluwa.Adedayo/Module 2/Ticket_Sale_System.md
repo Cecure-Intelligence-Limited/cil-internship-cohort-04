@@ -1,0 +1,1 @@
+The following link contains the solution document to ticket sales system case study. [Solution Document](https://docs.google.com/document/d/1LQoYl6_GM6Gd86qQtUshWAKBz-JJiLVVacWD2cDQQII/edit?usp=sharing) 

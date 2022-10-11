@@ -1,0 +1,17 @@
+## The IAM Role Allows Lambda functions to call AWS services on your behalf by giving it full access.
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "sts:AssumeRole"
+            ],
+            "Principal": {
+                "Service": [
+                    "lambda.amazonaws.com"
+                ]
+            }
+        }
+    ]
+}

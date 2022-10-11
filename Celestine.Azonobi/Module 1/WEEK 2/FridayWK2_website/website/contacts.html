@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cecure Intellingence Internship Batch 4</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+    
+</header>
+<body>
+    <div class="navbar">
+        <div class="container">
+            <img id="page-logo" class="logo" src="images/slack.svg" alt="logo", style="width: 90%; height: 50px;">
+            <img id="mobile-cta" class="mobile-menu" src="images/menu.svg" alt="Open Navigation">
+
+            <nav>
+                <img id="mobile-exit" class="mobile-menu-exit" src="images/exit.svg" alt="Close Navigation">
+                
+                <ul class="primary-nav">
+                    <li class="current"><a href="contacts.html">Contact us</a></li>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+
+                </ul>
+
+                <ul class="secondary-nav">
+                    <li class="nav-button"><a href="#">Become a Max Rider</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- Check Here Line 90 on css-->
+    <section class="hero">
+        <div class="hero-contact-container">
+            <img src="images/about1.png" alt="Poeple">
+            <h1 class="about-txt">Contact Us</h1>
+            
+        </div>
+    </section>
+   
+    <section class="testimonials-section">
+        <div class="contact-testimonial-container">
+            <h3>Our Services</h3>
+            <ul>
+                <li>
+                    <img src="images/gold email.jpeg" alt="Grapgh">
+                    <p>Send a Mail</p>
+                    <h6>info@arcpartners.co</h6>
+                </li>
+                <li>
+                    <img src="images/gold globe.jpeg" alt="Who we are">
+                    <p>We Are</p>
+                    <h6>Africa Based. Worldwide Focused</h6>
+                </li>
+                <li>
+                    <img src="images/phone.jpeg" alt="Payroll">
+                    <p>Call Here</p>
+                    <h6>(+234) 805 972 0824</h6>
+                    
+                </li>
+            </ul>
+            <input type="submit" value="View More">
+            <!--<button><h5><a href="home.html"></a>View More</h5></button>-->
+        </div>
+    </section>
+    
+  <section>
+    <div class="form_container">
+        <h3>Send A Message</h3>
+        <form action="action_page.php">
+            
+          <label for="fname">Full Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Full Name">
+
+          <label for="email">Email</label>
+          <input type="text" id="email" name="Email" placeholder="Email">
+          <label for="Subject">Your Subject</label>
+          <input type="text" id="subject" name="Subject" placeholder="Your Subject">
+
+          <label for="phone">Your Phone Number:</label>
+          <input type="tel" id="phone" name="phone" placeholder = "Phone Number" pattern="[0-9] {3}-[0-9] {3}-[0-9]{5}">
+      
+          <label for="country">Region</label>
+          <select id="Region" name="Region">
+            <option value="Africa">Africa</option>
+            <option value="Asia">Asia</option>
+            <option value="South America">South America</option>
+            <option value="North America">North America</option>
+            <option value="australia">Europe</option>
+            <option value="australia">Australia</option>
+
+          </select>
+      
+          <label for="subject">Your Message</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      
+          <input type="submit" value="Submit">
+      
+        </form>
+      </div>
+  </section>
+    <script>
+
+        const mobileBtn = document.getElementById('mobile-cta')
+              nav = document.querySelector('nav')
+              mobileBtnExit = document.getElementById('mobile-exit');
+
+        mobileBtn.addEventListener('click', () => {
+            nav.classList.add('menu-btn');
+        })
+
+        mobileBtnExit.addEventListener('click', () => {
+            nav.classList.remove('menu-btn');
+        })
+
+
+
+    </script>
+
+</body>
+</html>
