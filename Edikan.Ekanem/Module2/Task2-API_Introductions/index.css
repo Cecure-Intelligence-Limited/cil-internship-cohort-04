@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+/* General */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: aliceblue;
+}
+
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    overflow: auto;
+    min-height: 300px;
+    border: 1px solid steelblue;
+    background: #e8f1fc;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+/* Style the "Get" button */
+.getBtn {
+    display: inline-block;
+    background: steelblue;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+.getBtn:focus {
+    outline: none;
+}
+
+/* Form */
+.form {
+    /* background-color: steelblue; */
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+}
+
+/* .header h2 {
+    margin-bottom: 20px;
+} */
+
+/* Clear floats after the header */
+.form:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the input */
+input {
+    margin: 0;
+    border: none;
+    border-radius: 5px;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+    padding: 10px;
+    width: 25%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.addBtn:hover {
+    background-color: #bbb;
+}
+
+/* List */
+.list {
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: aliceblue;
+    border: 1px solid steelblue;
+    font-size: 18px;
+    transition: 0.2s;
+    list-style: none;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.list-item {
+    border-bottom: 1px solid steelblue;
+}
