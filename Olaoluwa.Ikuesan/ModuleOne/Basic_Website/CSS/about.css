@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap");
+:root {
+  --primary-color: black;
+}
+
+body {
+  background: #f2f2f2;
+  margin: 0;
+  font-family: "Poppins";
+}
+
+.navbar {
+  background: white;
+}
+.navbar nav {
+  display: none;
+}
+.navbar .container {
+  display: flex;
+  place-content: space-between;
+}
+.navbar .mobile-menu {
+  cursor: pointer;
+  position: fixed;
+  padding-left: 28.5em;
+}
+.navbar .logo {
+  position: fixed;
+}
+
+a {
+  color: #444444;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 5em 2em;
+}
+
+.hero {
+  box-sizing: border-box;
+}
+.hero img {
+  width: 100%;
+  height: auto;
+}
+.hero .bg-image {
+  background-image: url("..images/about1.jpg");
+  filter: blur(5px);
+  -webkit-filter: blur(1px);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--primary-color);
+}
+.hero .bg-text {
+  background-color: var(--primary-color);
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+  font-weight: bold;
+  border: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 10px;
+  text-align: center;
+}
+.hero .bubble {
+  background-color: none;
+  border-radius: 1em;
+  margin-top: 2em;
+}
+.hero .bubble img {
+  height: 50px;
+  width: 50px;
+  float: right;
+  position: fixed;
+  cursor: pointer;
+  margin-left: -2em;
+}
+
+.about .container {
+  display: block;
+  margin: 0.5em, 1em;
+  padding: 1em 1em;
+  box-sizing: border-box;
+}
+.about h1, .about h3 {
+  text-align: left;
+}
+.about .left-column {
+  width: 100%;
+  height: auto;
+}
+.about .left-column img {
+  width: 430px;
+  height: auto;
+  margin-right: 1em;
+}
+
+.services .container {
+  display: block;
+  margin: 0.5em, 1em;
+  padding: 1em, 1em;
+  box-sizing: border-box;
+}
+.services .container .heading {
+  text-align: center;
+}
+.services .container .row {
+  place-content: space-between;
+  display: flex;
+  margin: 2em 1em;
+  padding: 0.3em;
+}
+.services .container .row .column {
+  text-align: center;
+}
+.services .container .row .column img {
+  height: 50px;
+  border-radius: 2em;
+  background-color: rgb(240, 226, 226);
+}
+.services .container .view {
+  cursor: pointer;
+  color: rgb(64, 43, 43);
+}
+
+.footer .container {
+  display: block;
+  margin: 0.5em, 1em;
+  padding: 1em, 1em;
+  box-sizing: border-box;
+  background-color: rgb(108, 42, 108);
+  color: white;
+}
+.footer .container .heading {
+  text-align: center;
+  padding: 1em 1em;
+}
+.footer .container .heading .footer-cta {
+  border-radius: 5em;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.2em 0.2em;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+}
+.footer .container .row {
+  place-content: space-between;
+  display: flex;
+  margin: 2em 1em;
+  padding: 0.3em;
+}
+.footer .container .row .column {
+  text-align: left;
+}
+
+nav.menu-btn {
+  display: block;
+}
+
+nav {
+  position: fixed;
+  z-index: 999;
+  width: 66%;
+  right: 0;
+  top: 0;
+  background: #20272E;
+  height: 100vh;
+  padding: 1em;
+}
+nav ul.primary-nav {
+  margin-top: 5em;
+}
+nav li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 0.5em;
+  font-size: 1.3em;
+  text-align: right;
+}
+nav li a:hover {
+  font-weight: bold;
+}
+nav ul.secondary-nav {
+  margin-top: 0.5em;
+}
+nav ul.secondary-nav .nav-button {
+  background: rgb(157, 157, 210);
+  color: white;
+  padding: 0.6em 1.3em;
+  font-size: 0.8em;
+  border-radius: 5em;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.mobile-menu-exit {
+  float: right;
+  margin: 0.5em;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .mobile-menu, .mobile-menu-exit {
+    display: none;
+  }
+  .navbar .container {
+    display: grid;
+    grid-template-columns: 180px auto;
+    justify-content: unset;
+  }
+  .navbar nav {
+    display: flex;
+    justify-content: space-between;
+    background: none;
+    height: auto;
+    width: 100%;
+    padding: 0;
+  }
+  .navbar nav ul {
+    display: flex;
+    padding-left: 5em;
+  }
+  .navbar nav a {
+    color: black;
+    font-size: 1em;
+    padding: 0.1em 1em;
+  }
+  .navbar nav ul.primary-nav {
+    margin: 0;
+  }
+  .navbar nav li.current a {
+    font-weight: bold;
+  }
+  .navbar nav li.footer-cta a {
+    color: var(--primary-color);
+    border: 3px solid var(--primary-color);
+    font-weight: bold;
+    border-radius: 5em;
+    margin-top: -0.2em;
+  }
+  .navbar nav li.footer-cta a:hover {
+    background: var(--primary-color);
+    color: white;
+  }
+  .about {
+    position: relative;
+  }
+  .about .container {
+    display: flex;
+    place-content: space-between;
+  }
+  .services {
+    position: relative;
+  }
+  .services .container {
+    place-content: space-between;
+  }
+  .hero .bg-text {
+    font-size: 30px;
+    font-weight: bolder;
+  }
+}/*# sourceMappingURL=about.css.map */

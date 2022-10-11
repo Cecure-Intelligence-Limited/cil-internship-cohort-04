@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap");
+:root {
+  --primary-color: black;
+}
+
+body {
+  background: #f2f2f2;
+  margin: 0;
+  font-family: "Poppins";
+}
+
+.navbar {
+  background: white;
+}
+.navbar nav {
+  display: none;
+}
+.navbar .container {
+  display: flex;
+  place-content: space-between;
+}
+.navbar .mobile-menu {
+  cursor: pointer;
+  position: fixed;
+  padding-left: 28.5em;
+}
+.navbar .logo {
+  position: fixed;
+}
+
+a {
+  color: #444444;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 5em 2em;
+}
+
+.hero {
+  box-sizing: border-box;
+}
+.hero img {
+  width: 100%;
+  height: auto;
+}
+.hero .bg-image {
+  background-image: url("..images/about1.jpg");
+  filter: blur(5px);
+  -webkit-filter: blur(1px);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--primary-color);
+}
+.hero .bg-text {
+  background-color: var(--primary-color);
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+  font-weight: bold;
+  border: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 10px;
+  text-align: center;
+}
+.hero .bubble {
+  background-color: none;
+  border-radius: 1em;
+  margin-top: 2em;
+}
+.hero .bubble img {
+  height: 50px;
+  width: 50px;
+  float: right;
+  position: fixed;
+  cursor: pointer;
+  margin-left: -2em;
+}
+
+.reach .container {
+  display: block;
+  margin: 0.5em, 1em;
+  padding: 1em, 1em;
+  box-sizing: border-box;
+}
+.reach .container .heading {
+  text-align: center;
+}
+.reach .container .row {
+  place-content: space-between;
+  display: flex;
+  margin: 2em 1em;
+  padding: 0.3em;
+}
+.reach .container .row .column {
+  text-align: center;
+}
+.reach .container .row .column img {
+  height: 50px;
+  border-radius: 2em;
+  background-color: rgb(240, 226, 226);
+}
+
+.contacts .container {
+  place-content: space-between;
+}
+.contacts .container .heading {
+  text-align: left;
+}
+.contacts .container .row {
+  display: flex;
+}
+.contacts .container .row .left-column, .contacts .container .row .right-column, .contacts .container .row .message {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+.contacts .container .row .left-column input, .contacts .container .row .left-column textarea, .contacts .container .row .right-column input, .contacts .container .row .right-column textarea, .contacts .container .row .message input, .contacts .container .row .message textarea {
+  width: 100%;
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border-radius: 0.3em;
+  border: 1px solid gray;
+  box-sizing: border-box;
+}
+.contacts .container .row .left-column form {
+  margin-right: 1em;
+}
+.contacts .container .message {
+  box-sizing: border-box;
+  margin-bottom: 1em;
+}
+.contacts .container .message input, .contacts .container .message textarea {
+  width: 64.5%;
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border-radius: 0.3em;
+  border: 1px solid gray;
+  box-sizing: border-box;
+}
+.contacts .container input[type=submit] {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  font-size: 1.3em;
+  border: none;
+  margin-bottom: 5em;
+  border-radius: 5em;
+  display: inline-block;
+  padding: 0.8em 2em;
+  width: unset;
+  cursor: pointer;
+}
+
+.footer .container {
+  display: block;
+  margin: 0.5em, 1em;
+  padding: 1em, 1em;
+  box-sizing: border-box;
+  background-color: rgb(108, 42, 108);
+  color: white;
+}
+.footer .container .heading {
+  text-align: center;
+  padding: 1em 1em;
+}
+.footer .container .heading .footer-cta {
+  border-radius: 5em;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.2em 0.2em;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+}
+.footer .container .row {
+  place-content: space-between;
+  display: flex;
+  margin: 2em 1em;
+  padding: 0.3em;
+}
+.footer .container .row .column {
+  text-align: left;
+}
+
+nav.menu-btn {
+  display: block;
+}
+
+nav {
+  position: fixed;
+  z-index: 999;
+  width: 66%;
+  right: 0;
+  top: 0;
+  background: #20272E;
+  height: 100vh;
+  padding: 1em;
+}
+nav ul.primary-nav {
+  margin-top: 5em;
+}
+nav li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 0.5em;
+  font-size: 1.3em;
+  text-align: right;
+}
+nav li a:hover {
+  font-weight: bold;
+}
+nav ul.secondary-nav {
+  margin-top: 0.5em;
+}
+nav ul.secondary-nav .nav-button {
+  background: rgb(157, 157, 210);
+  color: white;
+  padding: 0.6em 1.3em;
+  font-size: 0.8em;
+  border-radius: 5em;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.mobile-menu-exit {
+  float: right;
+  margin: 0.5em;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .mobile-menu, .mobile-menu-exit {
+    display: none;
+  }
+  .navbar .container {
+    display: grid;
+    grid-template-columns: 180px auto;
+    justify-content: unset;
+  }
+  .navbar nav {
+    display: flex;
+    justify-content: space-between;
+    background: none;
+    height: auto;
+    width: 100%;
+    padding: 0;
+  }
+  .navbar nav ul {
+    display: flex;
+    padding-left: 5em;
+  }
+  .navbar nav a {
+    color: black;
+    font-size: 1em;
+    padding: 0.1em 1em;
+  }
+  .navbar nav ul.primary-nav {
+    margin: 0;
+  }
+  .navbar nav li.current a {
+    font-weight: bold;
+  }
+  .navbar nav li.footer-cta a {
+    color: var(--primary-color);
+    border: 3px solid var(--primary-color);
+    font-weight: bold;
+    border-radius: 5em;
+    margin-top: -0.2em;
+  }
+  .navbar nav li.footer-cta a:hover {
+    background: var(--primary-color);
+    color: white;
+  }
+  .reach {
+    position: relative;
+  }
+  .reach .container {
+    place-content: space-between;
+  }
+  .message {
+    position: relative;
+  }
+  .message .container {
+    place-content: space-between;
+  }
+  .hero .bg-text {
+    font-size: 30px;
+    font-weight: bolder;
+  }
+}/*# sourceMappingURL=contact.css.map */

@@ -1,0 +1,55 @@
+---
+- hosts: localhost
+  remote_user: root
+  connection: local
+  gather_facts: false
+
+
+# Define Variables
+  vars:
+    lambdaRole: arn:aws:iam::384546819585:role/LambdaRole
+
+# Define Tasks
+  tasks:
+
+    # A task to compress the python function
+    - name: Compress Lambda Function
+      archive:
+        path: ./testLambda.py
+        format: zip
+
+    # Pause to allow IAM Role take effect
+    - name: Sleeping For 3 Seconds for the Role to be available.
+      pause: seconds=3
+
+    # Define the Lambda Function
+    - name: Create My Lambda Function
+      lambda:
+        state: present
+        name: testLambda
+        zip_file: testLambda.py.zip
+        runtime: python3.9
+        handler: testLambda.test
+        role: "{{ lambdaRole }}"
+
+    # This Task runs the Lambda function, passing in the specified arguments and saving the results to register
+    - name: Run the Lambda Function
+      execute_lambda:
+        name: testLambda
+        payload:
+          arg1: task
+          arg2: test
+        wait: true
+      register: testLambda
+
+    # This Task removes/deletes the Lambda Function
+    - name: Delete the Lambda Function
+      lambda:
+        state: absent
+        name: testLambda
+        role: "{{ lambdaRole }}"
+
+    # This is the final task, it displays the results
+    - name: The End Results
+      debug:
+        msg: "{{ testLambda }}"
