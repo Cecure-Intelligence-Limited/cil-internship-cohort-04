@@ -1,1 +1,0 @@
-Please see the differences between "Good UX" and "Bad UX" using this link:[Diffrences between good and bad UX](https://www.figma.com/file/bAsAISXyrYaDpvcUDKY59A/Differences-Between-%22Good-UX%22-and-%22Bad-UX%22?node-id=0%3A1)
