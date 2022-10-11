@@ -1,0 +1,1 @@
+aws cloudformation deploy --template-file template.yaml --stack-name static-app
