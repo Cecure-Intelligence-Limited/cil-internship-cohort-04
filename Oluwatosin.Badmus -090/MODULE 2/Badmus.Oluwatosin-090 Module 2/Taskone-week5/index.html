@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO-DO LIST AP</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- This is the first part of my html code that contains a form -->
+    <!-- The form takes two inputs which has a place holder and a read only attribute -->
+    <!--  It also has a add task feature so that new tasks can be added -->
+
+    <header>
+      <h1>TO-DO LIST APP <sub>by Tosin</sub></h1>
+      <form id="todolist-form">
+        <input
+          type="text"
+          name="new-task"
+          id="new-task"
+          placeholder="Hey Tosin, what do you want to do today?"
+        />
+        <input type="submit" id="new-task-add" value="Add task" />
+      </form>
+    </header>
+
+    <!-- This is the second part of my html code which contains the main, section, and div tags -->
+
+    <main>
+      <section class="todo-list">
+        <h2>Tasks</h2>
+
+        <div id="tasks"></div>
+      </section>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
