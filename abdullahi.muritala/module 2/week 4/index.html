@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Abdullahi Muritala" />
+    <meta name="description" content="A simple todo app" />
+    <title>Todo</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <section class="content">
+        <div class="header">
+          <h1>TODO</h1>
+          <button id="theme-toggle">
+            <span class="d-block-light d-none"
+              ><img src="./assets/icons/icon-moon.svg" alt="dark"
+            /></span>
+            <span class="d-block-dark d-none"
+              ><img src="./assets/icons/icon-sun.svg" alt="light"
+            /></span>
+          </button>
+        </div>
+        <form action="#" id="newTaskForm">
+          <span class="round"></span>
+          <label for="newTodo" hidden>Add new</label>
+          <input type="text" name="newTodo" id="newTodo" placeholder="Create a new todo..." />
+        </form>
+        <div class="todo-list">
+          <ul class="todos" id="todos"></ul>
+          <div class="controls">
+            <span></span>
+            <div>
+              <button id="allTasksBtn">All</button>
+              <button id="activeTasksBtn">Active</button>
+              <button id="completedTasksBtn">Completed</button>
+            </div>
+            <button id="clearCompletedBtn">Clear Completed</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
