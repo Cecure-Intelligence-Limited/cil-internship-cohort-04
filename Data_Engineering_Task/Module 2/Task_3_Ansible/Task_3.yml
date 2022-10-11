@@ -1,0 +1,34 @@
+---
+- name: ansible lambda 
+  hosts: localhost
+  gather_facts: False
+  collections:
+    - community.aws
+
+#  vars:
+#    lambda_role: arn:aws:iam::318775664070:role/fifth-stack-MyLambdaRole
+    
+
+  tasks:
+
+    - name: Create a zip archive of lambda.py
+      community.general.archive:
+        path: lambda.py
+        format: zip
+        dest: code.zip
+
+    - name: Sleeping For 10 Seconds for the Role to be available.
+      pause: seconds=10
+
+
+    - name: provision lambda ansible
+      lambda:
+        name: Ansible Lambda task
+        zip_file: code.zip
+        runtime: 'python3.9'
+        role: arn:aws:iam::318775664070:role/ansi
+        aws_access_key: "AKIAUUOECTXDKU6HOIJ5"
+        aws_secret_key: "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"
+        region: us-east-1
+        handler: 'code.call'
+
