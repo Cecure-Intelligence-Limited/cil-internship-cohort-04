@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(90deg, rgba(233,235,236,1) 25%, rgba(213,221,224,1) 50%, rgba(195,206,212,1) 75%);
+  color: white;
+  font-family: 'Roboto Condensed', sans-serif;
+  min-height: 100vh;
+}
+header {
+  font-size: 1.7rem;
+  color: black;
+}
+header,
+form {
+  min-height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form input{
+  border-radius: 8px 0px 0px 8px;
+}
+form input:focus{
+  outline-color: beige;
+}
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+}
+form button {
+  color: #ff6f47;
+  background: #f7fffe;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+form button:hover {
+  background: #ff6f47;
+  color: white;
+}
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+.todo {
+  margin: 0.5rem;
+  background: white;
+  font-size: 1.5rem;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 1s ease;
+  border-radius: 8px;
+}
+.todo li {
+  flex: 1;
+}
+.trash-btn,
+.complete-btn {
+  background: #53e68c;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.trash-btn {
+  background: #ff6f47;
+  border-radius: 0 8px 8px 0;
+}
+.todo-item {
+  padding: 0 1rem;
+}
+.todo-button{
+  border-radius: 0 8px 8px 0;
+}
+.bi-trash,
+.bi-check-lg {
+  pointer-events: none;
+}
+.fall {
+  transform: translateY(10rem) rotateZ(20deg);
+  opacity: 0;
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+select {
+  /* reset select */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: none;
+  box-shadow: none;
+  border: none !important;
+  background-image: none;
+  /* select property */
+  color: #ff6f47;
+  cursor: pointer;
+  width: 12rem;
+  font-size: 16px;
+  padding: 6px;
+}
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+/* Arrow */
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  background: #ff6f47;
+  cursor: pointer;
+  pointer-events: none;
+  border-radius: 0 8px 8px 0;
+}
+.filter-todo {
+  padding: 1rem;
+  border-radius: 8px;
+}
+footer{
+  text-align: center;
+  font-size: .9rem;
+  margin-top: 3rem;
+  color: black;
+}
