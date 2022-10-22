@@ -14,7 +14,6 @@ const AppHeader = () => {
 
   const toggleMenu = () => {
     setToggle((prev) => !prev);
-    console.log(toggle);
   };
 
   return (
