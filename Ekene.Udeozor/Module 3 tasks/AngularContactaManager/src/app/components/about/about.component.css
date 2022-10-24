@@ -1,0 +1,11 @@
+.about{
+  height: 60vh;
+  text-align: center;
+  padding-top: 1.6rem;
+}
+h2{
+  text-decoration: underline;
+  text-decoration-color: #63f55d;
+  text-decoration-style: double;
+  text-decoration-thickness: 2px;
+}

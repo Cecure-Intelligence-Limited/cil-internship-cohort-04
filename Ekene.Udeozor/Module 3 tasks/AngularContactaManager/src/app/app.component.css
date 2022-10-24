@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap');
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-weight: 400;
+  font-size: 1.6rem;
+  font-family: 'Fuzzy Bubbles', cursive;
+  color: #454545;
+  line-height: 1.7;
+  box-sizing: border-box;
+}

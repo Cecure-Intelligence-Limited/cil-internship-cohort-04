@@ -1,0 +1,33 @@
+.add{
+  padding: 10rem;
+}
+.add-box{
+  margin: 0 auto;
+  width: 70%;
+  background-color: #c2c0bc;
+  text-align:center;
+  padding: 5rem;
+  border-radius: 3px;
+}
+.add-box h2{
+  color: #454545;
+  font-weight: bold;
+}
+.add-input{
+  width: 80%;
+  height: 4rem;
+  padding: .6rem;
+  border-radius: 3px;
+}
+.add-input:focus{
+  outline: none;
+  border-bottom: 2px solid #2e291c;
+}
+.add-button{
+  display: block;
+  margin: 3rem auto;
+  width: 10rem;
+  border-radius: 10px;
+  background-color: #805841;
+  color: #fff;
+}

@@ -1,0 +1,15 @@
+.contact{
+  background-color: #f0f7f0;
+  padding-left: 4rem;
+  font-size: 1rem;
+  padding-top: .3rem;
+}
+fa-icon{
+  color: #f7d5d5;
+  margin-left: 5rem;
+  cursor: pointer;
+  transition: .2s ease-in;
+}
+fa-icon:hover{
+  color: red;
+}

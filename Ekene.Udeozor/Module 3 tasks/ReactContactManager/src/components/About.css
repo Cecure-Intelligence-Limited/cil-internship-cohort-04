@@ -1,0 +1,9 @@
+.about{
+  height: 90vh;
+  text-align: center;
+  padding: 10rem 0;
+}
+.about h1{
+  font-size: 3.5rem;
+  margin-bottom: 12rem;
+}
