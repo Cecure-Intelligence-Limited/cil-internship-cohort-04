@@ -1,5 +1,9 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="about container">
+    <h2>About Us</h2>
+    <p>
+      This is an app created in partial fulfilment of Cecure Intelligence Limited Internship. It is
+      an app that could be used to manage contacts.
+    </p>
   </div>
 </template>
