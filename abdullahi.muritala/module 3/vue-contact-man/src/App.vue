@@ -7,12 +7,19 @@
 <script>
 import Footer from './components/Footer.vue';
 import Header from './components/Header.vue';
+import { mapActions } from 'vuex';
 
 export default {
   name: 'App',
   components: {
     Footer,
     Header,
+  },
+  methods: {
+    ...mapActions(['fetchContacts']),
+  },
+  created() {
+    this.fetchContacts();
   },
 };
 </script>

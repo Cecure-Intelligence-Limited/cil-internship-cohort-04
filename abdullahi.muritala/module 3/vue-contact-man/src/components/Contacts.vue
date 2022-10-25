@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex';
+import { mapGetters } from 'vuex';
 import Contact from '@/components/Contact.vue';
 
 export default {
@@ -13,12 +13,6 @@ export default {
   components: {
     Contact,
   },
-  methods: {
-    ...mapActions(['fetchContacts']),
-  },
   computed: mapGetters(['allContacts']),
-  created() {
-    this.fetchContacts();
-  },
 };
 </script>

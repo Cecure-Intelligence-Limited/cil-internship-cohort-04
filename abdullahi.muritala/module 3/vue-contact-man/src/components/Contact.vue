@@ -8,7 +8,7 @@
         </button>
       </div>
       <div>
-        <button>
+        <button @click="handleEdit(contact.id)">
           <font-awesome-icon icon="fa-solid fa-pen-to-square" />
         </button>
         <button class="delBtn" @click="deleteContact(contact.id)">
@@ -37,6 +37,9 @@ export default {
     ...mapActions(['deleteContact']),
     showDetails() {
       this.showContactDetails = !this.showContactDetails;
+    },
+    handleEdit(id) {
+      this.$router.push(`edit/${id}`);
     },
   },
   props: {
