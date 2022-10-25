@@ -4,9 +4,9 @@ A task in fulfilment of Frontend web development internship at Cecure Intelligen
 
 ## Resources
 
-A live version of [React Contact Manager](https://).
+A live version of [React Contact Manager](https://004-react-contact-man.netlify.app/).
 
-A video demonstration of the web pages both in desktop and mobile viewports available [on google drive](https://).
+A video demonstration of the web pages both in desktop and mobile viewports available [on google drive](https://drive.google.com/file/d/1VIJ6zXxFZWaXKIyKpsKzbzbe1slBLy6v/view?usp=sharing).
 
 ## Available Scripts
 
