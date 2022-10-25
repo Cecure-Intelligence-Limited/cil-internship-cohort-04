@@ -4,9 +4,9 @@ A task in fulfilment of Frontend web development internship at Cecure Intelligen
 
 ## Resources
 
-A live version of [Vue Contact Manager](https://).
+A live version of [Vue Contact Manager](https://004-vue-contact-man.netlify.app/).
 
-A video demonstration of the web pages both in desktop and mobile viewports available [on google drive](https://).
+A video demonstration of the web pages both in desktop and mobile viewports available [on google drive](https://drive.google.com/file/d/1lHVdkr-qHr6zf8YVdsI8k7Pqti9V4PDZ/view?usp=sharing).
 
 ## Available Scripts
 
@@ -48,4 +48,6 @@ npm run lint
 
 ### What I learned
 
--
+- Vue
+- Vuex
+- Deploying a vue project
