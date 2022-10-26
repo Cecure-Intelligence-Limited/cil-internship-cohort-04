@@ -1,0 +1,38 @@
+.form{
+  margin: 0 auto;
+  width: 50%;
+  background-color: #e6f0e6;
+  text-align:center;
+  padding: .7rem;
+  border-radius: 3px;
+}
+  label{
+  color: #454545;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-style: double;
+}
+.add-input{
+  width: 80%;
+  height: 2rem;
+  padding: .3rem;
+  border-radius: 3px;
+  border: none;
+}
+.add-input:focus{
+  outline: none;
+  border-bottom: 2px solid #4df04d;
+}
+.add-button{
+  margin: 1rem auto;
+  border-radius: 50%;
+  background-color: #4df04d;
+  color: #fff;
+  cursor: pointer;
+  transform: scale(1.6);
+  border: none;
+}
+.add-button:active{
+  transform: scale(0.8);
+}

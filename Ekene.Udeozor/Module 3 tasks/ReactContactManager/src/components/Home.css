@@ -1,0 +1,17 @@
+.home{
+  padding: 8rem ;
+}
+.home-title{
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.home-description{
+  background-color: #c2c0bc;
+  padding: 5rem;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 3px;
+  margin-bottom: 7rem;
+}
+
+/* /////////////////////////////////////////// */

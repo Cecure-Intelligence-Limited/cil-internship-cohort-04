@@ -1,0 +1,16 @@
+<div class="form">
+  <form (ngSubmit)="onSubmit()" >
+  <p><label for="name">Name</label></p>
+  <input type="text" name="name" class ="add-input" [(ngModel)]="name" placeholder="Enter your name..."/>
+
+  <p><label for="email">Email</label></p>
+  <input type="text" name="email" class="add-input" [(ngModel)]="email" placeholder="Enter your email address..." />
+
+  <p><label for="phone">Phone</label></p>
+  <input type="text" name="phone" class="add-input" [(ngModel)]="phone" placeholder="Enter your phone number..." />
+  <br>
+
+  <button class="add-button" type="submit" >+</button>
+
+  </form>
+</div>

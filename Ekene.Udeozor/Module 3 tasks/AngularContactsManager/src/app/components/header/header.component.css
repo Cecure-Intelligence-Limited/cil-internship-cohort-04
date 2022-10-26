@@ -1,0 +1,29 @@
+header{
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+  justify-content: space-between;
+  padding: 1rem 6rem;
+}
+.header-title{
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-decoration-color: #63f55d;
+  text-decoration-thickness: 5px;
+  transition: .3s ease-in;
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+.header-title:hover{
+  transform: rotate(8deg);
+}
+.links{
+  margin: .5rem;
+  text-decoration: none;
+  color: #454545;
+}
+.links:hover{
+  text-decoration: underline;
+  text-decoration-color: #63f55d;
+  text-decoration-style: wavy;
+}
