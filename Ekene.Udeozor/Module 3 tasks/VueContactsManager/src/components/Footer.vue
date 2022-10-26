@@ -1,6 +1,5 @@
 <template>
 <footer>
-<a>About this app</a>
 <p>© 2022. Ekene Udeozor</p>
 </footer>
 </template>
