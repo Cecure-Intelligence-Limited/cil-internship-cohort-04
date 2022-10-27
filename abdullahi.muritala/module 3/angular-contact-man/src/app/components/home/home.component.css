@@ -1,0 +1,18 @@
+.home-wrapper {
+  padding: 20px 30px;
+}
+
+.wrapper {
+  background: #e9ecef;
+  padding: 20px 30px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-weight: 400;
+  text-align: center;
+}
+
+ol {
+  list-style: lower-roman;
+}
