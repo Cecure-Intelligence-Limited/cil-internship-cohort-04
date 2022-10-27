@@ -3,12 +3,11 @@
     <h2>Contact Manager</h2>
     <p>This is a portfolio project to showcase knowledge of:</p>
     <ol>
-      <li>React Components and JSX</li>
-      <li>React Router</li>
-      <li>Component state management</li>
-      <li>Context api for global state management</li>
+      <li>VueJS Components</li>
+      <li>Vue Routing</li>
+      <li>Vue data management, props and states</li>
+      <li>Vue global state management</li>
       <li>Making asynchronous calls to the JSON placeholder fake RESR API using 'async/await'</li>
-      <li>Modular component styling with styled components</li>
     </ol>
   </div>
 </template>
