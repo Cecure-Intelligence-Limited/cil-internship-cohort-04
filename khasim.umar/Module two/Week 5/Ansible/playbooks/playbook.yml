@@ -2,7 +2,11 @@
 - hosts: localhost
   strategy: free
   connection: local
+<<<<<<< HEAD
   gather_facts: true
+=======
+  gather_facts: False
+>>>>>>> 5d5e7e73135042f05de84cfacf92cb8276b7c0aa
 
   vars:
     tempdir: tempdeploydir
