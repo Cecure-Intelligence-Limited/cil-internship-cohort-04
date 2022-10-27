@@ -6,7 +6,7 @@ We can define service models as the ways a company offers tangable value to its 
 Cloud services covers a wide range of resources that a service providers delivers to a customers via the internet, and these services can be divided into three based on the customers requirement and usage. They are:  
 
 ## Software As A Service (SaaS)
-SaaS is also known as "on-demand software". It is a software in which the applications are hosted by a cloud service provider. Users can access these applications with the help of internet connection and web browser..
+SaaS is also known as "on-demand software". It is a software in which the applications are hosted by a cloud service provider. Users can access these applications with the help of internet connection and web browser.
 SAAS is a cloud-based software delivery model in which the cloud provider develops and maintains cloud application software, provides automatic software updates, and makes software available to its customers via the internet on a pay-as-you-go basis. The public cloud provider manages all the hardware and traditional software, including middleware, application software, and security.
 
 # Characteristics of SaaS
