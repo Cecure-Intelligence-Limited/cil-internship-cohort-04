@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="top-div">
+    <div>
+      <span>{{ contact.name }}</span>
+      <button (click)="toggleDetails()">
+        <fa-icon [icon]="faArrowsAlt"></fa-icon>
+      </button>
+    </div>
+    <div>
+      <button (click)="onEdit(contact)">
+        <fa-icon [icon]="faPenSquare"></fa-icon>
+      </button>
+      <button class="delBtn" (click)="onDelete(contact)">
+        <fa-icon [icon]="faTrash"></fa-icon>
+      </button>
+    </div>
+  </div>
+  <ul class="{{ toggle ? 'show-details' : 'hide-details' }}">
+    <li>Email: {{ contact.email }}</li>
+    <li>Phone: {{ contact.phone }}</li>
+  </ul>
+</div>
