@@ -1,0 +1,61 @@
+header {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 10px 30px;
+}
+
+header div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .open-menu {
+    width: initial;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .closed-menu {
+    display: none;
+  }
+}
+
+.open-menu {
+  display: block;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .fa-bars {
+    display: none;
+  }
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  ul {
+    flex-direction: column;
+  }
+}
+
+button {
+  background: transparent;
+  border: none;
+  color: inherit;
+}

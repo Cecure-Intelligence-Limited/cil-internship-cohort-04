@@ -1,0 +1,25 @@
+<header>
+  <div class="container">
+    <a routerLink="/">Contact Manager</a>
+    <button (click)="toggleMenu()">
+      <fa-icon class="fa-bars" [icon]="faBars"></fa-icon>
+    </button>
+    <nav class="{{ toggle ? 'open-menu' : 'closed-menu' }}">
+      <ul>
+        <li>
+          <a routerLink="/"> <fa-icon [icon]="faHouse"></fa-icon> Home </a>
+        </li>
+        <li>
+          <fa-icon [icon]="faPlus"></fa-icon>
+          <a routerLink="/add"> Add </a>
+        </li>
+        <li>
+          <a routerLink="/about">
+            <fa-icon [icon]="faUserCirlce"></fa-icon>
+            About
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
