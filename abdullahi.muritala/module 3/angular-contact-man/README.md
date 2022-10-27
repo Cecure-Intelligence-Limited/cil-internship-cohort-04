@@ -4,9 +4,9 @@ A task in fulfilment of Frontend web development internship at Cecure Intelligen
 
 ## Resources
 
-A live version of [Angular Contact Manager](https://).
+A live version of [Angular Contact Manager](https://004-angular-contact-man.netlify.app/).
 
-A video demonstration of the web pages both in desktop and mobile viewports available [on google drive](https://).
+A video demonstration of the web pages both in desktop and mobile viewports available [on google drive](https://drive.google.com/file/d/10192zihCpsIBhz74KdjwX9uoAB_rGzAU/view?usp=sharing).
 
 ## Available Scripts
 
