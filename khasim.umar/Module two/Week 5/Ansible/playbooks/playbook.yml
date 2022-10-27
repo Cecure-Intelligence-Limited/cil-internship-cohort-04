@@ -1,0 +1,80 @@
+---
+- hosts: localhost
+  strategy: free
+  connection: local
+  gather_facts: true
+
+  vars:
+    tempdir: tempdeploydir
+    tempzipfile: lambda.zip
+    deployenv: deployvenv
+    aws_profile: default
+
+    lambda_timeout: 300
+    lambda_memory: 2048
+    lambda_iam_role: arn:aws:iam::266619782614:role/service-role/UmarKhasimLambdaFucntion-role-qg0fyaid
+
+    s3_bucket: s3-temp-bucket
+    s3_folder: tmp
+
+  tasks:
+
+  - name: Create deploy directory
+    file: path={{tempdir}} state=directory
+
+  - name: Copy items from dvenv
+    shell: cp -a {{deployenv}}/lib/python3.6/site-packages/. {{tempdir}}
+
+  - name: remove dist files in temp deploy dir & other pip packages
+    shell: rm -rf {{tempdir}}/*dist-info {{tempdir}}/pip {{tempdir}}/pkg_resources
+
+  - name: remove python cache
+    shell: rm -rf {{tempdir}}/__pycache__
+
+  - name: Copy python files
+    shell: cp *.py {{tempdir}}/
+
+  - name: Remove *.pyc files under all
+    shell: find {{tempdir}} -name \*.pyc -delete
+
+  - name: Create zip archive
+    archive:
+      path: "{{tempdir}}/"
+      dest: "{{tempzipfile}}"
+      format: zip
+
+  - name: Upload to s3
+    aws_s3:
+      bucket: "{{s3_bucket}}"
+      object: "{{s3_folder}}/{{tempzipfile}}"
+      src: "{{tempzipfile}}"
+      mode: put
+      profile: "{{aws_profile}}"
+
+  - name: Deploy through S3
+    lambda:
+      name: function1
+      profile: "{{aws_profile}}"
+      s3_bucket: "{{s3_bucket}}"
+      s3_key: "{{s3_folder}}/{{tempzipfile}}"
+      region: us-east-1
+      runtime: python3.6
+      role: "{{lambda_iam_role}}"
+      handler: lambda_function.lambda_handler
+      timeout: "{{lambda_timeout}}"
+      memory_size: "{{lambda_memory}}"
+
+  - name: Lambda Direct Deploy
+    lambda:
+      name: function2
+      profile: "{{aws_profile}}"
+      zip_file: "{{tempzipfile}}"
+      region: us-east-1
+      runtime: python3.6
+      role: "{{lambda_iam_role}}"
+      handler: lambda_function.lambda_handler
+      timeout: "{{lambda_timeout}}"
+      memory_size: "{{lambda_memory}}"
+
+  - name: Clean Up
+    shell: rm -rf {{tempzipfile}} *.retry {{tempdir}}
