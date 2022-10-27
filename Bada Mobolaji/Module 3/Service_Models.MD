@@ -80,3 +80,7 @@ Whether you are running a startup or a large enterprise, IaaS gives access to co
 3. Google Compute Engine
 4. Digital Ocean
 5. AWS Elastic Block Storage
+
+## The figure illustrates the customer's and cloud provider's management responsibilities for each cloud service:
+
+<img src="https://1.cms.s81c.com/sites/default/files/2021-09-02/PaaS-IaaS-SaaS-WHITEBG.png">
