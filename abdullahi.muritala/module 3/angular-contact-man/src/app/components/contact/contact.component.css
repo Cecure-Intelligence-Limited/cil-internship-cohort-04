@@ -1,0 +1,38 @@
+.card {
+  padding: 10px 30px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  max-width: 720px;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+.delBtn {
+  color: #dc3545;
+}
+
+.top-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  list-style: none;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  padding: 0;
+
+  /* TODO: Add the toggle class fucntinality to hide the list */
+}
+
+.show-details {
+  display: block;
+}
+
+.hide-details {
+  display: none;
+}

@@ -1,0 +1,27 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+input {
+  padding: 10px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  background: #343a40;
+  color: #ffffff;
+}
+
+.wrapper {
+  padding: 20px 30px;
+  max-width: 720px;
+}

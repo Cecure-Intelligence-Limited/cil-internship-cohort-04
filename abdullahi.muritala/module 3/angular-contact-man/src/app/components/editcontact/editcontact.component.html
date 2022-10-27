@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="wrapper">
+    <h2>Edit Contact</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-control">
+        <label for="contactName">Name</label>
+        <input
+          type="text"
+          name="contactName"
+          id="contactName"
+          [(ngModel)]="contactName"
+          required
+          placeholder="Enter contact's Name"
+        />
+      </div>
+      <div class="form-control">
+        <label for="contactEmail">Email</label>
+        <input
+          type="email"
+          [(ngModel)]="contactEmail"
+          name="contactEmail"
+          id="contactEmail"
+          required
+          placeholder="Enter contact's Email"
+        />
+      </div>
+      <div class="form-control">
+        <label for="contactPhone">Phone</label>
+        <input
+          type="text"
+          [(ngModel)]="contactPhone"
+          name="contactPhone"
+          id="contactPhone"
+          required
+          placeholder="Enter contact's Phone"
+        />
+      </div>
+      <input type="submit" value="Submit" />
+    </form>
+  </div>
+</div>
