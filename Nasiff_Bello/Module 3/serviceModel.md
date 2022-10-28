@@ -163,7 +163,7 @@ online shop within minutes without worrying about coding, hosting, or
 software.
 
 The BigCommerce platform also has regular updates that automatically roll out for users, and all the
-so􀁹ware licenses, upgrades, and hosting costs are covered in the monthly subscription fee.
+software licenses, upgrades, and hosting costs are covered in the monthly subscription fee.
 
 ## Examples of SaaS 
 **SaaS examples:** 
@@ -185,8 +185,8 @@ so􀁹ware licenses, upgrades, and hosting costs are covered in the monthly subs
 SaaS platforms are:
 - Available over the internet.
 - Hosted on a remote server by a third-party provider.
-- Scalable, with di􀁸erent tiers for small, medium, and enterprise-level businesses.
-- Inclusive, o􀁸ering security, compliance, and maintenance as part of the cost.
+- Scalable, with different tiers for small, medium, and enterprise-level businesses.
+- Inclusive, offering security, compliance, and maintenance as part of the cost.
 
 ## Things to Consider Before SaaS Implementation
 1. Opt for configuration over customization within a SaaS-based delivery model. The configuration will allow you to tailor without changing the core product, whereas, customization will make it challenging to scale with the constant updates and documentation.
