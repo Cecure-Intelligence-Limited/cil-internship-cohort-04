@@ -15,7 +15,7 @@ Earlier the data was stored in hard drives which were not reliable and secure as
 Today the cloud computing services have replaced search hard drive technology and came with a new concept called cloud technology in which the data store in the cloud. 
 There are many companies which provide Cloud computing service and they are very reliable.
 
-These are the service, which offers by Cloud Computing Providers:
+These are the major services, which are offered by Cloud Computing Providers:
 
 ***IaaS, or Infrastructure as a Service,*** is on-demand access to cloud-hosted physical and virtual servers, storage and networking - the backend IT infrastructure for running applications and workloads in the cloud.
 
