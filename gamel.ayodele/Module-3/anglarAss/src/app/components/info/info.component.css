@@ -1,0 +1,19 @@
+.container {
+  max-width: 900px;
+}
+.img {
+  width: 25px;
+  height: 25px;
+}
+.first-box {
+  display: flex;
+  align-items: center;
+}
+.boxes {
+  display: flex;
+  justify-content: space-between;
+}
+button {
+  background-color: white;
+  border: none;
+}

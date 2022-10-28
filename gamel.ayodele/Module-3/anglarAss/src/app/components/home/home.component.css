@@ -1,0 +1,11 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  background-color: #eaeaea;
+  padding: 60px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  align-self: center;
+}

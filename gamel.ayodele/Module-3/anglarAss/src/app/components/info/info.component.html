@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="card card-body mb-4">
+    <div class="boxes">
+      <div class="first-box">
+        <h3>{{ info.name }}</h3>
+        <button (click)="showMyContainer = !showMyContainer">
+          <img
+            src="../../../assets/down-arrow.png"
+            alt="dropdown"
+            class="img"
+          />
+        </button>
+      </div>
+      <div>
+        <!-- <router-link to="/update"> -->
+        <!-- <button @click="onEdit(info)">
+            <img src="../assets/edit.png" alt="EditKey" class="img" />
+          </button> -->
+        <!-- </router-link> -->
+        <button (click)="onDelete(info)">
+          <img src="../../../assets/delete1.png" alt="DeleteKey" class="img" />
+        </button>
+      </div>
+    </div>
+
+    <ul class="list-group" *ngIf="showMyContainer">
+      <li class="list-group-item">Email: {{ info.email }}</li>
+      <li class="list-group-item">Phone :{{ info.phone }}</li>
+    </ul>
+  </div>
+</div>

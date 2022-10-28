@@ -1,0 +1,40 @@
+<form class="container" (ngSubmit)="onSubmit()">
+  <div class="card text-dark bg-light">
+    <div class="card-header">Add Contact</div>
+    <div class="card-body">
+      <div class="mb-2">
+        <label class="form-label" for="name">Name</label>
+        <input
+          type="text"
+          name="name"
+          [(ngModel)]="name"
+          placeholder="Add Name"
+          class="form-control form-control-lg"
+        />
+      </div>
+      <div class="mb-2">
+        <label class="form-label" for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          [(ngModel)]="email"
+          placeholder="Add Email"
+          class="form-control form-control-lg"
+        />
+      </div>
+      <div class="mb-2">
+        <label class="form-label" for="tel">Phone</label>
+        <input
+          type="tel"
+          name="phone"
+          [(ngModel)]="phone"
+          placeholder="Add Phone"
+          class="form-control form-control-lg"
+        />
+      </div>
+      <div class="mb-2">
+        <input type="submit" class="form-control" value="Add Contact" />
+      </div>
+    </div>
+  </div>
+</form>
