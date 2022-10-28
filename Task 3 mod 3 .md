@@ -13,8 +13,7 @@
 
 5. Chat room
 
-# To understand the purpose, mission and vision of the digital product mentioned above, create a list of questions to ask the stakeholders about its USPs (Unique
-Selling Points).
+# To understand the purpose, mission and vision of the digital product mentioned above, create a list of questions to ask the stakeholders about its USPs (Unique Selling Points).
 
 1. What is the business goal, what is the company looking to achieve?
 
