@@ -1,0 +1,14 @@
+.wrapper {
+	padding: 20px;
+	padding-top: 30px;
+}
+
+.wrapper h3 {
+	font-size: 23px;
+}
+
+.wrapper p {
+	margin: 15px;
+	font-size: 20px;
+	font-weight: lighter;
+}

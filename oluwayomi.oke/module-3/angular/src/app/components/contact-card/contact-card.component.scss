@@ -1,0 +1,59 @@
+ul {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+
+  li {
+    border: 1px solid #bbbbbb;
+    border-radius: 3px;
+    padding: 2rem 1rem;
+
+    .carousel {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .nameDiv {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .name {
+          font-weight: 600;
+        }
+
+        .iconRed {
+          margin-left: 7px;
+          color: #ee6262;
+          font-size: 1.1rem;
+          cursor: pointer;
+        }
+
+        .iconNote {
+          color: #3e3e3e;
+          margin-right: 10px;
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    .extraInfo {
+      border: 1px solid #bbbbbb;
+      border-radius: 3px;
+      /* padding: 1rem;	 */
+      margin-top: 1rem;
+
+      p {
+        padding: 1rem;
+
+        &:first-child {
+          border-bottom: 1px solid #bbbbbb;
+        }
+
+        span {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

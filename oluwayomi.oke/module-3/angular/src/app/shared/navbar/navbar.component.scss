@@ -1,0 +1,24 @@
+nav {
+  background: #353535 !important;
+
+  .navbar-brand {
+    color: #fff;
+    font-weight: 700;
+    font-size: 22px;
+  }
+}
+
+.navbar .navbar-nav .nav-link {
+  font-weight: 500;
+  color: #b3b3b3;
+}
+
+.navbar .navbar-nav .nav-link.active-link {
+  color: #fff !important;
+  font-weight: bold;
+}
+
+.navbar-toggler {
+  color: #fff !important;
+  border: 1px solid white;
+}

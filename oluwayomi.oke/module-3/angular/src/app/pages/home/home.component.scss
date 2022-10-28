@@ -1,0 +1,33 @@
+.homeWrapper {
+  padding: 1.5rem;
+
+  .infoContainer {
+    background-color: #e0e4ed;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 35px;
+    border-radius: 3px;
+    padding: 4rem 1.5rem;
+
+    h4 {
+      text-align: center;
+      font-size: 1.6rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .info {
+      font-size: 1.4rem;
+      margin-bottom: 0.8rem;
+      font-weight: 300;
+    }
+
+    .infoList {
+      padding: 0 1.5rem;
+
+      li {
+        list-style-type: lower-roman;
+        line-height: 1.5;
+      }
+    }
+  }
+}

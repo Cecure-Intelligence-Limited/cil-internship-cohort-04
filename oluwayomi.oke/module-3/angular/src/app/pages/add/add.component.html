@@ -1,0 +1,37 @@
+<form autoComplete="off" class="formContainer" #contactadd="ngForm" (ngSubmit)="handleSubmit(contactadd.value)">
+  <p class="formHeading">Add Contact</p>
+
+  <div class="formText">
+    <label htmlFor="fullname">Name</label>
+    <input
+      type="text"
+      name="fullname"
+      id="fullname"
+      placeholder="Enter your name..."
+      required
+      ngModel 
+    />
+
+    <label htmlFor="email">Email</label>
+    <input
+      type="email"
+      name="email"
+      id="email"
+      placeholder="Enter your email..."
+      required
+      ngModel 
+    />
+
+    <label htmlFor="phone">Phone</label>
+    <input
+      type="text"
+      name="phone"
+      id="phone"
+      placeholder="Enter your phone..."
+      required
+      ngModel 
+    />
+
+    <button type="submit">Submit</button>
+  </div>
+</form>

@@ -1,0 +1,93 @@
+.homeWrapper {
+	padding: 1.5rem;
+}
+
+.infoContainer {
+	background-color: #e0e4ed;
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto 35px;
+	border-radius: 3px;
+	padding: 4rem 1.5rem;
+}
+
+.infoContainer h4 {
+	text-align: center;
+	font-size: 1.6rem;
+	margin-bottom: 0.9rem;
+}
+
+.info {
+	font-size: 1.4rem;
+	margin-bottom: 0.8rem;
+	font-weight: 300;
+}
+
+.infoList {
+	padding: 0 1.5rem;
+}
+
+.infoList li {
+	list-style-type: lower-roman;
+	line-height: 1.5;
+}
+
+.namesContainer {
+	width: 100%;
+	max-width: 850px;
+	margin: 0 auto;
+}
+
+.namesContainer li {
+	border: 1px solid #bbbbbb;
+	border-radius: 3px;
+	padding: 2rem 1rem;	
+}
+
+.namesContainer li .carousel {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nameDiv {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.name {
+	font-weight: 600;
+}
+
+.iconRed {
+	margin-left: 7px;
+	color: #ee6262;
+  font-size: 1.1rem;
+	cursor: pointer;
+}
+
+.iconNote {
+  color: #3e3e3e;
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+.extraInfo {
+	border: 1px solid #bbbbbb;
+	border-radius: 3px;
+	/* padding: 1rem;	 */
+	margin-top: 1rem;
+}
+
+.extraInfo p {
+	padding: 1rem;	
+}
+
+.extraInfo p:first-child {
+	border-bottom: 1px solid #bbbbbb;
+}
+
+.extraInfo span {
+	font-weight: 600;
+}

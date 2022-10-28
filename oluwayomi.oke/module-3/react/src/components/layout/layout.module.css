@@ -1,0 +1,13 @@
+.footer {
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #353535;
+	color: #e6e6e6;
+	padding: 15px;
+}
+
+.copy {
+	margin-right: 15px;
+}

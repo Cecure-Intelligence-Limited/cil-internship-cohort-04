@@ -1,0 +1,41 @@
+<form
+	autocomplete="off"
+	class="formContainer"
+	[formGroup]="editForm"
+>
+	<p class="formHeading">Edit Contact</p>
+
+	<div class="formText">
+		<label for="fullname">Name</label>
+		<input
+			type="text"
+			name="fullname"
+			formControlName="fullname"
+			placeholder="Enter
+		your name..."
+			required
+		/>
+
+		<label for="email">Email</label>
+		<input
+			type="email"
+			name="email"
+			id="email"
+			formControlName="email"
+			placeholder="Enter your
+		email..."
+		/>
+
+		<label for="phone">Phone</label>
+		<input
+			type="text"
+			name="phone"
+			formControlName="phone"
+			placeholder="Enter your phone..."
+		/>
+
+		<button type="submit" (click)="updateSubmit()">
+			Submit
+		</button>
+	</div>
+</form>

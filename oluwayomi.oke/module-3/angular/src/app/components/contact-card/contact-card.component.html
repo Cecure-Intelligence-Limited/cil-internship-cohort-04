@@ -1,0 +1,31 @@
+<ul>
+	<li *ngFor="let data of userContact">
+		<div class="carousel">
+			<div class="nameDiv">
+				<p class="name">{{data.fullname}}</p>
+				<i
+					(click)="toggleDiv(data.id)"
+					class="bi bi-chevron-double-down iconRed"
+				></i>
+			</div>
+
+			<div class="nameDiv">
+				<a routerLink="/edit/{{data.id}}">
+					<i class="bi bi-pencil-square iconNote"></i>
+				</a>
+
+				<p
+					(click)="handleDelete(data.id)"
+					class="iconRed"
+				>
+					X
+				</p>
+			</div>
+		</div>
+
+		<div *ngIf="active" class="extraInfo">
+			<p><span>Email:</span> {{data.email}}</p>
+			<p><span>Phone:</span> {{data.phone}}</p>
+		</div>
+	</li>
+</ul>
