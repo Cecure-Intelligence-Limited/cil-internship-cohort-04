@@ -38,7 +38,7 @@ EC2 users do not own the physical servers; AWS provides virtual servers.
 
 2. Magento 1 Enterprise Edition can be either on-premise or IaaS depending on how the merchant chooses
 to host their store.
-In the case of IaaS, the merchant is paying Magento for the licensing of the so􀁹ware and then using a
+In the case of IaaS, the merchant is paying Magento for the licensing of the software and then using a
 third party vendor for the best web hosting such as Rackspace.
 Merchants are able to pay for a hosting plan that meets their own needs without the cost of maintaining
 their own physical servers.
