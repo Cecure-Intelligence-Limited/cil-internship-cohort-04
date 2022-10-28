@@ -81,6 +81,7 @@ SaaS: Software as a Service (aka cloud application services), is the most widely
 
 Software as a service is a very common cloud computing deliver model for business applications within an enterprise. SaaS offerings span all types of use case, including email and social collaboration, customer relationship management (CRM), enterprise resource planning (ERP), human resources management (HRM), and content management, just to name a few.
 Through a SaaS model, data can be accessed from any device that has an internet connection and web browser. In the web-based method, a software vendor will host and maintain the servers, databases, and code that make up an application. This saves companies a tremendous amount of money since they no longer have to invest in expensive hardware to host the software. Additionally, instead of companies paying ongoing maintenance fees as well as a perpetual license, a SaaS model means they only pay an annual or monthly subscription fee, which includes the software license and support fees.
+
 SaaS Samples:
 -	Gmail
 -	Google Calendar
