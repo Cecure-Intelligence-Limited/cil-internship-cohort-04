@@ -7,7 +7,7 @@ which many companys today are specificaly set up to provide.
 
 Whether it’s infrastructure, software, applications, services, products, or even an operating system, everything is making its way to the cloud. 
 As a result, billions of dollars are being invested in cloud migration. 
-I will talk about the most popular cloud providers and their cloud offerings. 
+In this article we will discuss about the most popular cloud providers and their cloud offerings. 
 
 ## **Service Providers**
 Earlier the data was stored in hard drives which were not reliable and secure as the drive can access by anyone.
