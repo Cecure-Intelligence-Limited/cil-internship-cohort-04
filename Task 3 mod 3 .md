@@ -14,7 +14,7 @@
 5. Chat room
 
 # To understand the purpose, mission and vision of the digital product mentioned above, create a list of questions to ask the stakeholders about its USPs (Unique
-# Selling Points).
+Selling Points).
 
 1. What is the business goal, what is the company looking to achieve?
 
@@ -28,8 +28,8 @@
 
 6. What value is the product delivering to the customer?
 
-7.How will the product be considered a success?
+7. How will the product be considered a success?
 
-8.Who are the competitors and what competitive advantage does the brand have over others?
+8. Who are the competitors and what competitive advantage does the brand have over others?
 
 9. What's the 10 years plan or roadmap for the product?
