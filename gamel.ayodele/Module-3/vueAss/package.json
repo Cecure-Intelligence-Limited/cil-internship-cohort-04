@@ -1,0 +1,23 @@
+{
+  "name": "vue-project",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "backend": "json-server --watch db.json --port 8800"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "@types/node": "18.7.14",
+    "bootstrap": "^5.2.2",
+    "core-js": "^3.8.3",
+    "json-server": "^0.17.0",
+    "vue": "^3.2.41",
+    "vue-router": "^4.0.13"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-service": "~5.0.0"
+  }
+}

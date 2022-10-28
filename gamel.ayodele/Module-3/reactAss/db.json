@@ -1,0 +1,40 @@
+{
+  "infos": [
+    {
+      "name": "Ibukun Idris",
+      "email": "ibukun@gmail.com",
+      "phone": "+2348837453467",
+      "id": 2
+    },
+    {
+      "name": "Tope Harrison",
+      "email": "tope@yahoo.com",
+      "phone": "08872240807",
+      "id": 3
+    },
+    {
+      "name": "Endurance Akinyele",
+      "email": "sola@gmail.com",
+      "phone": "0907882334",
+      "id": 4
+    },
+    {
+      "name": "Deborah Ogunode",
+      "email": "deborah@gmail.com",
+      "phone": "+2348078872240",
+      "id": 5
+    },
+    {
+      "name": "Tomisin Damiola",
+      "email": "tomisin@gmail.com",
+      "phone": "+234907436534",
+      "id": 6
+    },
+    {
+      "name": "Ayodele Gamel",
+      "email": "ayodelegamel@gmail.com",
+      "phone": "+2348078872240",
+      "id": 7
+    }
+  ]
+}

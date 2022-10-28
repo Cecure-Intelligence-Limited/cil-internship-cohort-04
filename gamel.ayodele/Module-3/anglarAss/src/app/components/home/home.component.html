@@ -1,0 +1,22 @@
+<main>
+  <div class="container">
+    <div class="main">
+      <h2>Contact Manager</h2>
+      <p>This is a portfolio project to showcase knowledge of:</p>
+      <ol>
+        <li>Angular Component.</li>
+        <li>Angular Router.</li>
+        <li>
+          Making asynchronous calls to the json placeholder fake rest api using
+          "async/await"
+        </li>
+      </ol>
+    </div>
+    <!-- <app-add-info (onAddInfo)="addInfo($any($event))"></app-add-info> -->
+    <app-info
+      *ngFor="let info of infos"
+      [info]="info"
+      (OnDeleteInfo)="deleteInfo(info)"
+    ></app-info>
+  </div>
+</main>

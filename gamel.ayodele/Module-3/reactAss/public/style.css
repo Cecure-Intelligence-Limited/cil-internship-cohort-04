@@ -1,0 +1,73 @@
+/* Navbar */
+.contain {
+  display: flex;
+  justify-content: space-between;
+}
+nav {
+  background-color: rgba(59, 58, 58, 0.986);
+}
+.img-nav {
+  color: white;
+  height: 24px;
+  width: 24px;
+}
+.nav-link {
+  display: flex;
+}
+/* Main component 1 */
+.main {
+  display: flex;
+  flex-direction: column;
+  background-color: #eaeaea;
+  padding: 60px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  align-self: center;
+}
+/* Main component 2 */
+.img {
+  width: 25px;
+  height: 25px;
+}
+
+button {
+  border: none;
+  background-color: white;
+}
+
+.colon {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sub-colon {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Footer style */
+footer p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(41, 38, 38);
+  height: 4rem;
+  color: white;
+}
+
+/* AddInfo Component */
+
+input[type="submit"] {
+  background-color: rgba(59, 58, 58, 0.986);
+  margin-top: 20px;
+  color: white;
+}
+
+/* About page */
+.about {
+  margin: 30px;
+  font-size: x-large;
+}
