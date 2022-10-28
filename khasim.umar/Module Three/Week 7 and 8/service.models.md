@@ -1,3 +1,7 @@
+Cloud Service Providers
+
+Cloud service providers are companies that establish public clouds, manage private clouds, or offer on-demand cloud computing components (also known as cloud computing services) like Infrastructure-as-a-Service (IaaS), Platform-as-a-Service (PaaS), and Software-as-a-Service(SaaS). Cloud services can reduce business process costs when compared to on-premise IT.
+
 Amazon Web Services (AWS)
 
 Amazon Web Services (AWS), the cloud computing service of Amazon.com, is the largest cloud service provider globally. From its data centers, the business provides over 200 fully featured services including computing, storage, and database.
@@ -6,7 +10,7 @@ Amazon Web Services (AWS) has grown net sales from ~$8 billion in 2015, to more 
 
 Microsoft Azure
 
-Microsoft Corporation’s Intelligent Cloud segment contains Azure, the second largest cloud service provider globally. Through Microsoft Azure, the company delivers a consistent hybrid cloud experience, developer productivity, artificial intelligence (AI) capabilities, and security & compliance..
+Microsoft Corporation’s Intelligent Cloud segment contains Azure, the second largest cloud service provider globally. Through Microsoft Azure, the company delivers a consistent hybrid cloud experience, developer productivity, artificial intelligence (AI) capabilities, and security & compliance.
 Microsoft Azure presently has 60 regions and 116 availability zones in operation. These regions and availability zones are distributed throughout the United States, Azure Government (U.S.), Americas, Europe, Asia Pacific, as well as in the Middle East & Africa.
 Over 200 physical Microsoft Azure data centers are located worldwide, which house computer servers, each fitted out with independent power, cooling, and networking. The company connects this data center infrastructure with more than 175,000 miles of fiber lines across 140 countries.
 Microsoft Cloud revenue, which includes revenue from Azure and other cloud services, Office 365 Commercial, the commercial portion of LinkedIn, and Dynamics 365, reached $23.4 billion for the latest quarter, an increase of 32% year-over-year. As such, on an annualized basis, Microsoft Cloud’s revenue currently stands at $93.6 billion. However, Microsoft does not explicitly disclose Azure revenues, meaning that Azure is only a subset of total Microsoft Cloud revenue.
@@ -46,7 +50,7 @@ OVHcloud is a Europe-focused cloud service provider offering solutions including
 Presently, OVHcloud operates in 13 locations, comprising 33 data centers with 400,000 physical servers. Notably, OVHcloud owns 30 of the 33 data centers where it operates. These data centers are situated across 8 countries, namely France, Canada, the United States, Australia, Germany, Poland, the UK, and Singapore.
 DigitalOcean delivers its infrastructure and software solutions to 620,000 customers in more than 185 countries. Uniquely, ~70% of DigitalOcean’s revenue derives from outside of the United States. Similar to OVHcloud, DigitalOcean competes on price, often being 50%+ more cost-effective than the largest cloud service providers.
 
-Linode (Akamai)
+Linode (Akamai) 
 
 In March 2022, Akamai Technologies, a content delivery network (CDN) and security solutions provider, acquired Linode for $900 million.
 Linode currently has 11 data center regions in operation, through which it provides computing in the form of containers and virtual machines, as well as its storage services. The company’s data centers are located in the markets of Newark, New Jersey; Atlanta, Georgia; Dallas, Texas; Fremont, California; Toronto, Canada; London, UK; Frankfurt, Germany; Tokyo, Japan; Singapore; Mumbai, India; and Sydney, Australia.

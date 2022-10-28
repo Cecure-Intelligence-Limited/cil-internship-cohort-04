@@ -117,9 +117,9 @@ If you are chilling on the beach, but you still need to partake in a meeting, or
 6.	Dropbox
 Dropbox is another greatly successful SaaS example that helps you organize all your files together in one space. It can be synced across different devices, so you can access your information or check your workflows anytime and anywhere. You can incorporate tools you are using such as Microsoft Word and Excel or Google Sheets. It also integrates with Slack so you can quickly reach your teammates and Zoom if you need to start an online meeting.
 
-7.	Google Workplace
+7.	Google Workplace.
 We all know and use Google Workplace – Gmail, Google meet, Docs, Drive, and Calendar. All these tools are cloud-based, and this is the reason they are accessible from different devices that can be synced to perform as one.
 
-8.	Zendesk
+8.	Zendesk.
 Zendesk is a popular cloud-based SaaS customer service and helps desk platform. It helps you build relationships between your clients and your support team in order to keep customers happy, and boost your reps’ productivity.
 Moreover, the platform accommodates help desk agents by providing them with a variety of communication channels to choose from, such as email, phone, chat, social media, etc. Zendesk allows you to quickly deliver the information and answers customers are looking for.
