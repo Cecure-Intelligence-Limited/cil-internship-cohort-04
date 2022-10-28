@@ -135,7 +135,7 @@ IaaS is applicable in many circumstances. IaaS can be used in business organizat
 
 ### Difference between IaaS, PaaS, and SaaS
 | Cloud Computing Models|
-|--------------------|
+|--------|---------|------|
 | IaaS   | PaaS   | SaaS |	
 | It provides a virtual data center to store information and create platforms for app development, testing, and deployment. | It provides virtual platforms and tools to create, test, and deploy apps. | It provides web software and apps to complete business tasks.|
 |It provides access to resources such as virtual machines, virtual storage, etc.| It provides runtime environments and deployment tools for applications. | It provides software as a service to the end-users.|
