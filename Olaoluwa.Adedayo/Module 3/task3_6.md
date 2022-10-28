@@ -1,0 +1,1 @@
+The following link contains the solution document to Jira Software Sprint Planning Exercise. [Solution Document](https://cecureworks.atlassian.net/jira/software/projects/CEC/boards/1/roadmap?shared=&atlOrigin=eyJpIjoiMDNmZWYxZDgyOTcxNGZmNzlhMjAyYTI1Njc0MmQ0YmQiLCJwIjoiaiJ9)
