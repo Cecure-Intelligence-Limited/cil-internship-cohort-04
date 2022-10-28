@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<div class="flex justify-center">
+  <div
+    class="flex flex-col justify-center items-center mt-4 border w-[300px] sm:w-[400px] md:w-[800px]"
+  >
+    <div class="flex justify-between items-center w-5/6 py-8 px-4">
+      <div class="flex items-center space-x-2">
+        <h3>{{ task.name }}</h3>
+        <fa-icon [icon]="faAngleDoubleDown" class="text-red-400"></fa-icon>
+      </div>
+      <div class="flex items-center space-x-4">
+        <fa-icon [icon]="faEdit" class="text-gray-600"></fa-icon>
+        <fa-icon
+          [icon]="faTimes"
+          (click)="onDelete(task)"
+          class="text-red-400"
+        ></fa-icon>
+      </div>
+    </div>
+
+    <div>
+      <div class="py-4 px-4 text-left divide-y">
+        <p class="pb-4">
+          Email: <span>{{ task.Email }}</span>
+        </p>
+        <p class="pt-4">
+          Phone: <span>{{ task.Phone }}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
