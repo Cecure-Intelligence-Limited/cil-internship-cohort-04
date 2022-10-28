@@ -86,10 +86,10 @@ creating, testing, and deploying the app.
 
 ## Use Cases
 1. A good example of PaaS is AWS Elastic Beanstalk.
-Amazon Web Services (AWS) o􀁸ers over 100 cloud computing services such as EC2, RDS, and S3.
+Amazon Web Services (AWS) offers over 100 cloud computing services such as EC2, RDS, and S3.
 Most of these services can be used as IaaS, and most companies who use AWS will pick and choose the
 services they need.
-However, managing multiple di􀁸erent services can quickly become difficult and time-consuming for
+However, managing multiple different services can quickly become difficult and time-consuming for
 users.
 Thatʼs where AWS Elastic Beanstalk comes in: it works as another layer
 on top of the infrastructure services and automatically handles the
