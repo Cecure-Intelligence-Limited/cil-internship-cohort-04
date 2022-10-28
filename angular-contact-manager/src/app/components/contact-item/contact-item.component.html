@@ -1,0 +1,33 @@
+<div class="container mt-4 mb-4" style="max-width: 800px; margin-top: 20px">
+  <div class="card card-body mb-1 p-4">
+    <h4 style="font-size: 1rem; display: flex; justify-content: space-between">
+      <div>
+        {{ contact.name }}
+        <i
+          class="fa-solid fa-angles-down"
+          style="color: red; cursor: pointer"
+          (click)="handleDetails(detailsOpen)"
+        ></i>
+      </div>
+      <small
+        style="display: flex; align-items: center; justify-content: center"
+      >
+        <a class="nav-link float-right" routerLink="/contact/edit/1">
+          <i class="fa-solid fa-pen-to-square" style="cursor: pointer"></i>
+        </a>
+        <span color="red" cursor="pointer" class="ms-3">
+          <i
+            (click)="handleDelete(contact)"
+            class="fa-solid fa-xmark"
+            style="color: red; cursor: pointer"
+          ></i>
+        </span>
+      </small>
+    </h4>
+
+    <ul *ngIf="detailsOpen" class="list-group">
+      <li class="list-group-item"><b>Email:</b>{{ contact.email }}</li>
+      <li class="list-group-item"><b>Phone:</b>{{ contact.phone }}</li>
+    </ul>
+  </div>
+</div>

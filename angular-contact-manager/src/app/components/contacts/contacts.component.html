@@ -1,0 +1,5 @@
+<app-contact-item
+  *ngFor="let contact of contacts"
+  [contact]="contact"
+  (handleDeleteContact)="deleteContact(contact)"
+></app-contact-item>
