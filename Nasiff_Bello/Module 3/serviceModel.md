@@ -42,7 +42,7 @@ In the case of IaaS, the merchant is paying Magento for the licensing of the sof
 third party vendor for the best web hosting such as Rackspace.
 Merchants are able to pay for a hosting plan that meets their own needs without the cost of maintaining
 their own physical servers.
-The merchant is still responsible for installing and managing updates to their Magento so􀁹ware.
+The merchant is still responsible for installing and managing updates to their Magento software.
 
 ## Examples
 - AWS EC2 
