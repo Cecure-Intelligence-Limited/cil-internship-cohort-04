@@ -225,9 +225,9 @@ depends on the size and complexity of your business.
 # Resources
 - [IBM](https://www.ibm.com/cloud/learn/iaas-paas-saas)
 - [Tutorial Point](https://www.tutorialspoint.com/cloud_computing/)
-- [BigCommerce]("https://www.bigcommerce.com/articles/ecommerce/saas-vs-paas-vs-iaas/")
-- [BMC]("https://www.bmc.com/blogs/public-private-hybrid-cloud/")
-- [Fingent]("https://www.fingent.com/blog/cloud-service-models-saas-iaas-paas-choose-the-right-one-for-your-business/")
+- [BigCommerce](https://www.bigcommerce.com/articles/ecommerce/saas-vs-paas-vs-iaas/)
+- [BMC](https://www.bmc.com/blogs/public-private-hybrid-cloud/)
+- [Fingent](https://www.fingent.com/blog/cloud-service-models-saas-iaas-paas-choose-the-right-one-for-your-business/)
 
 
 
