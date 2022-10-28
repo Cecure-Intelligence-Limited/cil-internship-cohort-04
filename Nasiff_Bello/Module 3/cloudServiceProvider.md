@@ -77,7 +77,7 @@ AWS offers the largest global footprint in the market. No other cloud provider o
 AWS certifications are divided into four major categories – Foundational, Associate, Professional, and Specialty.
 
 ### 2. **Microsoft Azure**
-Microsoft Azure is a cloud computing service which is used for building testing deploying and managing the application. This process is done in a global network of the Microsoft-managed data centre. It is private as well as a public cloud platform.
+Microsoft Azure is a cloud computing service which is used for building, testing, deploying and managing the application. This process is done in a global network of the Microsoft-managed data centre. It is private as well as a public cloud platform.
 It uses virtualization which differentiates the coupling between the operating system and CPU with the help of an abstraction layer known as a hypervisor.
 
 This hypervisor emulates all the functionality of the physical machine such as hardware and server into a virtual one. There is numerous amount of virtual machine available and each virtual machine can run many operating systems.
