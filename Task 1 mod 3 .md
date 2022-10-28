@@ -7,7 +7,7 @@ A digital product that I use is WhatsApp. As we all know WhatsApp is a free mes
 
 # Why I would want to improve the features?
 
-I would want to improve its features to create a business model which has been missing from the product. Creating a business model from which Meta can earn from. Some features existing and new features can be switched to being used on a subscription basis. Features where users have to subscribe either weekly, monthly or yearly. An edit feature can also be introduced to make the correction of typographical errors to be easy and faster without anyone noticing. This enables messaging without noticing or being embarrassed about any obvious errors. Then a voice recording feature on the status and increasing the number of pinned chat can also be introduced. These features can also be made to be a paid feature which some users will want to have and use.
+I would want to improve its features to create a business model which has been missing from the product. Creating a business model from which Meta can earn from. Some features existing and new features can be switched to being used on a subscription basis. Features where users have to subscribe either weekly, monthly or yearly. An edit feature can also be introduced to make the correction of typographical errors to be easy and faster without anyone noticing. This enables messaging without noticing or being embarrassed about any obvious errors. Then a voice recording feature on the status and increasing the number of pinned chats can also be introduced. These features can also be made to be a paid feature which some users will want to have and use.
 
 # How would I go about improving its features? 
 
