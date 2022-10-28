@@ -213,7 +213,7 @@ Creative Cloud was the first host on Amazon Web Services but as per the new agre
 
 
 ## **Services Model Provided by Cloud Providers**
-|Name of Company | IaaS | Paas | SaaS |
+|Name of Company | IaaS | PaaS | SaaS |
 |------------- | ----- | ---- |-------|
 | AWS | Amazon EC2	|  Amazon Web Services| Amazon Web Services |
 | Microsoft	 | Microsoft Private Cloud | Microsoft Azure | Microsoft Office 365 |
