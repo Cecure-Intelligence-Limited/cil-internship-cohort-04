@@ -1,0 +1,34 @@
+{
+  "contacts": [
+    {
+      "id": 2,
+      "name": "Kenny Jean",
+      "email": "kenje@gmail.com",
+      "phone": "(651) 810-0554"
+    },
+    {
+      "name": "Stan Lee",
+      "email": "jet@ziks.com",
+      "phone": "(294) 381-3089",
+      "id": 3
+    },
+    {
+      "name": "Fred McGregor",
+      "email": "clem@yahoo.com",
+      "phone": "(875) 202-9038",
+      "id": 4
+    },
+    {
+      "name": "Ali Endemol",
+      "email": "edne@gmail.com",
+      "phone": "(809) 446-1382",
+      "id": 5
+    },
+    {
+      "name": "Adulramon",
+      "email": "lasisiolalekan081@yahoo.com",
+      "phone": "+2348139600605",
+      "id": 6
+    }
+  ]
+}
