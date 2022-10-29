@@ -1,0 +1,39 @@
+---  
+- hosts: localhost
+  gather_facts: false
+
+  tasks:
+  - name: MyAWSLambdaRole
+    community.aws.iam_role:
+      name: AWSLambdaRole3
+      assume_role_policy_document:
+        {
+        "Version": "2012-10-17",
+        "Statement": [
+          {
+            "Effect": "Allow",
+            "Action": [
+              "sts:AssumeRole"
+            ],
+            "Principal": {
+              "Service": [
+                "lambda.amazonaws.com"
+                ]
+              }
+            }
+          ]
+        }
+      managed_policies:
+        - CloudWatchFullAccess
+      description: Allows Lambda to call AWS services
+   
+  - name: MyLambdaFunction
+    community.aws.lambda:
+      name: Lambdafunction03
+      state: present
+      zip_file: lambda.zip
+      runtime: python3.9
+      handler: lambda.lambda_handler
+      role: MyAWSLambdaRole3
+      region: us-east-1
+      description: Creating Amazon lambda function with Redhat Ansible

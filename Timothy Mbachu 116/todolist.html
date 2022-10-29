@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="todolist.css" />
+    <script src="todolist.js" defer></script>
+    <title>Todo List</title>
+  </head>
+  <body>
+    <header>My Todo Lists</header>
+    <main>
+      <div class="all-lists">
+        <h2 class="all-lists-title">All Users</h2>
+        <ul class="all-lists-items" id="all-lists-items">
+          <!-- <li class="active-list">Youtube</li>
+          <li>Work</li>
+          <li>Grocery</li>
+          <li>Work</li> -->
+        </ul>
+        <form method="post" id="new-list-form">
+          <input
+            id="form-input-new-list"
+            type="text"
+            placeholder="enter new user number"
+          />
+          <input type="submit" id="add-list" value="+" />
+        </form>
+      </div>
+      <div class="todo-list">
+        <div class="todo-list-heading">
+          <h2 id="todo-list-title"></h2>
+          <div class="todo-list-info">
+            <span id="items-count">0</span>
+            <p>tasks remaining</p>
+          </div>
+        </div>
+        <form action="" id="new-todo-form">
+          <input
+            id="form-input-new-todo"
+            type="text"
+            placeholder="add new todo"
+          />
+          <input type="submit" id="add-todo" value="+" />
+        </form>
+        <div class="todo-list-items">
+          <!-- <div class="todo-list-item">
+            <input type="checkbox" class="checkbox" />
+            <label for=""
+              >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Voluptates, recusandae.</label
+            >
+          </div>
+          <div class="todo-list-item">
+            <input type="checkbox" class="checkbox" />
+            <label for="">task2</label>
+          </div>
+          <div class="todo-list-item">
+            <input type="checkbox" class="checkbox" />
+            <label for="">task2</label>
+          </div>
+          <div class="todo-list-item">
+            <input type="checkbox" class="checkbox" />
+            <label for="">task2</label>
+          </div> -->
+        </div>
+        <div class="clear">
+          <button class="clear-complete">Clear completed tasks</button>
+          <button id="delete-list" class="delete-list">Delete list</button>
+        </div>
+      </div>
+      <!-- <form>
+        <input
+          id="form-input"
+          type="text"
+          placeholder="What are your plans for today?"
+        />
+        <input id="form-submit" type="submit" value="Add New" />
+      </form>
+      <div class="filter">
+        <select name="" id="filter-select">
+          <option value="all">All</option>
+          <option value="completed">Completed</option>
+          <option value="uncompleted">Uncompleted</option>
+        </select>
+        <div class="results-info">
+          <span id="result-count">0</span>
+          <span>•</span>
+          <p>Results</p>
+        </div>
+      </div>
+      <div class="todos">
+       <div class="todo">
+          <div class="todo-content">Lorem ipsum dolor sit, aaaaaaaaaaaa</div>
+          <div class="todo-actions">
+            <button id="todo-edit">Edit</button>
+            <button id="todo-delete">Delete</button>
+          </div>
+        </div>
+      </div>  -->
+    </main>
+  </body>
+</html>

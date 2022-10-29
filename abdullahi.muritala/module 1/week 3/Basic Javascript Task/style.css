@@ -1,0 +1,11 @@
+main {
+  max-width: 500px;
+  margin: 0 auto;
+}
+button {
+  background-color: crimson;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+}

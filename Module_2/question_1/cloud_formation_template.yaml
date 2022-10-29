@@ -1,0 +1,34 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": 
+    "CIL
+    This template deploys an aws lambda function and an S3 bucket.",
+  "Resources": {
+      "Lambda": {
+        "Type": "AWS::Lambda::Function",
+        "Properties": {
+            "FunctionName": "jbabaLambdaFunc",
+            "Code": {
+                "ZipFile": {
+                    "Fn::Join": {
+                        "\n",
+                        [
+                            "def appreciation(event, context):",
+                            "    print('Thanks so much CIL')  ",
+                            "    return 1 "
+                        ]
+                    }
+
+                }
+            },
+            "Role": "arn:aws:iam::952688338975:role/lambda_basics",
+            "Runtime": "python3.10",
+            "Timeout": 120,
+        }      
+    },    
+    "S3": {
+        "Type": "AWS::S3::Bucket"
+    }
+  }
+    
+}

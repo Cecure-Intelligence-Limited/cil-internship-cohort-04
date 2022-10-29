@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Lexend+Deca:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Todo app</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="bg-img"></div>
+      <div class="inner_wrapper">
+        <div class="todo_header">
+          <h1>ALL USERS TODO</h1>
+          <p class="date"></p>
+          <img src="./images/icon-sun.svg" alt="light mode" />
+        </div>
+        <!-- <img src="./images/back-icon.svg" alt="back" width="16px" /> -->
+        <button id="back">
+          <img src="./images/back-icon.svg" alt="back" width="16px" />
+        </button>
+        <div class="todo_container">
+          <div class="tab">
+            <h1 class="tablinks">User Todo List</h1>
+          </div>
+          <div class="loader"></div>
+          <div id="London" class="tabcontent"></div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="./todoDetails.js"></script>
+  </body>
+</html>

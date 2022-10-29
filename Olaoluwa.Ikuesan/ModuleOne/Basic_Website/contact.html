@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+            <a href="index.html"><img class="logo" src="images/logo.svg" alt="Website's Logo"></a>
+            <img id="mobile-cta" class="mobile-menu" src="images/menu.svg" alt="Open Menu">
+            <nav>
+                <img id="mobile-exit" class="mobile-menu-exit" src="images/exit.svg" alt="Exit Menu">
+                <ul class="primary-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="current"><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <ul class="secondary-nav">
+                    <li class="nav-button"><a href="contact.html">Become a MAX Rider</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <div class="bg-image">
+                <img src="images/about1.jpg" alt="Team at work">
+            </div>
+            <div class="bg-text">
+                <h1>Contact Us</h1>
+                <h5>Home >> Contact Us</h5>
+            </div>
+        </div>
+        <div class="bubble">
+            <img src="images/bubble.svg" class="bubble" alt="Let's chat">
+        </div>
+    </section>
+
+
+    <section class="reach">
+        <div class="container">
+            <div class="heading">
+                <h2>Reach Us</h2>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <img src="images/message.png" alt="Send amail">
+                    <h4>Send A Mail</h4>
+                    <p>info@toolqit.com</p>
+                </div>
+                <div class="column">
+                    <img src="images/people.png" alt="We are here">
+                    <h4>We Are</h4>
+                    <p>Africa Based, Worldwide Focused</p>
+                </div>
+                <div class="column">
+                    <img src="images/call.png" alt="Call Us">
+                    <h4>Call Here</h4>
+                    <p>(+234) 813 256 5787</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="contacts">
+        <div class="container">
+            <div class="heading">
+                <h2>Send A Message.</h2>
+            </div>
+            <div class="row">
+                <div class="left-column">
+                    <form action="">
+                        <label for="name"></label>
+                        <input type="text" id="name" name="name" placeholder="Your Name">
+                        <label for="phone"></label>
+                        <input type="text" id="phone" name="phone" placeholder="Your Phone">
+                    </form>
+                </div>
+                <div class="right-column">
+                    <form action="">
+                        <label for="email"></label>
+                        <input type="email" id="email" name="email" placeholder="Your Email">
+                        <label for="subject"></label>
+                        <input type="text" id="subject" name="subject" placeholder="Your Subject">
+                    </form>
+                </div>
+            </div>
+            <div class="message">
+                <form action="">
+                    <label for="message"></label>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+                </form>
+            </div>
+            <input type="submit" class="message-cta" value="Message Us">
+        </div>
+    </section>
+
+
+    <section class="footer">
+        <div class="container">
+            <div class="heading">
+                <h1>The world of vehicles at the feet of a MAX champion</h1>
+                <div class="footer-cta">
+                    <a href="contact.html" class="footer-cta">Become a MAX Champion</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <h4>Company</h4>
+                    <p>About Metro Africa Xpress</p>
+                    <p>Impacts</p>
+                    <p>Press &amp; Media</p>
+                    <p>Careers</p>
+                </div>
+                <div class="column">
+                    <h4>Services</h4>
+                    <p>Drivers Platform</p>
+                    <p>Transport Marketplace</p>
+                    <p>Enterprise</p>
+                    <p>Electric Vehicles</p>
+                </div>
+                <div class="column">
+                    <h4>Get In Touch</h4>
+                    <i class="fa fa-youtube-play"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-linkedin-square"></i>
+                    <p>success@max.ng</p>
+                    <p>info@max.ng</p>
+                    <p>25b Bisola Durosinmi Etti dr, Lekki Phase 1</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+
+        const mobileBtn = document.getElementById('mobile-cta')
+              nav = document.querySelector('nav')
+              mobileBtnExit = document.getElementById('mobile-exit');
+
+        mobileBtn.addEventListener('click', () => {
+            nav.classList.add('menu-btn');
+        })
+
+        mobileBtnExit.addEventListener('click', () => {
+            nav.classList.remove('menu-btn');
+        })
+
+    </script>
+    
+    
+</body>
+</html>

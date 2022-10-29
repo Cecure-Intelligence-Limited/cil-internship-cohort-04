@@ -1,0 +1,51 @@
+/* USERS DATA PAGE  */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap");
+
+* {
+  margin: 0;
+  /* overflow: hidden; */
+  font-family: "Roboto", sans-serif;
+  /* width: 100%; */
+  box-sizing: border-box;
+}
+
+.users__data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.users__actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.users__actions span {
+  padding-right: 2vw;
+  font-size: 1.2rem;
+  /* padding: auto;
+    margin: auto; */
+}
+.users__actions button {
+  background-color: rgb(118, 170, 243);
+  /* padding: auto; */
+  /* margin: auto; */
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  width: 10vw;
+  height: 4vh;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.users__data > table {
+  background-color: rgb(118, 170, 243);
+  margin-left: 1vw;
+  margin-right: 1vw;
+  border-radius: 5px;
+}
+.users__data > table > tr {
+  background-color: lightgrey;
+}

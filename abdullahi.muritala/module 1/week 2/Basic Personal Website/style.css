@@ -1,0 +1,470 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  font-size: 14px;
+  min-height: 100%;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1300px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #fff;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 85px;
+}
+
+header .logo {
+  width: 100px;
+  flex: 0 0 auto;
+}
+
+.logo img {
+  width: 100%;
+}
+
+header ul {
+  flex: content;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  gap: 30px;
+}
+
+header a {
+  color: rgb(135, 149, 161);
+  text-decoration: none;
+  transition: all 200ms;
+  font-size: 1.2em;
+}
+
+header a:hover {
+  color: #333;
+}
+
+.cta-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 200ms ease-in;
+}
+
+.cta-btn:hover {
+  opacity: 0.7;
+}
+
+.home-hero {
+  background: url(./assets/images/main\ background.jpg) rgba(0, 0, 0, 0.5) no-repeat center center
+    fixed;
+}
+
+.about-hero {
+  background: url(./assets/images/about\ background.jpg) rgba(0, 0, 0, 0.5) no-repeat center center
+    fixed;
+}
+
+.hero {
+  background-blend-mode: multiply;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 140px;
+}
+
+.hero-copy {
+  color: #fff;
+  font-size: 4em;
+  max-width: 800px;
+  line-height: 70px;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.copy-section {
+  margin-top: 90px;
+  font-size: 1.2em;
+}
+
+.copy-section .copy-image {
+  max-width: 50%;
+}
+
+.copy-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.copy-section h2 {
+  font-size: 36px;
+  line-height: 48px;
+  margin-bottom: 30px;
+}
+
+.copy-section p {
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+
+.copy-section a {
+  font-size: 1.2em;
+}
+
+.social-proof {
+  margin: 200px 0px;
+  text-align: center;
+}
+
+.social-proof h2 {
+  font-size: 3em;
+  font-weight: 300;
+}
+
+.max-stat {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.max-stat .stats {
+  display: flex;
+  flex-direction: column;
+}
+
+.stats span:first-of-type {
+  font-size: 4em;
+  font-weight: 800;
+}
+
+.copy-section .copy2-text,
+.copy-section .copy3-text {
+  padding-left: 50px;
+}
+
+.copy-section .copy1-text {
+  padding-right: 50px;
+}
+
+.copy-section .copy2-text,
+.copy-section .copy1-text,
+.copy-section .copy3-text {
+  font-size: 1.2em;
+}
+
+.copy-section li {
+  background: url(./assets/icons/check-mark.svg) no-repeat left top;
+  padding: 3px 0px 10px 50px;
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+footer {
+  background: #2b2d42;
+  color: #fff;
+  margin-top: 60px;
+  padding: 60px 140px 30px 140px;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-cta {
+  font-size: 2em;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+footer .cta-btn {
+  background: #fff;
+  color: #2b2d42;
+  font-size: 0.5em;
+}
+
+.footer-links {
+  margin-top: 60px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+footer .icons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer ul {
+  padding: 0;
+}
+
+footer li {
+  margin-bottom: 15px;
+}
+
+footer li a {
+  cursor: pointer;
+  transition: all 200ms ease-in;
+}
+
+footer li a:hover {
+  opacity: 0.5;
+}
+
+/* Styles for About Us Page starts here*/
+
+.about-hero {
+  height: 30vh;
+  color: #fff;
+}
+
+.services-section,
+.form-section {
+  margin-top: 60px;
+  padding: 30px;
+  text-align: center;
+  background: #f4f8fc;
+}
+
+.services-section h2,
+.form-section h2 {
+  font-size: 3em;
+}
+
+.services-section h2 span,
+.form-section h2 span {
+  color: #448cf0;
+}
+
+.services-section {
+  margin-bottom: 30px;
+}
+
+.services-section img {
+  max-width: 25%;
+}
+
+.services-section p {
+  font-weight: 600;
+}
+
+.services-section .services {
+  margin-top: 90px;
+  justify-content: space-evenly;
+}
+
+.services-section .services div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.services-section button,
+.form-section button {
+  background: #448cf0;
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: opacity 200ms ease-in;
+}
+
+.services-section button:hover {
+  opacity: 0.8;
+}
+
+/* Styles for contact us starts here */
+.contact-details {
+  margin-top: 90px;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.contact-details > div {
+  padding: 60px;
+  border: 1px solid rgba(51, 51, 51, 0.1);
+  cursor: pointer;
+  transition: all 200ms ease-in;
+}
+
+.contact-details > div:hover {
+  transform: translateY(-10px);
+}
+
+.contact-details h3 {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.form-section .form-controls {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.form-section form input {
+  width: 70%;
+}
+
+.form-section img {
+  width: 16px;
+  height: 16px;
+}
+
+.form-section .form-group {
+  position: relative;
+  min-height: 3.5em;
+}
+
+.form-section input.form-control,
+.form-section textarea {
+  position: absolute;
+  padding: 20px 30px;
+  top: 0;
+  left: 0;
+  border: none;
+  outline: none;
+}
+
+.form-section label {
+  position: absolute;
+  top: 20px;
+  left: 5px;
+  z-index: 7;
+}
+
+.form-section textarea {
+  resize: none;
+}
+
+.form-section button {
+  margin-top: 200px;
+}
+
+/* Header Dropdown */
+.hamburger {
+  display: none;
+}
+
+/* Media Quarries */
+@media screen and (max-width: 1280px) {
+  .container {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header nav {
+    display: none;
+    position: absolute;
+    top: 85px;
+    background: #fff;
+    width: 90%;
+  }
+
+  header ul {
+    flex-direction: column;
+  }
+
+  header a {
+    color: #000;
+  }
+
+  header button {
+    display: none;
+  }
+
+  .hero-copy {
+    font-size: 2em;
+    line-height: 50px;
+  }
+
+  .flex-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .copy-section .copy-image {
+    max-width: 100%;
+  }
+  .copy-section .copy2-text {
+    padding-right: 0;
+  }
+  .copy-section .copy2-text,
+  .copy-section .copy3-text {
+    padding-left: 0;
+  }
+  .copy-section {
+    font-size: 1em;
+  }
+  .copy-section h2 {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+  .social-proof {
+    margin: 100px 0px;
+  }
+  .social-proof h2 {
+    font-size: 2em;
+    font-weight: 300;
+  }
+  .stats span:first-of-type {
+    font-size: 3em;
+    font-weight: 800;
+  }
+  footer {
+    margin-top: 30px;
+    padding: 15px 30px 15px 30px;
+  }
+  .form-section .form-controls {
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+  }
+  .cta-btn {
+    padding: 10px 20px;
+  }
+  .services-section h2,
+  .form-section h2 {
+    font-size: 2em;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+/* To toggle the display of navbar on mobile */
+.showMenu {
+  display: block;
+}

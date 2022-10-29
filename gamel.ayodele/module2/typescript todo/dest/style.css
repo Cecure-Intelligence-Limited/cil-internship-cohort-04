@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* body {
+  font-family: "Arima", cursive;
+} */
+.container {
+  max-width: 1200px;
+  height: 100vh;
+  margin: 50px auto 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+form {
+  padding: 10px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+input[type="checkbox"] {
+  margin-left: 10px;
+  cursor: pointer;
+}
+button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.todo-delete-all {
+  margin: 10px 0;
+}
+ul {
+  list-style: none;
+}

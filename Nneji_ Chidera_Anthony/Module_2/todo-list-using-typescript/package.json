@@ -1,0 +1,10 @@
+{
+  "name": "typescript-todo-list",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc --watch"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  }
+}
