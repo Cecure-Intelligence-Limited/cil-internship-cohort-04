@@ -1,7 +1,7 @@
 <template>
   <Header />
   <Hero />
-  <Contacts :contacts="contacts" />
+  <Contacts @delete-contact="deleteTask" :contacts="contacts" />
   <Footer />
 </template>
 
@@ -23,6 +23,13 @@ export default {
     return {
       contacts: [],
     };
+  },
+  methods: {
+    deleteTask(id) {
+      if (confirm("Are you sure?")) {
+        this.contacts = this.contacts.filter((contact) => contact.id !== id);
+      }
+    },
   },
   created() {
     this.contacts = [
