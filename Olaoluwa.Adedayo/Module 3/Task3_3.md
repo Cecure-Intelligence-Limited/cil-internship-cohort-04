@@ -1,0 +1,1 @@
+The following link contains the solution document to BA skills in Scrum events. [Solution Document](https://docs.google.com/document/d/1eRepEGMotQhDD1EBGs-7yL2tE2Fb5r9dedY3hpQMb98/edit?usp=sharing)

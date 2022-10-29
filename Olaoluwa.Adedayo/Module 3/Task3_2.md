@@ -1,0 +1,1 @@
+The following link contains the solution document to BA involvement across full SDLC. [Solution Document](https://docs.google.com/presentation/d/1n9pjUza5JgzzTudxxUxgus2X2eWHrs7h_XM1z7CpY_c/edit?usp=sharing)

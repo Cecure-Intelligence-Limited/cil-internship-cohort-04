@@ -1,0 +1,1 @@
+The following link contains the solution document to the presentation on work relationship between a product manager and business analys. [Solution Document](https://docs.google.com/presentation/d/1zJfqixNzGjcfw8HA8Dq8fP8Gvv83jVMPieVLwrKyPa4/edit?usp=sharing)
